@@ -25,7 +25,7 @@ var questions = [
   },
   {
     question_number: "3",
-    question: "Jane's dance class is every other day starting from Monday, January 1st. What day of the week is her 5th class?",
+    question: "Avital's flamenco class is every other day starting from Monday, January 1st. What day of the week is her 5th class?",
     answers: [
       "Monday",
       "Tuesday",
@@ -146,7 +146,7 @@ var questions = [
   },
   {
     question_number: "13",
-    question: "A person is 25 years old. Their sister is 3 years younger. How old is their sister?",
+    question: "Avital is 25 years old. Her sister is 3 years younger. How old is her sister?",
     answers: [
       "20 years old",
       "21 years old",
@@ -154,7 +154,7 @@ var questions = [
       "23 years old"
     ],
     correctAnswer: 2,
-    explanation: "If the person is 25 years old and their sister is 3 years younger, you subtract 3 from 25 to get 22."
+    explanation: "If Avital is 25 years old and her sister is 3 years younger, you subtract 3 from 25 to get 22."
   },
   {
     question_number: "14",
@@ -170,7 +170,7 @@ var questions = [
   },
   {
     question_number: "15",
-    question: "A person wants to save ₪500 in 5 months. How much do they need to save each month?",
+    question: "Liz wants to save ₪500 in 5 months. How much do Liz need to save each month?",
     answers: [
       "₪80",
       "₪90",
@@ -178,11 +178,11 @@ var questions = [
       "₪120"
     ],
     correctAnswer: 2,
-    explanation: "If the person wants to save ₪500 in 5 months, you divide 500 by 5 to get 100."
+    explanation: "If Liz wants to save ₪500 in 5 months, you divide 500 by 5 to get 100."
   },
   {
     question_number: "16",
-    question: "A person has 18 pencils in their pencil case. They give 2 to their friend. How many pencils are left?",
+    question: "Mike has 18 pencils in their pencil case. He gives 2 to his friend. How many pencils are left?",
     answers: [
       "16 pencils",
       "17 pencils",
@@ -190,7 +190,7 @@ var questions = [
       "19 pencils"
     ],
     correctAnswer: 0,
-    explanation: "If the person has 18 pencils and gives 2 to their friend, you subtract 2 from 18 to get 16."
+    explanation: "If Mike has 18 pencils and gives 2 to their friend, you subtract 2 from 18 to get 16."
   },
   {
     question_number: "17",
@@ -206,7 +206,7 @@ var questions = [
   },
   {
     question_number: "18",
-    question: "A person has ₪250 in their wallet. They spend ₪50 on a toy and ₪70 on a book. How much money is left?",
+    question: "Rachel has ₪250 in their wallet. Rachel spends ₪50 on a toy and ₪70 on a book. How much money is left?",
     answers: [
       "₪120",
       "₪130",
@@ -214,7 +214,7 @@ var questions = [
       "₪150"
     ],
     correctAnswer: 1,
-    explanation: "If the person has ₪250 and spends ₪50 on a toy and ₪70 on a book, they spend a total of ₪50 + ₪70 = ₪120. Subtracting ₪120 from ₪250 leaves ₪130."
+    explanation: "If Rachel has ₪250 and spends ₪50 on a toy and ₪70 on a book, she spends a total of ₪50 + ₪70 = ₪120. Subtracting ₪120 from ₪250 leaves ₪130."
   },
   {
     question_number: "19",
@@ -230,7 +230,7 @@ var questions = [
   },
   {
     question_number: "20",
-    question: "A person wants to schedule a meeting with a friend. They want to meet at 2:00 PM, but their friend is busy until 2:30 PM. How long will they have to wait?",
+    question: "Avital wants to schedule a meeting with a friend. They want to meet at 2:00 PM, but the friend is busy until 2:30 PM. How long will they have to wait?",
     answers: [
       "15 minutes",
       "20 minutes",
@@ -238,7 +238,7 @@ var questions = [
       "30 minutes"
     ],
     correctAnswer: 3,
-    explanation: "If the person wants to meet at 2:00 PM, but their friend is busy until 2:30 PM, they will have to wait 30 minutes."
+    explanation: "If Avital wants to meet at 2:00 PM, but the friend is busy until 2:30 PM, they will have to wait 30 minutes."
   },
   {
     question_number: "21",
@@ -254,7 +254,7 @@ var questions = [
   },
   {
     question_number: "22",
-    question: "A person wants to cook a meal in the microwave for 2 minutes and 15 seconds. If they set it for 2 minutes and 20 seconds, how much longer will it cook than the recommended time?",
+    question: "Avital wants to cook a meal in the microwave for 2 minutes and 15 seconds. If she set it for 2 minutes and 20 seconds, how much longer will it cook than the recommended time?",
     answers: [
       "2 seconds",
       "5 seconds",
@@ -266,7 +266,7 @@ var questions = [
   },
   {
     question_number: "23",
-    question: "A person has a doctor's appointment at 10:00 AM. If the appointment takes 30 minutes, what time will it end?",
+    question: "Frida has a doctor's appointment at 10:00 AM. If the appointment takes 30 minutes, what time will it end?",
     answers: [
       "10:20 AM",
       "10:25 AM",
@@ -310,7 +310,7 @@ var questions = [
   
   {
     question_number: "27",
-    question: "Sarah is 7 years old. How old will she be in 5 years?",
+    question: "Daniel is 7 years old. How old will she be in 5 years?",
     answers: [
       "10 years old",
       "11 years old",
@@ -318,7 +318,7 @@ var questions = [
       "13 years old"
     ],
     correctAnswer: 1,
-    explanation: "Sarah is currently 7 years old, and in 5 years, she will be 7 + 5 = 12 years old."
+    explanation: "Daniel is currently 7 years old, and in 5 years, she will be 7 + 5 = 12 years old."
   },
   
   {
@@ -349,15 +349,15 @@ var questions = [
   
   {
     question_number: "30",
-    question: "A baby is 9 months old. How many months will it be in 3 months?",
+    question: "A baby is 6 months old. How many months will it be in 3 months?",
     answers: [
       "9 months",
-      "10 months",
-      "11 months",
-      "12 months"
+      "7 months",
+      "8 months",
+      "10 months"
     ],
-    correctAnswer: 2,
-    explanation: "The baby is currently 9 months old, and in 3 months, it will be 9 + 3 = 12 months old."
+    correctAnswer: 0,
+    explanation: "The baby is currently 6 months old, and in 3 months, it will be 6 + 3 = 9 months old."
   },
   
   {
@@ -388,7 +388,7 @@ var questions = [
   
   {
     question_number: "33",
-    question: "A person has 12 dollars and spends 4 dollars. How much money does the person have left?",
+    question: "Arik has 12 dollars and spends 4 dollars. How much money does the person have left?",
     answers: [
       "8 dollars",
       "10 dollars",
@@ -396,25 +396,25 @@ var questions = [
       "16 dollars"
     ],
     correctAnswer: 0,
-    explanation: "The person had 12 dollars and spent 4 dollars, so they have 12 - 4 = 8 dollars left."
+    explanation: "Arik had 12 dollars and spent 4 dollars, so they have 12 - 4 = 8 dollars left."
   },
   
   {
     question_number: "34",
-    question: "A person is 80 years old. How old will they be in 5 years?",
+    question: "Rachel is 76 years old. How old will they be in 5 years?",
     answers: [
       "80 years old",
       "81 years old",
       "84 years old",
       "85 years old"
     ],
-    correctAnswer: 2,
-    explanation: "The person is currently 80 years old, and in 5 years, they will be 80 + 5 = 85 years old."
+    correctAnswer: 1,
+    explanation: "Rachel is currently 76 years old, and in 5 years, they will be 76 + 5 = 81 years old."
   },
   
   {
     question_number: "35",
-    question: "A person has 15 apples and gives 3 to a friend. How many apples does the person have left?",
+    question: "Liz has 15 apples and gives 3 to a friend. How many apples does the Liz have left?",
     answers: [
       "12 apples",
       "13 apples",
@@ -422,7 +422,7 @@ var questions = [
       "18 apples"
     ],
     correctAnswer: 0,
-    explanation: "The person had 15 apples and gave away 3, so they have 15 - 3 = 12 apples left."
+    explanation: "Liz had 15 apples and gave away 3, so she has 15 - 3 = 12 apples left."
   },
   
   {
