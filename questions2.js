@@ -1930,19 +1930,19 @@ var questions = [
       "11 months",
       "12 months"
     ],
-    correctAnswer: 2,
+    correctAnswer: 3,
     explanation: "The baby is currently 9 months old, and in 3 months, it will be 9 + 3 = 12 months old."
   },
   {
     question_number: "161",
     question: "A person wants to save $50 per week for a vacation. If they save for 5 weeks, how much will they have?",
     answers: [
-      "$20",
-      "$30",
-      "$40",
-      "$50"
+      "$200",
+      "$300",
+      "$150",
+      "$250"
     ],
-    correctAnswer: 4,
+    correctAnswer: 3,
     explanation: "The person saves $50 per week, and they save for 5 weeks, so they will have 5 x $50 = $250."
   },
   {
