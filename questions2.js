@@ -1,3320 +1,2360 @@
 var questions = [
   {
     question_number: "1",
-    question: "איזו מהבלוטות הבאות יוצאת דופן ?",
+    question: "If an event starts on March 5th and lasts for 10 days, on what date does it end?",
     answers: [
-      "דמעות",
-      "זיעה",
-      "רוק",
-      "אדרנל"
+      "March 14th",
+      "March 15th",
+      "March 16th",
+      "March 17th"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "March 5th plus 10 days is March 15th."
   },
   {
     question_number: "2",
-    question: "מי מהבאים הוא הורמון מעכב ?",
-    answers: ["GHRH", "CRH", "סומטוסטטין", "TRH"],
-    correctAnswer: -1,
-    answerAI: 2
+    question: "If you have a project that starts on the first Monday of April and you need to work for 4 weeks, on what day does your project end?",
+    answers: [
+      "The last Monday of April",
+      "The first Monday of May",
+      "The last Sunday of April",
+      "The first Sunday of May"
+    ],
+    correctAnswer: 0,
+    explanation: "4 weeks from the first Monday of April ends on the last Monday of April."
   },
   {
     question_number: "3",
-    question: "איזה הורמון מייצרים תאי אלפא בלבלב ?",
+    question: "Jane's dance class is every other day starting from Monday, January 1st. What day of the week is her 5th class?",
     answers: [
-      "אדרנלין",
-      "גלוקגון",
-      "אינסולין",
-      "סומטוסטטין"
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "Jane's classes are on the 1st, 3rd, 5th, 7th, and 9th. The 9th is a Tuesday."
   },
   {
     question_number: "4",
-    question: "מי מבין החומרים הבאים הוא תוצר אקסוקריני של הלבלב ?",
+    question: "A conference was scheduled to start on September 10th, which was a Tuesday, but it was postponed by 2 weeks. What is the new starting day of the week?",
     answers: [
-      "גלוקגון",
-      "אינסולין",
-      "עמילאז",
-      "אדרנלין"
+      "Tuesday",
+      "Wednesday",
+      "Monday",
+      "Thursday"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 0,
+    explanation: "Postponing by exactly 2 weeks keeps the same day of the week, so it will still start on a Tuesday."
   },
   {
     question_number: "5",
-    question: "מה תפקידו של ההורמון פרולקטין ?",
+    question: "If a school semester starts on February 1st and lasts for exactly 5 months, what is the ending date?",
     answers: [
-      "הבשלת זקיקים בשחלה לקראת ביוץ",
-      "עידוד פירוק לקטוז בקיבה",
-      "עידוד פירוק סוכר במעי",
-      "ייצור חלב בשד"
+      "June 30th",
+      "July 1st",
+      "June 29th",
+      "July 2nd"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "Starting from February 1st and counting forward 5 months lands on July 1st."
   },
   {
     question_number: "6",
-    question: "מה מהבאים נכון לגבי אופן פעולתו של הורמון על תא מטרה ?",
+    question: "If you need to microwave a meal for 2 minutes and 30 seconds, but your microwave timer only works in seconds, how many seconds should you set it for?",
     answers: [
-      "פועל על כל תאי הגוף",
-      "מזרז תהליכים ביוכימיים",
-      "תמיד מדכא פעילות תוך תאית",
-      "יפעל רק על תאים שלהם רצפטורים (קולטנים) ספציפיים להורמון זה"
+      "150 seconds",
+      "120 seconds",
+      "180 seconds",
+      "210 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "2 minutes and 30 seconds equals (2 * 60 + 30 = 120 + 30 = 150) seconds."
   },
   {
     question_number: "7",
-    question: "עיכוב ייצור של ‪TSH‬ על ידי רמות גבוהות של תירוקסין הוא דוגמה ל‪:‬",
+    question: "You are cooking pasta and need to microwave it for 5 minutes. If you accidentally set your microwave to 3 minutes, how much more time do you need to add?",
     answers: [
-      "משוב חיובי",
-      "קשת רפלקס",
-      "שחרור מושהה",
-      "משוב שלילי"
+      "3 minutes",
+      "2 minutes",
+      "4 minutes",
+      "1 minute"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "If you've already microwaved the pasta for 3 minutes, you need (5 - 3 = 2) more minutes."
   },
   {
     question_number: "8",
-    question: "מה תפקידו של ‪?ACTH‬",
+    question: "Your microwave’s power is too high and cooks very fast. If a dish usually takes 4 minutes to cook on normal power, how long should you cook it if you set the microwave to 50% power to cook the same dish evenly?",
     answers: [
-      "משפיע על עצמות ושרירים וגורם לגדילתם",
-      "מעודד שחרור הורמונים מבלוטת האדרנל",
-      "ייצור ושחרור הורמוני תריס",
-      "ייצור חלב בשד"
+      "8 minutes",
+      "6 minutes",
+      "5 minutes",
+      "7 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "Cooking at 50% power typically requires doubling the cooking time, so (4 * 2 = 8) minutes."
   },
   {
     question_number: "9",
-    question: "מה נכון לגבי אפינפרין ?",
+    question: "If you need to defrost chicken for 12 minutes in the microwave, but you split the time into two equal sessions to prevent overheating, how long is each session?",
     answers: [
-      "מעלה את לחץ הדם",
-      "מדכא את פעילות מערכת העיכול",
-      "מכווץ אישונים",
-      "תשובות ‪2 + 1‬ נכונות"
+      "5 minutes",
+      "6 minutes",
+      "10 minutes",
+      "4 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "Splitting 12 minutes into two equal sessions gives (12 / 2 = 6) minutes per session."
   },
+
   {
     question_number: "10",
-    question: "מה מהבאים אינו חומר ממנו בנויים הורמונים?",
-    answers: ["סטרואידים", "אמינים", "פוספוליפידים", "חלבונים"],
-    correctAnswer: -1,
-    answerAI: 2
+    question: "You are making popcorn that requires 3 minutes and 30 seconds in the microwave. If you accidentally set it for 2 minutes, how much longer should you microwave it?",
+    answers: [
+      "1 minute 30 seconds",
+      "2 minutes",
+      "1 minute 45 seconds",
+      "1 minute"
+    ],
+    correctAnswer: 0,
+    explanation: "You still need (3 minutes 30 seconds - 2 minutes = 1 minute 30 seconds)."
   },
   {
     question_number: "11",
-    question: "מה שגוי לגבי קורטיזול?",
+    question: "A group of friends want to share some candy equally. If they have 48 pieces of candy and there are 8 friends, how many pieces will each friend get?",
     answers: [
-      "הורמון סטרס המעלה את זמינות הסוכר בדם",
-      "מופרש מקליפת האדרנל האמצעית",
-      "נוצר מכולסטרול",
-      "הסיבה היחידה להפרשת יתר של הורמון זה היא תסמונת קושינג"
+      "4 pieces",
+      "5 pieces",
+      "6 pieces",
+      "8 pieces"
     ],
-    correctAnswer: 3,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "If there are 48 pieces of candy and 8 friends, you divide 48 by 8 to get 6 pieces per friend."
   },
   {
     question_number: "12",
-    question: "מהו הסדר הנכון?",
+    question: "A bicycle ride from Rishon LeZion to Ramat Gan takes 2 hours. If you leave at 9:00 AM, what time will you arrive in Ramat Gan?",
     answers: [
-      "היפופיזה > איבר מטרה > היפותלמוס",
-      "היפותלמוס > איבר מטרה > היפופיזה",
-      "איבר מטרה > היפותלמוס > היפופיזה",
-      "היפותלמוס > היפופיזה > איבר מטרה"
+      "10:00 AM",
+      "11:00 AM",
+      "12:00 PM",
+      "1:00 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "If the ride takes 2 hours and you leave at 9:00 AM, you add 2 hours to 9:00 AM to get 11:00 AM."
   },
   {
     question_number: "13",
-    question: "איזה מהתאים הבאים ניתן למצוא בבלוטת התריס (תאירואיד)?",
-    answers: ["תא C", "תא שערה (סיליה)", "תא פריאטלי", "הפטוציט"],
-    correctAnswer: -1,
-    answerAI: 0
+    question: "A person is 25 years old. Their sister is 3 years younger. How old is their sister?",
+    answers: [
+      "20 years old",
+      "21 years old",
+      "22 years old",
+      "23 years old"
+    ],
+    correctAnswer: 2,
+    explanation: "If the person is 25 years old and their sister is 3 years younger, you subtract 3 from 25 to get 22."
   },
   {
     question_number: "14",
-    question: "‫מה נכון לגבי בלוטת התריס ?‬",
+    question: "A shopping cart has 12 apples, and you add 4 more. How many apples are in the cart now?",
     answers: [
-      "‫תאי ‪C‬ מושפעים מההיפופיזה‬",
-      "‫קלציטונין מופרש ע\"י תאי זקיק‬",
-      "‫תירוקסין מזרז את קצב חילוף החומרים בגוף (מטבוליזם)‬",
-      "‫מפרישה תירוקסין המעודד ‪TSH‬ במשוב חיובי‬"
+      "14 apples",
+      "15 apples",
+      "16 apples",
+      "17 apples"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If the cart has 12 apples and you add 4 more, you add 12 + 4 = 16 apples."
   },
   {
     question_number: "15",
-    question: "‫מי מהחומרים הבאים הוא החשוב ביותר לתפקוד בלוטת התריס ?‬",
+    question: "A person wants to save ₪500 in 5 months. How much do they need to save each month?",
     answers: [
-      "‫מגנזיום‬",
-      "‫ברזל‬",
-      "‫יוד‬",
-      "‫סלניום‬"
+      "₪80",
+      "₪90",
+      "₪100",
+      "₪120"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If the person wants to save ₪500 in 5 months, you divide 500 by 5 to get 100."
   },
   {
     question_number: "16",
-    question: "‫אדרנלין הוא דוגמה להורמון מסוג‪:‬‬",
+    question: "A person has 18 pencils in their pencil case. They give 2 to their friend. How many pencils are left?",
     answers: [
-      "‫חלבוני‬",
-      "‫סטרואידי‬",
-      "‫פחמימתי‬",
-      "‫אמיני‬"
+      "16 pencils",
+      "17 pencils",
+      "18 pencils",
+      "19 pencils"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If the person has 18 pencils and gives 2 to their friend, you subtract 2 from 18 to get 16."
   },
   {
     question_number: "17",
-    question: "‫מי מבין ההורמונים הבאים מופרש בעקבות אכילת פחממות ?‬",
+    question: "A toy car travels 15 meters in 3 seconds. How many meters does it travel per second?",
     answers: [
-      "‫אלדוסטרון‬",
-      "‫אינסולין‬",
-      "‫תירוקסין‬",
-      "‫קורטיזול‬"
+      "3 meters",
+      "4 meters",
+      "5 meters",
+      "6 meters"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "If the toy car travels 15 meters in 3 seconds, you divide 15 by 3 to get 5 meters per second."
   },
   {
     question_number: "18",
-    question: "אינסולין הוא דוגמה להורמון מסוג:",
+    question: "A person has ₪250 in their wallet. They spend ₪50 on a toy and ₪70 on a book. How much money is left?",
     answers: [
-      "פחמימתי",
-      "סטרואידי",
-      "אמיני",
-      "חלבוני"
+      "₪120",
+      "₪130",
+      "₪140",
+      "₪150"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "If the person has ₪250 and spends ₪50 on a toy and ₪70 on a book, they spend a total of ₪50 + ₪70 = ₪120. Subtracting ₪120 from ₪250 leaves ₪130."
   },
   {
     question_number: "19",
-    question: "מה נכון לגבי הורמוני הלבלב ?",
+    question: "A microwave can cook food for 3 minutes and 20 seconds. If you set it for 3 minutes and 30 seconds, how much longer will it cook than the recommended time?",
     answers: [
-      "תאי אלפא פועלים כאשר רמות הסוכר בדם גבוהות",
-      "תאי בטא פועלים כאשר רמות הסוכר בדם גבוהות",
-      "תאי אלפא מפרישים הורמון הגורם להכנסת סוכר לתאים",
-      "תאי בטא מפרישים גלוקגון"
+      "5 seconds",
+      "10 seconds",
+      "15 seconds",
+      "20 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "If the recommended time is 3 minutes and 20 seconds, and you set it for 3 minutes and 30 seconds, it will cook for 10 seconds longer."
   },
   {
     question_number: "20",
-    question: "מי מבין הבלוטות הבאות מפרישה אנדוקרינית בלבד ?",
+    question: "A person wants to schedule a meeting with a friend. They want to meet at 2:00 PM, but their friend is busy until 2:30 PM. How long will they have to wait?",
     answers: [
-      "יותרת המוח (היפופיזה)",
-      "לבלב",
-      "בלוטות רוק",
-      "בלוטות בדופן המעי"
+      "15 minutes",
+      "20 minutes",
+      "25 minutes",
+      "30 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "If the person wants to meet at 2:00 PM, but their friend is busy until 2:30 PM, they will have to wait 30 minutes."
   },
   {
     question_number: "21",
-    question: "מי מההורמונים הבאים מופרש מהאונה האחורית של בלוטת יותרת המוח (היפופיזה) ?",
+    question: "A calendar shows that today is Wednesday. If tomorrow is Thursday, what day will it be in 5 days?",
     answers: [
-      "אוקסיטוצין",
-      "פרולקטין",
-      "תירוקסין",
-      "אינסולין"
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Saturday"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "If today is Wednesday, tomorrow is Thursday, and you add 5 days, you get Saturday."
   },
   {
     question_number: "22",
-    question: "איזה מההורומונים הבאים מופרש ע\"י ההיפופיזה האחורית ?",
+    question: "A person wants to cook a meal in the microwave for 2 minutes and 15 seconds. If they set it for 2 minutes and 20 seconds, how much longer will it cook than the recommended time?",
     answers: [
-      "FSH",
-      "GH",
-      "ADH",
-      "TSH"
+      "2 seconds",
+      "5 seconds",
+      "10 seconds",
+      "15 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "If the recommended time is 2 minutes and 15 seconds, and you set it for 2 minutes and 20 seconds, it will cook for 5 seconds longer."
   },
   {
     question_number: "23",
-    question: "איזה מההורמונים הבאים מופרש מההיפותלמוס ?",
-    answers:
-      [
-        "GH",
-        "TSH",
-        "ACTH",
-        "TRH"
-      ],
-    correctAnswer: -1,
-    answerAI: 3
+    question: "A person has a doctor's appointment at 10:00 AM. If the appointment takes 30 minutes, what time will it end?",
+    answers: [
+      "10:20 AM",
+      "10:25 AM",
+      "10:30 AM",
+      "10:35 AM"
+    ],
+    correctAnswer: 2,
+    explanation: "If the appointment starts at 10:00 AM and takes 30 minutes, it will end at 10:30 AM."
   },
   {
     question_number: "24",
-    question: "מה תפקידו של ההורמון ‪ADH ?‬",
+    question: "A calendar shows that today is the 15th of the month. If tomorrow is the 16th, what will the date be in 5 days?",
     answers: [
-      "האצת קצב חילוף החומרים בתאים",
-      "יצירת חלב בשד",
-      "גדילה של עצמות",
-      "הפחתת כמות המים המופרשים בשתן"
+      "20th",
+      "21st",
+      "22nd",
+      "23rd"
     ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
+    correctAnswer: 1,
+    explanation: "If today is the 15th, tomorrow is the 16th, and you add 5 days, you get the 21st."
+  },  
   {
-    question_number: "25",
-    question: "מה מהבאים אינה דרך באמצעותה ההורמון ‪PTH‬ מעלה את רמת הסידן בדם ?",
-    answers: [
-      "מגביר פירוק עצם",
-      "מפחית הפרשת סידן בשתן",
-      "מפחית פירוק סידן בלבלב",
-      "מגביר ספיגת סידן במערכת העיכול"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
+     question_number: "25",
+      question: "Tom has 12 apples and gives 2 to his friend. How many apples does Tom have left?",
+       answers: [ "10", "12", "14", "16" ], 
+       correctAnswer: 0, 
+       explanation: "Tom had 12 apples and gave away 2, so he has 12 - 2 = 10 apples left."
   },
   {
     question_number: "26",
-    question: "מי מההורמונים הבאים נשלט ע\"י הורמונים המפורסים מההיפופיזה ?",
+    question: "A bus leaves Bat Yam at 8:00 AM and arrives in Tel Aviv at 9:00 AM. How long did the bus ride take?",
     answers: [
-      "גלוקגון",
-      "קלציטונין",
-      "קורטיזול",
-      "PTH"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "27",
-    question: "מי מההורמונים הבאים מופרש מליבת (מדולה) בלוטת יותרת הכליה (אדרנל) ?",
-    answers: [
-      "אדרנלין",
-      "פרולקטין",
-      "אלדוסטרון",
-      "קורטיזול"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "28",
-    question: "מי מהבאים יוצא דופן מבחינת סיווג ביוכימי ?",
-    answers: [
-      "אינסולין",
-      "אדרנלין",
-      "נוראדרנלין",
-      "תירוקסין"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "29",
-    question: "מי מבין הבאים הוא בעל ההשפעה הגדולה ביותר על לחץ הדם ?",
-    answers: [
-      "עורקים",
-      "ורידים נבובים",
-      "עורקיקים",
-      "נימים"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "30",
-    question: "מה נכון לגבי זרימת הדם במחזור הגדול ?",
-    answers: [
-      "דם עשיר בחמצן זורם לעלייה ימין",
-      "דם עני בחמצן זורם בוורידים, מתנקז מהם לוורידים הנבובים ומהם לעלייה ימין",
-      "דם עשיר בחמצן יוצא מחדר שמאל אל עורק הריאה",
-      "אף תשובה אינה נכונה"
-    ],
-    correctAnswer: -1,
-    answerAI: 1
-  },
-  {
-    question_number: "31",
-    question: "מה נכון לגבי הלב?",
-    answers: [
-      "דיאסטולה היא פרק הזמן בו חדרי הלב מתכווצים",
-      "סיסטולה היא פרק הזמן בו חדרי הלב רפויים",
-      "שריר הלב יכול לתפקד בצורה תקינה גם באופן אנאירובי",
-      "העורקים הכליליים (קורונריים) מספיק דם לשריר הלב עצמו"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "32",
-    question: "מה נכון לגבי כלי הדם?",
-    answers: [
-      "בעורקים ובוורידים קיימים מסתמים, אך בנימים לא",
-      "בנימים מתבצעים חילוף החומרים וחילוף הגדים בין הדם לרקמה",
-      "העורקים מנקזים דם מהרקמות",
-      "לוורידים דופן שרירית יותר מאשר לעורקים"
-    ],
-    correctAnswer: -1,
-    answerAI: 1
-  },
-  {
-    question_number: "33",
-    question: "איזה מהבאים מוביל דם עשיר בחמצן?",
-    answers: [
-      "עורק הריאה",
-      "ורידי הריאה",
-      "וריד השער",
-      "וריד נבוב תחתון"
+      "30 minutes",
+      "1 hour",
+      "1 hour 30 minutes",
+      "2 hours"
     ],
     correctAnswer: 1,
-    answerAI: 0
+    explanation: "The bus ride took 1 hour."
   },
+  
+  {
+    question_number: "27",
+    question: "Sarah is 7 years old. How old will she be in 5 years?",
+    answers: [
+      "10 years old",
+      "11 years old",
+      "12 years old",
+      "13 years old"
+    ],
+    correctAnswer: 1,
+    explanation: "Sarah is currently 7 years old, and in 5 years, she will be 7 + 5 = 12 years old."
+  },
+  
+  {
+    question_number: "28",
+    question: "A microwave can cook food for 30 seconds, 1 minute, or 2 minutes. How many seconds is 1 minute?",
+    answers: [
+      "30 seconds",
+      "60 seconds",
+      "90 seconds",
+      "120 seconds"
+    ],
+    correctAnswer: 1,
+    explanation: "1 minute is equal to 60 seconds."
+  },
+  
+  {
+    question_number: "29",
+    question: "A book costs 25 shekels. If you have a 50-shekel bill, how much change will you get?",
+    answers: [
+      "25 shekels",
+      "30 shekels",
+      "40 shekels",
+      "50 shekels"
+    ],
+    correctAnswer: 2,
+    explanation: "You pay with a 50-shekel bill, and the book costs 25 shekels, so you'll get 50 - 25 = 25 shekels in change."
+  },
+  
+  {
+    question_number: "30",
+    question: "A baby is 9 months old. How many months will it be in 3 months?",
+    answers: [
+      "9 months",
+      "10 months",
+      "11 months",
+      "12 months"
+    ],
+    correctAnswer: 2,
+    explanation: "The baby is currently 9 months old, and in 3 months, it will be 9 + 3 = 12 months old."
+  },
+  
+  {
+    question_number: "31",
+    question: "A calendar shows that today is Wednesday. What day will it be in 4 days?",
+    answers: [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    correctAnswer: 2,
+    explanation: "Today is Wednesday, and in 4 days, it will be Sunday."
+  },
+  
+  {
+    question_number: "32",
+    question: "Sevilla is a city in which country?",
+    answers: [
+      "Spain",
+      "France",
+      "Italy",
+      "Germany"
+    ],
+    correctAnswer: 0,
+    explanation: "Sevilla is a city in Spain."
+  },
+  
+  {
+    question_number: "33",
+    question: "A person has 12 dollars and spends 4 dollars. How much money does the person have left?",
+    answers: [
+      "8 dollars",
+      "10 dollars",
+      "12 dollars",
+      "16 dollars"
+    ],
+    correctAnswer: 0,
+    explanation: "The person had 12 dollars and spent 4 dollars, so they have 12 - 4 = 8 dollars left."
+  },
+  
   {
     question_number: "34",
-    question: "מהו הסדר הנכון של מסלול ההולכה החשמלית בלב ?",
+    question: "A person is 80 years old. How old will they be in 5 years?",
     answers: [
-      "קשר עליה-חדר - AV Node-קשר סינוס-עליה - SA Node-צרור ימני - צרור שמאלי - סיבי פורקינייה",
-      "אין סדר קבוע למסלול ההולכה החשמלית בלב",
-      "קשר סינוס-עליה - SA Node-קשר עליה-חדר - AV Node-צרור ימני וצרור שמאלי - סיבי פורקינייה",
-      "סיבי פורקינייה - קשר עליה-חדר - AV Node-צרור ימני וצרור שמאלי - קשר סינוס-עליה SA Node"
+      "80 years old",
+      "81 years old",
+      "84 years old",
+      "85 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "The person is currently 80 years old, and in 5 years, they will be 80 + 5 = 85 years old."
   },
+  
   {
     question_number: "35",
-    question: "בר עשה בדיקת אקו לב ובבדיקה נאמר לו שנפח הפעימה שלו היא 50 סמ\"ק. בזמן שבר עושה ספורט, הדופק שלו מגיע ל 100 פעימות לדקה. מי מהבאים היא תפוקת הלב שלו ?",
+    question: "A person has 15 apples and gives 3 to a friend. How many apples does the person have left?",
     answers: [
-      "150 מ\"ל בדקה",
-      "5000 מ\"ל בדקה",
-      "150 מ\"ל בשעה",
-      "5000 מ\"ל בשעה"
+      "12 apples",
+      "13 apples",
+      "15 apples",
+      "18 apples"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "The person had 15 apples and gave away 3, so they have 15 - 3 = 12 apples left."
   },
+  
   {
     question_number: "36",
-    question: "מה מהבאים שגוי לגבי השפעה על לחץ הדם?",
+    question: "A person wants to save 100 shekels per month. If they save 25 shekels per week, how many weeks will it take to reach their goal?",
     answers: [
-      "הסטטוס המשפחתי של הנבדק משפיע על לחץ הדם",
-      "כמות הנתרן שאדם צורך משפיעה על לחץ הדם",
-      "מידת כיווץ כלי הדם משפיעה על לחץ הדם",
-      "לעיתים יכול לעלות כחלק מ\"תסמונת החלוק הלבן\""
+      "2 weeks",
+      "3 weeks",
+      "4 weeks",
+      "5 weeks"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The person wants to save 100 shekels per month, and they save 25 shekels per week. To find out how many weeks it will take, divide 100 by 25, which is 4 weeks."
   },
+  
   {
     question_number: "37",
-    question: "הקול השני של הלב (S2) נגרם כתוצאה מ-",
+    question: "A person is 25 years old. How old will they be in 10 years?",
     answers: [
-      "טריקת (סגירת) המסתמים הצניפיים",
-      "פתיחת המסתמים הצניפיים",
-      "טריקת (סגירת) המסתמים הגביעיים",
-      "פתיחת המסתמים הגביעיים"
+      "30 years old",
+      "32 years old",
+      "35 years old",
+      "40 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "The person is currently 25 years old, and in 10 years, they will be 25 + 10 = 35 years old."
   },
+  
   {
     question_number: "38",
-    question: "מה מהבאים נכון לגבי ורידים?",
+    question: "A person has 18 dollars and spends 6 dollars. How much money does the person have left?",
     answers: [
-      "מזרימים דם עני בחמצן בלבד",
-      "מזרימים דם עשיר בחמצן בלבד",
-      "מכילים שסתומים שמונעים זרימת דם בכיוון ההפוך",
-      "דרכם מתבצע עיקר חילוף החומרים עם הרקמות"
+      "12 dollars",
+      "14 dollars",
+      "16 dollars",
+      "18 dollars"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 0,
+    explanation: "The person had 18 dollars and spent 6 dollars, so they have 18 - 6 = 12 dollars left."
   },
+  
   {
     question_number: "39",
-    question: "מה מהבאים נכון לגבי תפוקת הלב?",
+    question: "A calendar shows that today is the 10th of the month. If tomorrow is the 11th, what will the date be in 7 days?",
     answers: [
-      "המכפלה בין לחץ הדם לבין נפח הפעימה",
-      "הסכום בין נפח הפעימה לקצב הלב בשניה אחת",
-      "המכפלה בין קצב הלב ונפח הפעימה",
-      "הסכום בין נפח הפעימה לקצב הלב לק\"ג גוף"
+      "17th",
+      "18th",
+      "19th",
+      "20th"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "If today is the 10th, tomorrow is the 11th, and you add 7 days, you get the 18th."
   },
+  
   {
     question_number: "40",
-    question: "איזה מהמסתמים הבאים נמצא בין עלייה שמאל לחדר שמאל?",
+    question: "A person wants to buy a toy that costs 50 shekels. If they have a 20-shekel bill, how much more money do they need?",
     answers: [
-      "המסתם התלת צניפי (טריקוספידלי)",
-      "המסתם הדו צניפי (ביקוספידלי, מיטראלי)",
-      "המסתם הריאתי (Pulmonary)",
-      "המסתם הותיני (Aortic)"
+      "10 shekels",
+      "20 shekels",
+      "30 shekels",
+      "40 shekels"
     ],
-    correctAnswer: -1,
-    answerAI: 1 // תשובה מספר 2
+    correctAnswer: 2,
+    explanation: "The toy costs 50 shekels, and the person has a 20-shekel bill, so they need 50 - 20 = 30 shekels more."
   },
+  
   {
     question_number: "41",
-    question: "מה מהבאים נכון לגבי ה(SA-NODE -קשר סינוס-עליה)?",
+    question: "A person is 40 years old. How old will they be in 8 years?",
     answers: [
-      "נמצא בעליה שמאל",
-      "נמצא בחדר ימין",
-      "נמצא בחדר שמאל",
-      "נמצא בעליה ימין"
+      "45 years old",
+      "46 years old",
+      "48 years old",
+      "50 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "The person is currently 40 years old, and in 8 years, they will be 40 + 8 = 48 years old."
   },
+  
   {
     question_number: "42",
-    question: "מתי מתכווצות העליות ?",
+    question: "A person has 12 pencils and gives 2 to a friend. How many pencils does the person have left?",
     answers: [
-      "סוף הסיסטולה",
-      "סוף הדיאסטולה",
-      "תחילת הדיאסטולה",
-      "תחילת הסיסטולה"
+      "10 pencils",
+      "11 pencils",
+      "12 pencils",
+      "14 pencils"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "The person had 12 pencils and gave away 2, so they have 12 - 2 = 10 pencils left."
   },
+  
   {
     question_number: "43",
-    question: "כיצד מערכת הלב וכלי הדם מווסתת את טמפרטורת הגוף?",
+    question: "A calendar shows that today is Monday. What day will it be in 3 days?",
     answers: [
-      "על ידי הרחבה וכיווץ של כלי דם",
-      "על ידי הסעת הורמונים מקררים ממקומות חמים למקומות קרים",
-      "על ידי אגירה של מים בכלי הדם",
-      "על ידי השתנה מרובה וקירור הגוף דרך מערכת השתן"
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "Today is Monday, and in 3 days, it will be Thursday."
   },
+  
   {
     question_number: "44",
-    question: "מה שגוי לגבי כלי הדם הורידיים?",
+    question: "A person wants to save 200 shekels per month. If they save 50 shekels per week, how many weeks will it take to reach their goal?",
     answers: [
-      "בעלי דופן דקה לעומת העורקים וכן ,בעלי שסתומים",
-      "הגורמים לנזק בשסתומים יכולים להיות הריון ,עמידה ממושכת ותורשה",
-      "בגיל המבוגר שסתומי הורידים נסתמים ולכן נוצרת הרחבת ורידים ברגליים",
-      "מובילים דם עני בחמצן בלבד"
+      "2 weeks",
+      "3 weeks",
+      "4 weeks",
+      "5 weeks"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person wants to save 200 shekels per month, and they save 50 shekels per week. To find out how many weeks it will take, divide 200 by 50, which is 4 weeks."
   },
   {
     question_number: "45",
-    question: "בבדיקה של רקמת שריר הלב, מה נצפה למצא בכמות הרבה ביותר בתאים?",
+    question: "A bus leaves Bat Yam at 8:00 AM and arrives in Tel Aviv at 9:00 AM. How long did the bus take to travel?",
     answers: [
-      "ריבוזומים",
-      "מנגנון גולג'י",
-      "ליזוזומים",
-      "מיטוכונדריות"
+      "30 minutes",
+      "1 hour",
+      "1 hour 30 minutes",
+      "2 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
+    correctAnswer: 1,
+    explanation: "The bus traveled from 8:00 AM to 9:00 AM, which is 1 hour."
+  },  
   {
     question_number: "46",
-    question: "מה נכון לגבי אספקת החמצן ללב?",
+    question: "If a baby is 9 months old, how many months will it be in 3 months?",
     answers: [
-      "גורמי הסיכון העיקריים לבעיה באספקת החצמן הם: חינוך, מקום מגורים ומצב סוציואקונומי",
-      "ניתוח מעקפים הוא הטיפול היחיד לעורקים כליליים סתומים",
-      "העורקים שמזינים את הלב עצמו מתמלאים בעת הדיאסטולה",
-      "אספקת החמצן ללב מגיעה מהעורקים הקרוטידים"
+      "9 months",
+      "10 months",
+      "11 months",
+      "12 months"
     ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
+    correctAnswer: 3,
+    explanation: "The baby is currently 9 months old, and in 3 months, it will be 9 + 3 = 12 months old."
+  },  
   {
     question_number: "47",
-    question: "מהו עורק?",
+    question: "A book costs ₪25. If you pay with a ₪50 bill, how much change will you get?",
     answers: [
-      "כלי דם שמזרים דם מהלב אל הגוף",
-      "כלי דם שמוביל את הדם אל הלב",
-      "כלי דם המוביל דם מהריאות",
-      "כלי דם בו זורם דם מחומצן בלבד"
+      "₪20",
+      "₪25",
+      "₪30",
+      "₪35"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "You pay with a ₪50 bill, and the book costs ₪25, so you'll get ₪50 - ₪25 = ₪25 in change."
   },
   {
     question_number: "48",
-    question: "מה מהבאים נכון לגבי נפח הפעימה של הלב במנוחה?",
+    question: "If it takes 2 hours to drive from Rishon to Holon, how long will it take to drive from Rishon to Tel Aviv if it's 30 minutes more?",
     answers: [
-      "כ 70 -סמ\"ק",
-      "כ 100 -סמ\"ק",
-      "כ 35 -סמ\"ק",
-      "אין תשובה נכונה"
+      "2 hours",
+      "2 hours 30 minutes",
+      "3 hours",
+      "3 hours 30 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "It takes 2 hours to drive from Rishon to Holon, and it's 30 minutes more to drive to Tel Aviv, so it will take 2 hours + 30 minutes = 2 hours 30 minutes."
   },
   {
     question_number: "49",
-    question: "מיהו קוצב הלב העיקרי?",
+    question: "If you sleep at 10:00 PM and wake up at 7:00 AM, how many hours did you sleep?",
     answers: [
-      "Bundle of His (צרור עלייה-חדר)",
-      "סיבי פורקינייה",
-      "AV Node (קשר עלייה-חדר)",
-      "SA Node (קשר סינוס-עליה)"
+      "7 hours",
+      "8 hours",
+      "9 hours",
+      "10 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "You slept from 10:00 PM to 7:00 AM, which is 9 hours."
   },
   {
     question_number: "50",
-    question: "מה המשפט הנכון לגבי כלי-הדם?",
+    question: "A microwave can cook food for 2 minutes and 30 seconds. If you cook for 1 minute and 15 seconds, how much longer do you need to cook?",
     answers: [
-      "שכבת השריר של הורידים עבה יותר מזו של העורקים",
-      "עורקים הם כלי דם המכילים רק דם עשיר בחמצן.",
-      "כלי הדם אשר יוצא מחדר שמאל הינו וריד",
-      "ורידים תמיד מובילים דם אל הלב"
+      "1 minute 15 seconds",
+      "1 minute 30 seconds",
+      "2 minutes",
+      "2 minutes 15 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "You've cooked for 1 minute and 15 seconds, and you need to cook for 2 minutes and 30 seconds, so you need to cook for another 1 minute and 15 seconds."
   },
   {
     question_number: "51",
-    question: "‫מה נחשב ללחץ דם תקין במנוחה ?‬",
+    question: "If you have ₪120 and spend ₪40, how much money do you have left?",
     answers: [
-      "‪120/80‬",
-      "‪180/120‬",
-      "‪90/60‬",
-      "‪200/100"
+      "₪80",
+      "₪90",
+      "₪100",
+      "₪110"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "You had ₪120 and spent ₪40, so you have ₪120 - ₪40 = ₪80 left."
   },
   {
     question_number: "52",
-    question: "מצורף ציור של עורק. איזו שכבה של העורק מסומנת בחץ?",
+    question: "If a Holocaust survivor is 85 years old, how old will they be in 5 years?",
     answers: [
-      "אנדותל",
-      "אינטימה",
-      "מדיה",
-      "אקסטרנה (אדונטיציה)"
+      "85 years old",
+      "86 years old",
+      "90 years old",
+      "95 years old"
     ],
-    correctAnswer: 3,
-    answerAI: 2 // תשובה מספר 3
+    correctAnswer: 2,
+    explanation: "The survivor is currently 85 years old, and in 5 years, they will be 85 + 5 = 90 years old."
   },
   {
     question_number: "53",
-    question: "‫מה מהבאים הוא חלק ממחזור הדם הגדול?‬",
+    question: "If you have 12 cookies and you eat 2, how many cookies do you have left?",
     answers: [
-      "‬הורידים הנבובים‬",
-      "‬עורק הריאה‬",
-      "‬העלייה השמאלית‬",
-      "‬החדר הימני‬"
+      "10 cookies",
+      "11 cookies",
+      "12 cookies",
+      "14 cookies"
     ],
     correctAnswer: 0,
-    answerAI: 2
+    explanation: "You had 12 cookies and ate 2, so you have 12 - 2 = 10 cookies left."
   },
   {
     question_number: "54",
-    question: "‫היכן יימצא הדם העני ביותר בחמצן?‬",
+    question: "If a city is 120 km away, and you drive at 40 km/h, how long will it take to get there?",
     answers: [
-      "‬נימים‬",
-      "‬עורקי הריאה‬",
-      "‬אאורטה (ותין)‬",
-      "‬ורידי הריאה‬"
+      "2 hours",
+      "3 hours",
+      "4 hours",
+      "5 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "You're driving at 40 km/h, and the city is 120 km away, so it will take 120 km / 40 km/h = 3 hours to get there."
   },
   {
     question_number: "55",
-    question: "איזה מהבאים אינו חלק מתפקידי מערכת הלב וכלי הדם?",
+    question: "A bus leaves Bat Yam at 9:00 AM and arrives in Tel Aviv at 10:30 AM. How long did the bus ride take?",
     answers: [
-      "ויסות טמפרטורה",
-      "הסעת הורמונים",
-      "יצירה של כדוריות דם לבנות",
-      "הובלת חומרי מזון ממערכת העיכול לרקמות"
+      "1 hour",
+      "1.5 hours",
+      "2 hours",
+      "3 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "The bus ride took 1.5 hours, from 9:00 AM to 10:30 AM."
   },
   {
     question_number: "56",
-    question: "מה נכון לגבי לחץ דם?",
+    question: "If Sara is 8 years old and her brother is 4 years older, how old is her brother?",
     answers: [
-      "הינו הלחץ שמפעיל הדם על דפנות כלי הדם",
-      "120/80 הינו ערך תקין של לחץ דם",
-      "העורקיקים (הארטריולות) יוצרים התנגדות לכלי הדם ומשפיעים על לחץ הדם",
-      "כל התשובות נכונות"
+      "10 years old",
+      "11 years old",
+      "12 years old",
+      "13 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "If Sara is 8 years old and her brother is 4 years older, her brother is 8 + 4 = 12 years old."
   },
   {
     question_number: "57",
-    question: "מה נכון לגבי המסתמים הצניפיים?",
+    question: "A microwave can cook food for 30 seconds, 1 minute, or 2 minutes. How many options are there?",
     answers: [
-      "פתיחתם מאפשרת זרימת דם מהעליות לחדרים",
-      "במצב פיזיולוגי הם מאפשרים זרימה דו כיוונית",
-      "בזמן הסיסטולה המסתמים בין העליות לחדרים פתוחים",
-      "אף תשובה אינה נכונה"
+      "2 options",
+      "3 options",
+      "4 options",
+      "5 options"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "There are 3 options: 30 seconds, 1 minute, or 2 minutes."
   },
   {
     question_number: "58",
-    question: "מה אינו אחד מתפקידי הדם?",
+    question: "If it takes 2 hours to drive from Rishon to Holon, how long will it take to drive from Holon to Rishon?",
     answers: [
-      "בנייה מחדש של שריר הלב לאחר התקף לב",
-      "נשיאת חמצן לרקמות השונות",
-      "ויסות טמפרטורה בגוף",
-      "הובלת תאים של מערכת החיסון לאזור בו ישנה דלקת"
+      "1 hour",
+      "2 hours",
+      "3 hours",
+      "4 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "The distance is the same, so it will also take 2 hours to drive from Holon to Rishon."
   },
   {
     question_number: "59",
-    question: "לאן עובר הדם שהיה בנימים?",
+    question: "If a toy costs 25 shekels and you have a 20% discount coupon, how much will you pay?",
     answers: [
-      "לעורקים",
-      "לוורידים",
-      "לוורידונים",
-      "לעורקיקים"
+      "20 shekels",
+      "22 shekels",
+      "25 shekels",
+      "30 shekels"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 0,
+    explanation: "With a 20% discount, you'll pay 25 - (25 x 0.2) = 20 shekels."
   },
   {
     question_number: "60",
-    question: "הקול הראשון של הלב (S1) נגרם כתוצאה מ-",
+    question: "If a baby is 6 months old, how many weeks old is the baby?",
     answers: [
-      "טריקת (סגירת) המסתמים הצניפיים",
-      "טריקת (סגירת) המסתמים הגביעיים",
-      "פתיחת המסתמים הגביעיים",
-      "פתיחת המסתמים הצניפיים"
+      "20 weeks",
+      "24 weeks",
+      "26 weeks",
+      "30 weeks"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "6 months is equal to 24 weeks."
   },
   {
     question_number: "61",
-    question: "‫מה מהבאים נכון לגבי מחזורי הלב?‬",
+    question: "If a book costs 50 shekels and you have 30 shekels, how much more money do you need?",
     answers: [
-      "‬עורק הריאה יוצא מחדר ימין ומכיל דם עשיר בחמצן‬",
-      "‬מחזור הדם הגדול מתחיל בחדר ימין ומסתיים בעלייה שמאל‬",
-      "‬לעלייה שמאל נכנסים ורידים בהם דם עשיר בחמצן‬",
-      "‬כל התשובות שגויות‬"
+      "10 shekels",
+      "20 shekels",
+      "30 shekels",
+      "40 shekels"
     ],
-    correctAnswer: 2,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "You need 50 - 30 = 20 shekels more."
   },
   {
     question_number: "62",
-    question: "‫מטופל מגיע לחדר המיון ומתלונן על קוצר נשימה‪ .‬בבדיקת הדמיה ניתן לזהות קריש דם גדול החוסם את עורק הריאה בחלקו הפרוקסימלי (כלומר‪ ,‬בתחילת‬‫העורק) ‪ -‬מה סביר להניח שיקרה כתוצאה מכך ?‬",
+    question: "If it's 3:45 PM and you need to wait 2 hours, what time will it be?",
     answers: [
-      "‬דם לא יגיע לריאות‬",
-      "‬דם לא יגיע אל החדר הימני של הלב‬",
-      "‬לממצא זה אין השפעה על זרימת הדם‬",
-      "‬דם לא יגיע לעלייה הימנית של הלב‬"
+      "5:45 PM",
+      "6:45 PM",
+      "7:45 PM",
+      "8:45 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "If it's 3:45 PM and you wait 2 hours, it will be 5:45 PM."
   },
   {
     question_number: "63",
-    question: "מהו קצבו התקין של ‪ - SA NODE‬קשר סינוס עלייה ?",
+    question: "If you have 12 cookies and you eat 2, how many cookies do you have left?",
     answers: [
-      "60-90 פעימות בדקה",
-      "40-60 פעימות בדקה",
-      "90-110 פעימות בדקה",
-      "10-20 פעימות בדקה"
+      "10 cookies",
+      "11 cookies",
+      "12 cookies",
+      "14 cookies"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "You had 12 cookies and ate 2, so you have 12 - 2 = 10 cookies left."
   },
   {
     question_number: "64",
-    question: "מה נכון לגבי ההולכה החשמלית בלב?",
+    question: "If a person is 80 years old and was born in 1940, what year is it now?",
     answers: [
-      "קצב הפעימות המקורי (הפנימי) של ה‪ AV node-‬וה‪ SA node-‬זהה",
-      "( AV node (קשר עלייה‪-‬חדר) הוא הקוצב הראשי של הלב",
-      "( Bundle of His (צרור עלייה‪-‬חדר) הוא הקוצב המשני של הלב",
-      "האות החשמלי נוצר תחילה ב‪( SA node-‬קשר סינוס‪-‬עלייה)"
+      "2020",
+      "2022",
+      "2024",
+      "2026"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If the person was born in 1940 and is 80 years old, it is currently 2020."
   },
   {
     question_number: "65",
-    question: "‫מה המשפט הנכון לגבי הלימפוציטים?‬",
+    question: "A bus leaves Bat Yam at 9:00 AM and arrives in Tel Aviv at 10:30 AM. How long did the bus ride take?",
     answers: [
-      "‬נוצרים בקשרי הלימפה ומשם נודדים למערכת הדם‬",
-      "‬נוצרים בלב ומשם נעים דרך מערכת הדם אל שאר חלקי הגוף‬",
-      "‬נוצרים במח העצם‬",
-      "‬הם סוג של תאי דם אדומים‬"
+      "1 hour",
+      "1.5 hours",
+      "2 hours",
+      "2.5 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "The bus ride took 10:30 - 9:00 = 1.5 hours."
   },
   {
     question_number: "66",
-    question: "מצורף ציור של עורק. איזו שכבה של העורק מסומנת בחץ?",
+    question: "If Sara is 7 years old and her brother is 3 years older, how old is her brother?",
     answers: [
-      "אינטימה",
-      "אנדותל",
-      "אקסטרנה (אדונטיציה)",
-      "מדיה"
+      "9 years old",
+      "10 years old",
+      "11 years old",
+      "12 years old"
     ],
-    correctAnswer: 3,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If Sara is 7 years old and her brother is 3 years older, her brother is 7 + 3 = 10 years old."
   },
   {
     question_number: "67",
-    question: "‫המסתם התלת צניפי (טריקוספידלי) מפריד בין‪:‬‬",
+    question: "A microwave can cook food for 30 seconds, 1 minute, 1.5 minutes, or 2 minutes. If you cook food for 1.5 minutes, how many seconds is that?",
     answers: [
-      "‬החדר הימני לחדר השמאלי‬",
-      "‬העלייה השמאלית לחדר השמאלי‬",
-      "‬‬העלייה הימנית לחדר הימני",
-      "‬החדר השמאלי לוותין (אבי העורקים)‬"
+      "60 seconds",
+      "90 seconds",
+      "120 seconds",
+      "150 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "1.5 minutes is equal to 1.5 x 60 = 90 seconds."
   },
   {
     question_number: "68",
-    question: "‫מה מהבאים נכון לגבי הכיווץ הסינכרוני של שרירי הלב?‬",
+    question: "If you have $15 and spend $3 on a toy, how much money do you have left?",
     answers: [
-      "‪תאי הלב מחוברים בצמתים רופפים המאפשרים העברה יעילה וכיווץ סינכרוני של השריר‬",
-      "‪תאי הלב מחוברים בצמתים הדוקים המאפשרים העברה יעילה וכיווץ סינכרוני של השריר‬",
-      "‪תאי הלב מבודדים אחד מהשני‪ ,‬תכונה המאפשרת כיווץ מדוייק של כל תא ותא‬",
-      "‪תאי הלב עשויים ברובם מתאי עצב‬"
+      "$10",
+      "$12",
+      "$15",
+      "$18"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "You had $15 and spent $3, so you have $15 - $3 = $12 left."
   },
   {
     question_number: "69",
-    question: "‫מה נכון לגבי קולות הלב?‬",
+    question: "If it takes 2 hours to drive from Rishon LeZion to Jerusalem, and you leave at 9:00 AM, what time will you arrive?",
     answers: [
-      "‪קול S1‬ נשמע בתחילת הדיאסטולה‬",
-      "‪קול S2‬ נשמע בתחילת הסיסטולה‬",
-      "‪קול S2‬ נובע מסגירת המסתמים הגביעיים (אאורטלי ופולמונרי)‬",
-      "‪קול S1‬ נובע מטריקת המסתמים הגביעיים (אאורטלי וטריקוספידלי)‬"
+      "10:00 AM",
+      "11:00 AM",
+      "12:00 PM",
+      "1:00 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If it takes 2 hours to drive, and you leave at 9:00 AM, you will arrive at 9:00 + 2 hours = 11:00 AM."
   },
   {
     question_number: "70",
-    question: "מי מהבאים הינו חלק מתפקידי מערכת הלב וכלי הדם?",
+    question: "If a book costs $12 and you have a 20% discount coupon, how much will you pay for the book?",
     answers: [
-      "הסעת הורמונים",
-      "ויסות טמפרטורה",
-      "הובלת מרכיבי מערכת החיסון",
-      "כל התשובות נכונות"
+      "$9",
+      "$10",
+      "$11",
+      "$12"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If the book costs $12 and you have a 20% discount, you will pay $12 - (20% of $12) = $12 - $2.40 = $9.60."
   },
   {
     question_number: "71",
-    question: "מה נכון לגבי כלי הדם השונים בגופנו?",
+    question: "If you have 12 pencils in a box and you add 4 more, how many pencils do you have now?",
     answers: [
-      "לחץ הדם בורידים הוא הגבוה ביותר",
-      "בנימים אין לחץ דם",
-      "לחץ הדם הסיסטולי בוריד הנבוב הוא 120/80 באופן תקין",
-      "באבי העורקים לחץ הדם הוא הגבוה ביותר"
+      "12",
+      "14",
+      "16",
+      "18"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "You had 12 pencils and added 4 more, so you have 12 + 4 = 16 pencils now."
   },
   {
     question_number: "72",
-    question: "המסתם הדו צניפי (מיטרלי)מפריד בין:",
+    question: "If a baby is 6 months old, how many weeks old is the baby?",
     answers: [
-      "העלייה הימנית לחדר הימני",
-      "החדר הימני לחדר השמאלי",
-      "העלייה השמאלית לחדר השמאלי",
-      "החדר השמאלי לוותין (אבי העורקים)"
+      "20 weeks",
+      "24 weeks",
+      "26 weeks",
+      "30 weeks"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "If the baby is 6 months old, and there are approximately 4 weeks in a month, the baby is 6 x 4 = 24 weeks old."
   },
   {
     question_number: "73",
-    question: "‫איך נקרא הקול שנוצר בעקבות סגירת המסתמים הצניפיים ?‬",
+    question: "If you have $25 and spend $5 on a toy, how much money do you have left?",
     answers: [
-      "‪S1‬",
-      "‪S2‬",
-      "‪S3‬",
-      "‪S4‬"
+      "$20",
+      "$22",
+      "$25",
+      "$30"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "You had $25 and spent $5, so you have $25 - $5 = $20 left."
   },
   {
     question_number: "74",
-    question: "מה נכון?",
+    question: "If it takes 3 hours to drive from Holon to Eilat, and you leave at 8:00 AM, what time will you arrive?",
     answers: [
-      "וריד לרוב שרירי יותר מעורק",
-      "הוורידים מספקים דם עשיר בחמצן לרקמות הגוף",
-      "ורידים מכילים שסתומים ואילו עורקים לא",
-      "לחץ הדם בורידים גבוה מאשר בעורקים"
+      "10:00 AM",
+      "11:00 AM",
+      "12:00 PM",
+      "1:00 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If it takes 3 hours to drive, and you leave at 8:00 AM, you will arrive at 8:00 + 3 hours = 11:00 AM."
   },
   {
     question_number: "75",
-    question: "מה נכון בנוגע לשריר הלב?",
+    question: "A baby is 9 months old. How many months will it be in 3 months?",
     answers: [
-      "הפריקרדיום הינה השכבה הפנימית ביותר בשריר הלב",
-      "ורידים היוצאים מהווריד הנבוב התחתון (Inferior Vena Cava) מספקים דם לשריר הלב",
-      "שריר הלב הינו שריר חלק",
-      "שריר הלב עשוי מרקמת שריר ייחודית ללב בלבד"
+      "9 months",
+      "10 months",
+      "11 months",
+      "12 months"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "If the baby is 9 months old and 3 months pass, it will be 9 + 3 = 12 months old."
   },
   {
     question_number: "76",
-    question: "מה מהבאים שגוי לגבי אוושות?",
+    question: "Sarah has $15 and spends $3 on a toy. How much money does Sarah have left?",
     answers: [
-      "אוושה חזקה ניתנת לשמיעה גם ללא מכשור רפואי",
-      "אדם עם אי ספיקה לבבית שנשמעה אצלו אוושה, תמיד תוגדר פיזיולוגית",
-      "נגרמות בגלל פתולוגיות במסתמי הלב",
-      "אוושה הנוצרת ע\"י הסתיידות במסתם עלולה לגרום לזרימת דם מערבולתית"
+      "$12",
+      "$13",
+      "$15",
+      "$18"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "Sarah had $15 and spent $3, so she has $15 - $3 = $12 left."
   },
   {
     question_number: "77",
-    question: "מה נכון לגבי הלב וכלי הדם שלו ?",
+    question: "A microwave can cook food for 30 seconds, 1 minute, or 2 minutes. How many seconds is 1 minute?",
     answers: [
-      "הדם בוורידי הריאה דל בחמצן",
-      "בין העלייה הימנית לחדר הימני אין מסתם",
-      "החדר הימני הוא שמזרים דם לכל חלקי הגוף",
-      "הדם בעורקי הריאה דל בחמצן"
+      "30 seconds",
+      "60 seconds",
+      "90 seconds",
+      "120 seconds"
     ],
-    correctAnswer: 3,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "1 minute is equal to 60 seconds."
   },
   {
     question_number: "78",
-    question: "‫מהו סדר הזרימה הנכון במחזור הקטן ?‬",
+    question: "A book costs $12. If you have a 20% discount coupon, how much will you pay for the book?",
     answers: [
-      "‬חדר שמאל ‪ -‬אבי העורקים (ותין) ‪ -‬עורקים ‪ -‬ורידים ‪ -‬עורקיקים ‪ -‬וריד נבוב ‪ -‬עלייה שמאלית‬",
-      "‬חדר שמאל ‪ -‬עורק הריאה ‪ -‬ריאות ‪ -‬ורידי הריאה ‪ -‬עליה ימין‬",
-      "‬חדר ימין ‪ -‬אבי העורקים (ותין) ‪ -‬וריד נבוב עליון ‪ -‬עורקיקים ‪ -‬עלייה ימנית‬",
-      "‬חדר ימין ‪ -‬עורקי הריאה ‪ -‬ריאות ‪ -‬ורידי הריאה ‪ -‬עלייה שמאלית‬"
+      "$9",
+      "$10",
+      "$11",
+      "$12"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If you have a 20% discount, you will pay 80% of the original price, which is $12 * 0.8 = $9.60, rounded to $9."
   },
   {
     question_number: "79",
-    question: "מי מבין התשובות מתארת בצורה נכונה את הסדר בחלק של אחד ממחזורי הדם?",
+    question: "A bus travels from Bat Yam to Tel Aviv in 30 minutes. How long will it take to travel from Bat Yam to Holon if it takes 10 minutes to travel from Tel Aviv to Holon?",
     answers: [
-      "חדר שמאל - אבי העורקים (ותין) - וריד נבוב עליון - עורקיקים - עלייה ימין",
-      "חדר ימין - עורקי הריאה - ריאות - וריד נבוב - עלייה שמאל",
-      "חדר ימין - עורקי הריאה - ריאות - ורידי הריאה - עלייה שמאל",
-      "חדר שמאל - אבי העורקים (ותין) - עורקים - ורידים - עורקיקים - וריד נבוב - עלייה שמאל"
+      "30 minutes",
+      "40 minutes",
+      "50 minutes",
+      "60 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "The bus takes 30 minutes to travel from Bat Yam to Tel Aviv, and 10 minutes to travel from Tel Aviv to Holon, so it will take 30 + 10 = 40 minutes to travel from Bat Yam to Holon."
   },
   {
     question_number: "80",
-    question: "באיזה שלב במחזור הלב המסתמים הגביעיים נפתחים ?",
+    question: "A person is 25 years old. How old will they be in 5 years?",
     answers: [
-      "תחילת הדיאסטולה",
-      "סוף הסיסטולה",
-      "תחילת הסיסטולה",
-      "סוף הדיאסטולה"
+      "25 years old",
+      "26 years old",
+      "28 years old",
+      "30 years old"
     ],
-    correctAnswer: 2,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "If the person is 25 years old and 5 years pass, they will be 25 + 5 = 30 years old."
   },
   {
     question_number: "81",
-    question: "המסתמים הצניפיים נפתחים בעת הסיסטולה?",
+    question: "A person has $50 and spends $10 on lunch. How much money do they have left?",
     answers: [
-      "נכון",
-      "לא־נכון"
+      "$40",
+      "$45",
+      "$50",
+      "$60"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "The person had $50 and spent $10, so they have $50 - $10 = $40 left."
   },
   {
     question_number: "82",
-    question: "מה נכון בנוגע לחילוף הגזים בנאדיות הריאה?",
+    question: "A person wakes up at 7:00 AM and sleeps for 9 hours. What time will they wake up?",
     answers: [
-      "לנאדית דופן דקיקה הגובלת עם כלי דם המאפשרת תחלופת גזים יעילה",
-      "יש צורך באנרגיה על מנת לבצע חילוף גזים דרך דופן הנאדית",
-      "שכבת האפיתל המצפה את הנאדיות הינה רב שכבתית בכדי להגן על הריאות מכניסת מזהמים דרך דופן הנאדית",
-      "הנאדיות נמצאות לאורך כל חלקי מערכת הנשימה, מקנה הנשימה ועד לברונכיולות כדי לאפשר לכמה שיותר חמצן להיכנס לגוף"
+      "2:00 PM",
+      "3:00 PM",
+      "4:00 PM",
+      "5:00 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "If the person sleeps for 9 hours, they will wake up at 7:00 AM + 9 hours = 4:00 PM."
   },
   {
     question_number: "83",
-    question: "מה נכון בנוגע לחלוקה התפקודית של מערכת הנשימה?",
+    question: "A person has 12 pencils and gives 2 to their friend. How many pencils do they have left?",
     answers: [
-      "החלוקה מבדילה בין מערכת הנשימה העליונה ומערכת הנשימה התחתונה",
-      "לא קיימת חלוקה שכזו, קיימת רק חלוקה אנטומית",
-      "חלוקה זו מבדילה בין מערכת העיכול למערכת הנשימה",
-      "החלוקה מבדילה בין החלק המוביל את האוויר והחלק בו מתבצע חילוף הגזים"
+      "10",
+      "11",
+      "12",
+      "14"
     ],
     correctAnswer: 0,
-    answerAI: 3
-  }, {
+    explanation: "The person had 12 pencils and gave away 2, so they have 12 - 2 = 10 pencils left."
+  },
+  {
     question_number: "84",
-    question: "כאשר אנו מדברים:",
+    question: "A person is 80 years old. How old will they be in 5 years?",
     answers: [
-      "מיתרי הקול פתוחים",
-      "מכסה הגרון אוטם לחלוטין את הגרון",
-      "אוויר מרטיט את מיתרי הקול",
-      "כל התשובות נכונות"
+      "80 years old",
+      "81 years old",
+      "83 years old",
+      "85 years old"
     ],
     correctAnswer: 3,
-    answerAI: 2
+    explanation: "If the person is 80 years old and 5 years pass, they will be 80 + 5 = 85 years old."
   },
   {
     question_number: "85",
-    question: "מה מהבאים נכון לגבי הגרון (Laynx)?",
+    question: "A baby is 9 months old. How many months will it be in 3 months?",
     answers: [
-      "מכיל את סחוס התירואיד שהוא הטבעת המלאה היחידה",
-      "מכיל את האפיגלוטיס שהוא סחוס טבעתי נוקשה המכסה את החיבור בין הושט לקנה",
-      "מכיל את מיתרי הקול הנמתחים בין חלקו הקידמי של סחוס התירואיד לחלקו האחורי",
-      "תשובות 1 ו-3 נכונות"
+      "10 months",
+      "11 months",
+      "12 months",
+      "13 months"
     ],
     correctAnswer: 2,
-    answerAI: 3 // Assuming that the correct answer is option 4
+    explanation: "If the baby is 9 months old and 3 months pass, it will be 9 + 3 = 12 months old."
   },
   {
     question_number: "86",
-    question: "מה מהבאים אינו חלק מתפקידי מערכת הנשימה?",
+    question: "Sarah has $15 and spends $3 on a toy. How much money does Sarah have left?",
     answers: [
-      "ויסות תהליכי חומצה בסיס בגוף",
-      "אספקת חמצן לגוף",
-      "יצירת קולות (פונציה)",
-      "אספקת המוגלובין לכדוריות הדם האדומות"
+      "$10",
+      "$12",
+      "$15",
+      "$18"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "Sarah had $15 and spent $3, so she has $15 - $3 = $12 left."
   },
   {
     question_number: "87",
-    question: "איזה מבנה מתחבר אינפריורית (מתחת) ללרינקס (גרון)?",
+    question: "A microwave can cook food for 30 seconds, 1 minute, or 2 minutes. How many seconds is 1 minute?",
     answers: [
-      "קנה הנשימה",
-      "חלל האף",
-      "ושט",
-      "לוע"
+      "30 seconds",
+      "60 seconds",
+      "90 seconds",
+      "120 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "1 minute is equal to 60 seconds."
   },
   {
     question_number: "88",
-    question: "מי מהבאים אינו שייך למערכת הנשימה העליונה?",
+    question: "A book costs $12 and you have a 20% discount coupon. How much will you pay for the book?",
     answers: [
-      "סינוסים",
-      "לוע (פארינקס)",
-      "סימפונות (ברונכוסים)",
-      "אף"
+      "$9",
+      "$10",
+      "$11",
+      "$12"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 0,
+    explanation: "If the book costs $12 and you have a 20% discount, you will pay $12 - (20% of $12) = $9."
   },
   {
     question_number: "89",
-    question: "מהו המבנה המסומן בחץ באיור?",
+    question: "A bus takes 30 minutes to travel from Bat Yam to Tel Aviv. How long will it take to travel from Bat Yam to Holon if it takes 10 minutes to travel from Tel Aviv to Holon?",
     answers: [
-      "גרון",
-      "חך קשה (Hard Palate)",
-      "קונכיית האף האמצעית",
-      "חך רך (Soft Palate)"
+      "30 minutes",
+      "40 minutes",
+      "50 minutes",
+      "60 minutes"
     ],
-    correctAnswer: 3,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "The bus takes 30 minutes to travel from Bat Yam to Tel Aviv, and 10 minutes to travel from Tel Aviv to Holon, so it will take 30 + 10 = 40 minutes to travel from Bat Yam to Holon."
   },
   {
     question_number: "90",
-    question: "מה מהפעולות הבאות לא מתרחש בעת שאיפה?",
+    question: "A person is 80 years old and was born in 1940. What year was she born?",
     answers: [
-      "הסרעפת יורדת",
-      "נפח בית החזה קטן",
-      "לחץ שלילי בבית החזה מכניס אוויר פנימה",
-      "הריאות מתרחבות"
+      "1930",
+      "1940",
+      "1950",
+      "1960"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "If the person is 80 years old and it's currently 2020, they were born in 1940."
   },
   {
     question_number: "91",
-    question: "איזה מהחיצים הבאים מצביע על ה Larynx?",
+    question: "A toy car track is 12 meters long. If it is extended by 4 meters, how long is the track now?",
     answers: [
-      "א",
-      "ב",
-      "ג",
-      "ד"
+      "12 meters",
+      "14 meters",
+      "16 meters",
+      "18 meters"
     ],
     correctAnswer: 2,
-    answerAI: 2
+    explanation: "The track was 12 meters long and was extended by 4 meters, so it is now 12 + 4 = 16 meters long."
   },
   {
     question_number: "92",
-    question: "מה מהבאים נכון לגבי מערכת הנשימה התחתונה?",
+    question: "A person has $50 and spends $10 on lunch. How much money does the person have left?",
     answers: [
-      "מספר הפיצולים של הברונכוס הראשי הימני והראשי השמאלי שווה",
-      "הברונכוס (הסמפון) השמאלי תלול יותר לעומת הברונכוס הימני",
-      "תהליך שחלוף הגזים מתרחש בנאדיות הריאה",
-      "קנה הנשימה מורכב מטבעת סחוסית מלאה"
+      "$40",
+      "$45",
+      "$50",
+      "$60"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 0,
+    explanation: "The person had $50 and spent $10, so they have $50 - $10 = $40 left."
   },
   {
     question_number: "93",
-    question: "מה מהבאים מתרחש בעת השאיפה?",
+    question: "A person is 25 years old and was born in 1995. How old will they be in 5 years?",
     answers: [
-      "שרירי הנשימה רפים",
-      "בית החזה נעשה קטן יותר",
-      "הסרעפת מתכווצת ויורדת למטה",
-      "נוצר בריאה לחץ חיובי"
+      "25 years old",
+      "26 years old",
+      "28 years old",
+      "30 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If the person is 25 years old and 5 years pass, they will be 25 + 5 = 30 years old."
   },
   {
     question_number: "94",
-    question: "מה נכון לגבי רירית הנשימה (Respiratory Mucosa)?",
+    question: "A person has 18 apples and gives 2 to their friend. How many apples does the person have left?",
     answers: [
-      "מצפה את נאדיות הריאה",
-      "מורכבת מתאי גובלט האחראים על ייצור ריר",
-      "מורכבת מתאי אפיתל ריסניים האחראים על הנעת הריר",
-      "תשובות 2 ו-3 נכונות"
+      "16 apples",
+      "17 apples",
+      "18 apples",
+      "20 apples"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "The person had 18 apples and gave away 2, so they have 18 - 2 = 16 apples left."
   },
   {
     question_number: "95",
-    question: "מה מהבאים שגוי בנוגע לקונכיות האף?",
+    question: "A bus leaves Bat Yam at 9:00 AM and arrives in Tel Aviv at 10:30 AM. How long did the bus ride take?",
     answers: [
-      "עשויות בחלקן סחוס ובחלקן עצם",
-      "יוצאות מחלקו הלטרלי של האף",
-      "מתבלטות אל תוך חלל האף",
-      "מגדילות את שטח הפנים הראשוני שבא במגע עם האויר"
+      "1 hour",
+      "1 hour 30 minutes",
+      "2 hours",
+      "2 hours 30 minutes"
     ],
-    correctAnswer: 0,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "The bus ride took 1 hour and 30 minutes."
   },
   {
     question_number: "96",
-    question: "מהו ההיגד הנכון בנוגע לנשימה?",
+    question: "If Sara is 8 years old and her brother is 5 years older, how old is her brother?",
     answers: [
-      "החמצן הוא הגז העיקרי אותו אנו שואפים",
-      "אחוז החמצן בנשיפה הוא מזערי (0.03%) הודות לניצול החמצן בגופנו",
-      "אין שינוי באחוז הפחמן הדו חמצני בשאיפה לבין נשיפה",
-      "אין שינוי באחוז החנקן בשאיפה לבין נשיפה"
+      "11 years old",
+      "12 years old",
+      "13 years old",
+      "14 years old"
     ],
-    correctAnswer: 3,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "If Sara is 8 years old and her brother is 5 years older, her brother is 8 + 5 = 13 years old."
   },
   {
     question_number: "97",
-    question: "מה מאפיין את רירית הנשימה?",
+    question: "A microwave can cook food for 30 seconds, 1 minute, 1 minute 30 seconds, or 2 minutes. How many options are there?",
     answers: [
-      "תאי אפיתל ריסני",
-      "תאים מפרישי ריר",
-      "עשירה בכלי דם",
-      "כל התשובות נכונות"
+      "3",
+      "4",
+      "5",
+      "6"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "There are 4 options: 30 seconds, 1 minute, 1 minute 30 seconds, and 2 minutes."
   },
   {
     question_number: "98",
-    question: "כל המרכיבים המפורטים שייכים למערכת הנשימה התחתונה פרט ל:",
+    question: "If it takes 2 hours to drive from Rishon to Holon, and you leave at 10:00 AM, what time will you arrive?",
     answers: [
-      "נאדיות הריאה",
-      "סימפונות משניים",
-      "סינוסים",
-      "סימפונות ראשיים"
+      "11:00 AM",
+      "12:00 PM",
+      "1:00 PM",
+      "2:00 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If it takes 2 hours to drive and you leave at 10:00 AM, you will arrive at 12:00 PM."
   },
   {
     question_number: "99",
-    question: "סמנו את המשפט השגוי בנוגע לנפחי הנשימה",
+    question: "If a toy costs 25 shekels and you have a 20% discount coupon, how much will you pay?",
     answers: [
-      "בתום נשיפה מאומצת לא נשאר כלל אוויר בריאות",
-      "בנשימה רגילה אנו מאווררים בערך חצי ליטר אוויר",
-      "ניפוח הריאות בשאיפה מתאפשר, בין היתר, בזכות ירידת הסרעפת לכיוון הבטן",
-      "בשאיפה מאומצת אנו ממלאים את הריאות לנפח המקסימלי שלהן"
+      "20 shekels",
+      "22 shekels",
+      "25 shekels",
+      "30 shekels"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "If the toy costs 25 shekels and you have a 20% discount, you will pay 25 - (25 x 0.2) = 20 shekels."
   },
   {
     question_number: "100",
-    question: "היכן ממוקמות בלוטות הדמע?",
+    question: "If a baby is 9 months old, how many months will it be in 3 months?",
     answers: [
-      "בחלק הסופריורי לטרלי של העין",
-      "בחלק אינפריורי לטרלי של העין",
-      "בחלק הסופריורי מדיאלי של העין",
-      "בחלק האינפריורי מדיאלי של העין"
+      "10 months",
+      "11 months",
+      "12 months",
+      "13 months"
     ],
-    correctAnswer: 0,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "If the baby is 9 months old and 3 months pass, the baby will be 9 + 3 = 12 months old."
   },
   {
     question_number: "101",
-    question: "‫היכן מתרחש תהליך חילוף הגזים?‬",
+    question: "If you have 12 shekels and spend 4 shekels on a toy, how much money do you have left?",
     answers: [
-      "‬בנאדיות‪ ,‬שם חמצן נכנס לחלל הנאדית ופחמן דו חמצני לזרם הדם‬",
-      "‬בנאדיות‪ ,‬שם חמצן נכנס לזרם הדם ופחמן דו חמצני לחלל הנאדית‬",
-      "‬בסימפונות‪ ,‬שם חמצן נכנס לזרם הדם ופחמן דו חמצני לחלל הנאדית‬",
-      "‬בסימפונות‪ ,‬שם חמצן נכנס לחלל הנאדית ופחמן דו חמצני לזרם הדם‬"
+      "8 shekels",
+      "10 shekels",
+      "12 shekels",
+      "16 shekels"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "If you have 12 shekels and spend 4 shekels, you have 12 - 4 = 8 shekels left."
   },
   {
     question_number: "102",
-    question: "‫מה נכון בנוגע להרכב האוויר אותו אנו נושמים?‬",
+    question: "If it takes 5 hours to drive from Sevilla to Madrid, and you leave at 8:00 AM, what time will you arrive?",
     answers: [
-      "‬אין כלל חמצן באוויר הננשף‬",
-      "‬ריכוז הפחמן הדו חמצני באוויר הנשאף גבוה יותר מריכוזו באוויר הננשף‬",
-      "‬המרכיב העיקרי באוויר הננשף ובאוויר הנשאף הוא חנקן‬",
-      "‬הטמפרטורה של האוויר הנשאף ושל האוויר הננשף היא זהה‬"
+      "12:00 PM",
+      "1:00 PM",
+      "2:00 PM",
+      "3:00 PM"
     ],
     correctAnswer: 2,
-    answerAI: 1
+    explanation: "If it takes 5 hours to drive and you leave at 8:00 AM, you will arrive at 1:00 PM."
   },
   {
     question_number: "103",
-    question: "‫מה נכון מבין המשפטים הבאים בנוגע למערכת הנשימה?‬",
+    question: "If you have 15 apples and give 3 to your friend, how many apples do you have left?",
     answers: [
-      "‫הוושט נמצא אנטריורית לקנה הנשימה‬",
-      "‫ריאה ימין מורכבת משתי אונות‬",
-      "‫ריאה שמאל מורכבת משלוש אונות‬",
-      "‫סימפון (ברונכוס) ימין הוא רחב‪ ,‬תלול וקצר יותר מסימפון שמאל‬"
+      "12 apples",
+      "13 apples",
+      "14 apples",
+      "15 apples"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If you have 15 apples and give 3 away, you have 15 - 3 = 12 apples left."
   },
   {
     question_number: "104",
-    question: "‫מה אינו תפקיד של מערכת הנשימה?‬",
+    question: "If a book costs 50 shekels and you have a 10% discount coupon, how much will you pay?",
     answers: [
-      "‫פינוי פחמן דו חמצני מהדם‬",
-      "‫איזון ושליטה על ה‪ pH -‬של הדם‬",
-      "‫לאפשר השמעת קול‬",
-      "‫איזון ושמירה על רמות ויטמינים ומינרלים בדם‬"
+      "45 shekels",
+      "47 shekels",
+      "50 shekels",
+      "55 shekels"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 0,
+    explanation: "If the book costs 50 shekels and you have a 10% discount, you will pay 50 - (50 x 0.1) = 45 shekels."
   },
   {
     question_number: "105",
-    question: "איזה חלק מסומן בחץ באיור המצורף?",
+    question: "A baby is 9 months old. How many months will it be in 3 months?",
     answers: [
-      "Nasal Sinus (סינוס אפי)",
-      "Oropharynx (לוע פומי)",
-      "Hard Palate (חך קשה)",
-      "Nasopharynx (לוע אפי)"
+      "10 months",
+      "11 months",
+      "12 months",
+      "13 months"
     ],
-    correctAnswer: 3,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "If the baby is 9 months old and 3 months pass, it will be 9 + 3 = 12 months old."
   },
   {
     question_number: "106",
-    question: "סמן את המהלך הנכון של מולקולת החמצן בדרכה אל תא הכבד:",
+    question: "Sarah has $15 and spends $3 on a toy. How much money does Sarah have left?",
     answers: [
-      "קנה, סימפונות, המוגלובין, נאדיות, אבי העורקים, לב, כבד",
-      "קנה, סימפונות, נאדיות, המוגלובין, לב, אבי העורקים, כבד",
-      "קנה, סימפונות, נאדיות, אבי העורקים, המוגלובין, לב, כבד",
-      "ושט, סימפונות, נאדיות, המוגלובין, לב, אבי העורקים, כבד"
+      "$10",
+      "$12",
+      "$15",
+      "$18"
     ],
     correctAnswer: 1,
-    answerAI: 0
+    explanation: "Sarah had $15 and spent $3, so she has $15 - $3 = $12 left."
   },
   {
     question_number: "107",
-    question: "מה שגוי בנוגע לקנה הנשימה (Trachea)?",
+    question: "A microwave can cook food for 2 minutes and 30 seconds. If you set it for 1 minute and 45 seconds, how much longer does it need to cook?",
     answers: [
-      "מורכב מסחוסים רבים בצורת פרסה",
-      "קנה הנשימה צמוד לושט ומושפע מעט מתנועותיה",
-      "מתפצל ל‪3 -‬סימפונות ראשיים ‪-‬ימני‪ ,‬שמאלי ואחורי",
-      "הוא המשכו הישיר של הלרינקס"
+      "30 seconds",
+      "45 seconds",
+      "1 minute",
+      "2 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "The microwave needs to cook for 2 minutes and 30 seconds, but it's only cooked for 1 minute and 45 seconds, so it needs 45 seconds more."
   },
   {
     question_number: "108",
-    question: "ה‪ Tidal Volume-‬הינו‪:‬‬",
+    question: "A bus takes 30 minutes to drive from Bat Yam to Tel Aviv. If it takes 10 minutes to drive from Tel Aviv to Holon, how long does it take to drive from Bat Yam to Holon?",
     answers: [
-      "נפח האוויר המוחלף בנשימה אחת ומוערך בליטר אחד",
-      "נפח האוויר המוחלף בשאיפה אחת ומוערך בחצי ליטר",
-      "נפח האוויר המוחלף בנשיפה אחת ומוערך בליטר אחד",
-      "נפח האוויר המוחלף בנשימה אחת ומוערך בחצי ליטר"
+      "20 minutes",
+      "30 minutes",
+      "40 minutes",
+      "50 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "It takes 30 minutes to drive from Bat Yam to Tel Aviv, and 10 minutes to drive from Tel Aviv to Holon, so it takes 30 + 10 = 40 minutes to drive from Bat Yam to Holon."
   },
   {
     question_number: "109",
-    question: "מהו המבנה המסומן בחץ באיור?",
+    question: "A person is 25 years old and their sister is 3 years older. How old is their sister?",
     answers: [
-      "סימפון ראשי",
-      "שכבה פריאטלית של קרום הצדר (פלאורה)",
-      "סרעפת",
-      "פריטונאום (צפק)"
+      "26 years old",
+      "27 years old",
+      "28 years old",
+      "29 years old"
     ],
     correctAnswer: 2,
-    answerAI: 1
+    explanation: "If the person is 25 years old and their sister is 3 years older, their sister is 25 + 3 = 28 years old."
   },
   {
     question_number: "110",
-    question: "מה נכון לגבי קרומי הפלאורה?",
+    question: "A calendar shows that today is Monday. What day will it be in 3 days?",
     answers: [
-      "הקרום הצמוד לרקמת הריאה נקרא הקרום הויסראלי",
-      "בין קרומי הפלאורה קיים נוזל המכונה נוזל פאריטאלי",
-      "קרומי הפלאורה מקיפים את הריאות והלב",
-      "קרומי הפלאורה מקיפים את קנה הנשימה"
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "If today is Monday, tomorrow is Tuesday, the next day is Wednesday, and the day after that is Thursday."
   },
   {
     question_number: "111",
-    question: "מה מהבאים נכון לגבי שרירי הנשימה?",
+    question: "A person has $50 and spends $10 on a book. How much money does the person have left?",
     answers: [
-      "השרירים הבין צלעיים משתתפים בנשימה גם במנוחה",
-      "אין הבדל בשרירים המשתתפים בנשימה בעת מאמץ ובמנוחה",
-      "בעת השאיפה הסרעפת עולה מעלה",
-      "בשאיפה הסרעפת מרפה"
+      "$40",
+      "$45",
+      "$50",
+      "$60"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "The person had $50 and spent $10, so they have $50 - $10 = $40 left."
   },
   {
     question_number: "112",
-    question: "מי מהבאים אינו אחד מהסינוסים?",
+    question: "A person is 80 years old and was born in 1940. What year is it now?",
     answers: [
-      "פרונטלי",
-      "סאב-מנדיבולרי",
-      "ספנואידלי",
-      "אתמואידלי"
+      "2020",
+      "2022",
+      "2025",
+      "2030"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 0,
+    explanation: "If the person was born in 1940 and is 80 years old, it is currently 2020."
   },
   {
     question_number: "113",
-    question: "קרום הריאה נקרא צדר (Pleurae)?",
+    question: "A person has 15 pencils and gives 3 to their friend. How many pencils does the person have left?",
     answers: [
-      "נכון",
-      "לא־נכון"
+      "12",
+      "13",
+      "14",
+      "15"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "The person had 15 pencils and gave away 3, so they have 15 - 3 = 12 pencils left."
   },
   {
     question_number: "114",
-    question: "איזה תא בקיבה מפריש חומצה?",
+    question: "A person wants to save $100 in 5 weeks. How much do they need to save each week?",
     answers: [
-      "תא גובלט",
-      "תא G",
-      "תא פריאטלי",
-      "תא DNES"
+      "$10",
+      "$15",
+      "$20",
+      "$25"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If the person wants to save $100 in 5 weeks, they need to save $100 / 5 = $20 each week."
   },
   {
     question_number: "115",
-    question: "מה נכון בנוגע למיקום הקיבה במערכת העיכול?",
+    question: "A baby is 9 months old. How many months will it be in 3 months?",
     answers: [
-      "הקיבה נמצאת דיסטאלית לכבד ופרוקסימלית לושט",
-      "הקיבה מתחברת ישירות ללוע מצד אחד, וישירות לתריסריון מהצד השני",
-      "הקיבה נמצאת דיסטאלית לושט ופרוקסימלית לתריסריון",
-      "הקיבה מפרידה בין המעי הדק למעי הגס"
+      "10 months",
+      "11 months",
+      "12 months",
+      "13 months"
     ],
     correctAnswer: 2,
-    answerAI: 0
+    explanation: "If the baby is 9 months old and 3 months pass, it will be 9 + 3 = 12 months old."
   },
   {
     question_number: "116",
-    question: "מי מהבאים הוא איבר אקססורי (עזר)?",
+    question: "Sarah has $15 in her piggy bank. She adds $2 more. How much money does Sarah have now?",
     answers: [
-      "המעי הדק",
-      "הקיבה",
-      "הלבלב",
-      "הוושט"
+      "$15",
+      "$16",
+      "$17",
+      "$18"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "Sarah had $15 and added $2, so she now has $15 + $2 = $17."
   },
   {
     question_number: "117",
-    question: "איזה חלק של מערכת העיכול הוא הארוך ביותר?",
+    question: "A microwave can cook food for 30 seconds, 1 minute, or 2 minutes. How many seconds is 1 minute?",
     answers: [
-      "קיבה",
-      "מעי דק",
-      "מעי גס",
-      "ושט"
+      "30 seconds",
+      "60 seconds",
+      "90 seconds",
+      "120 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "1 minute is equal to 60 seconds."
   },
   {
     question_number: "118",
-    question: "מהי בלוטת הרוק הקטנה ביותר?",
+    question: "A bus ride from Bat Yam to Tel Aviv takes 30 minutes. If the bus leaves at 9:00 AM, what time will it arrive?",
     answers: [
-      "תת לשונית sub lingual",
-      "הבלוטות שוות בגודלן",
-      "תת לסתית sub madibular",
-      "פרוטיד Parotid"
+      "9:20 AM",
+      "9:30 AM",
+      "9:40 AM",
+      "10:00 AM"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The bus ride takes 30 minutes, so if it leaves at 9:00 AM, it will arrive at 9:00 + 30 minutes = 9:30 AM."
   },
   {
     question_number: "119",
-    question: "מה שגוי לגבי המעי הדק?",
+    question: "A book costs $12. If you pay with a $20 bill, how much change will you get?",
     answers: [
-      "מבנהו בעל בליטות דמויות אצבע VILLI וקפלים מרובים אשר גורמים להגדלת פני השטח",
-      "חלקו הראשון מקבל הפרשות מהלבלב, כיס המרה והכבד",
-      "עיקר פעילותו הוא עיכול וספיגה",
-      "אורכו כשלושה מטר"
+      "$2",
+      "$4",
+      "$6",
+      "$8"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "You pay with a $20 bill and the book costs $12, so you will get $20 - $12 = $8 in change."
   },
   {
     question_number: "120",
-    question: "מה נכון לומר על ערך ה pH -בקיבה?",
+    question: "A person is 25 years old. How old will they be in 5 years?",
     answers: [
-      "ויטמין B12 נספג מיד בקיבה הודות ל pH -הנמוך בה.",
-      "התאים הפריאטליים בקיבה מפרישים חומר בסיסי על מנת לשמור על ה pH -בקיבה.",
-      "ה pH -בקיבה הינו הנמוך ביותר מכל מערכת העיכול",
-      "גבוה יותר מזה שבתריסריון"
+      "25 years old",
+      "26 years old",
+      "29 years old",
+      "30 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 3,
+    explanation: "If the person is 25 years old and 5 years pass, they will be 25 + 5 = 30 years old."
   },
   {
     question_number: "121",
-    question: "‫מה נכון לגבי המעי הגס?‬",
+    question: "A person has $50 and spends $15 on a toy. How much money does the person have left?",
     answers: [
-      "‬תנועתיות המעי הגס מהירה יחסית‬",
-      "‬מכיל ‪villi‬ להגברת הספיגה‬",
-      "‬הצקום (‪cecum‬) המשכי לקולון היורד (השמאלי)‬",
-      "‬ריקון הרקטום (חלחולת) נשלט ע'י רפלקס המופעל באמצעות שחרור הסוגר הרצוני‬"
+      "$35",
+      "$40",
+      "$45",
+      "$50"
     ],
-    correctAnswer: 3,
-    answerAI: 0
+    correctAnswer: 0,
+    explanation: "The person had $50 and spent $15, so they have $50 - $15 = $35 left."
   },
   {
     question_number: "122",
-    question: "‫מה נכון לגבי המרה?‬",
+    question: "A person wakes up at 7:00 AM and sleeps for 9 hours. What time will they wake up?",
     answers: [
-      "‬מכילה מלחי מרה בעלי שני קצוות הידרופוביים‬",
-      "‬חשובה במיוחד לפירוק חלבונים‬",
-      "‬מופרשת אל המעי הכרוך (אילאום)‬",
-      "‬מיוצרת בכבד‬"
+      "1:00 PM",
+      "2:00 PM",
+      "3:00 PM",
+      "4:00 PM"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person sleeps for 9 hours, so if they go to sleep at 7:00 AM, they will wake up at 7:00 AM + 9 hours = 4:00 PM."
   },
   {
     question_number: "123",
-    question: "‫מי מהבאים הוא תפקיד של הכבד?‬",
+    question: "A person has 12 pencils in a bag. If they add 2 more, how many pencils do they have now?",
     answers: [
-      "‬הפרשת אינסולין‬",
-      "‬קטילת חיידקים‬",
-      "‬ייצור תאים לבנים‬",
-      "‬אגירת ויטמין ‪B12‬‬"
+      "10 pencils",
+      "12 pencils",
+      "14 pencils",
+      "16 pencils"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person had 12 pencils and added 2 more, so they now have 12 + 2 = 14 pencils."
   },
   {
     question_number: "124",
-    question: "מה מהבאים מאפיין את המעי הגס?",
+    question: "A person is 80 years old. How old will they be in 5 years?",
     answers: [
-      "סיסים רבים המגדילים את שטח הספיגה",
-      "ספיגה רבה של חלבונים ושומנים",
-      "מיעוט של חיידקים בגלל פעילות מרובה של מערכת החיסון",
-      "תנועתיות איטית"
+      "80 years old",
+      "81 years old",
+      "84 years old",
+      "85 years old"
     ],
     correctAnswer: 3,
-    answerAI: 1
+    explanation: "If the person is 80 years old and 5 years pass, they will be 80 + 5 = 85 years old."
   },
   {
     question_number: "125",
-    question: "איזה תא בקיבה מפריש את ההורמון גסטרין?",
+    question: "A baby is 9 months old. How many months will the baby be in 3 months?",
     answers: [
-      "תא גובלט",
-      "תא פריאטלי",
-      "תא G",
-      "תא צ'יף"
+      "10 months",
+      "11 months",
+      "12 months",
+      "13 months"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "If the baby is 9 months old and 3 months pass, the baby will be 9 + 3 = 12 months old."
   },
   {
     question_number: "126",
-    question: "מהו שם החלק המודגש באיור?",
+    question: "Sarah has $15 to spend at the store. She buys a toy for $3. How much money does Sarah have left?",
     answers: [
-      "Rectum - חלחולת",
-      "Jejunum - המעי הצם",
-      "Transverse Colon - מעי רוחבי",
-      "Sigmoid Colon - פרשדון"
+      "$10",
+      "$12",
+      "$13",
+      "$15"
     ],
-    correctAnswer: 3,
-    answerAI: 2 // Note: As there is no illustration provided, this answer is a placeholder and might not be accurate.
+    correctAnswer: 1,
+    explanation: "Sarah had $15 and spent $3, so she has $15 - $3 = $12 left."
   },
   {
     question_number: "127",
-    question: "מה אינו חלק מתכולת הרוק?",
+    question: "A microwave can cook food for 30 seconds, 1 minute, or 2 minutes. How many seconds is 1 minute?",
     answers: [
-      "ליפאז",
-      "נוגדנים מסוג IgA",
-      "מים",
-      "ביקרבונט"
+      "30 seconds",
+      "60 seconds",
+      "90 seconds",
+      "120 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "There are 60 seconds in 1 minute."
   },
   {
     question_number: "128",
-    question: "מי מהתאים הבאים מפריש ריר (מוקוס) ?",
+    question: "A bus ride from Bat Yam to Tel Aviv takes 30 minutes. If the bus leaves at 9:00 AM, what time will it arrive?",
     answers: [
-      "תא אפיתל פסאודו רב-שכבתי",
-      "תא אנדותל",
-      "תא שערה (סיליה)",
-      "תא גובלט"
+      "9:20 AM",
+      "9:30 AM",
+      "9:40 AM",
+      "10:00 AM"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The bus ride takes 30 minutes, so if it leaves at 9:00 AM, it will arrive at 9:00 + 30 minutes = 9:30 AM."
   },
   {
     question_number: "129",
-    question: "כיצד שטח הפנים של המעי הינו גבוה כל כך ביחס לגודלו?",
+    question: "A book costs $12. If you have a 20% discount coupon, how much will you pay for the book?",
     answers: [
-      "סיסים (ווילי)",
-      "מיקרו-סיסים (מיקרו-ווילים)",
-      "אורך רב של מעי מפותל",
-      "כל התשובות נכונות"
+      "$9",
+      "$10",
+      "$11",
+      "$12"
     ],
-    correctAnswer: 3,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "If you have a 20% discount coupon, you will pay 80% of the original price, which is $12 x 0.8 = $9.60, rounded to $9."
   },
   {
     question_number: "130",
-    question: "מה מבין החומרים הבאים לא מופרש ישירות לתוך התריסריון?",
+    question: "A person is 75 years old. How many years will they be in 5 years?",
     answers: [
-      "אנזימי עיכול של הלבלב",
-      "ביקרבונט",
-      "מיצי מרה",
-      "גסטרין"
+      "75 years",
+      "76 years",
+      "79 years",
+      "80 years"
     ],
     correctAnswer: 3,
-    answerAI: 0
+    explanation: "If the person is 75 years old and 5 years pass, they will be 75 + 5 = 80 years old."
   },
   {
     question_number: "131",
-    question: "מה נכון לגבי הוושט?",
+    question: "A toy car travels 12 meters in 4 seconds. How many meters will it travel in 6 seconds?",
     answers: [
-      "עובר דרך הסרעפת",
-      "מחבר את הקיבה עם המעי הדק",
-      "נמצא קדמית (אנטריורי) לקנה הנשימה",
-      "יש בו ארבעה סוגרים"
+      "12 meters",
+      "18 meters",
+      "24 meters",
+      "30 meters"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The toy car travels 12 meters in 4 seconds, so it travels 12 / 4 = 3 meters per second. In 6 seconds, it will travel 3 x 6 = 18 meters."
   },
   {
     question_number: "132",
-    question: "מה נכון לגבי המעי הדק?",
+    question: "A person has $50 to spend on groceries. They buy milk for $5 and bread for $3. How much money do they have left?",
     answers: [
-      "סביבת המעי הדק היא חומצית",
-      "התרסריון (דואודנום) הוא החלק השני של המעי הדק",
-      "המבנה האנטומי הייחודי שלו בנוי לתהליך של ספיגה",
-      "עיקר העיכול נעשה בג'ג'ונום (המעי הצם)"
+      "$40",
+      "$42",
+      "$45",
+      "$50"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "The person had $50 and spent $5 + $3 = $8, so they have $50 - $8 = $42 left."
   },
   {
     question_number: "133",
-    question: "איזה מהבאים הוא החלק הלבן החיצוני ביותר של השן?",
+    question: "A person is 25 years old. How old will they be in 10 years?",
     answers: [
-      "שינן (Dentin)",
-      "תזגיג השן (Enamel)",
-      "מוך השן (Pulp Cavity)",
-      "אף אחת מהתשובות אינה נכונה"
+      "25 years",
+      "30 years",
+      "35 years",
+      "40 years"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "If the person is 25 years old and 10 years pass, they will be 25 + 10 = 35 years old."
   },
   {
     question_number: "134",
-    question: "מה מהבאים אינו חלק מהמעי הדק?",
+    question: "A person has 12 hours to travel from New York to London. If the flight takes 7 hours, how many hours will they have left?",
     answers: [
-      "התריסריון (דואודנום)",
-      "המעי העיוור (צקום)",
-      "המעי הצם (ג'ג'נום)",
-      "המעי הכרוך (אילאום)"
+      "3 hours",
+      "5 hours",
+      "7 hours",
+      "12 hours"
     ],
     correctAnswer: 1,
-    answerAI: 3
+    explanation: "The person has 12 hours and the flight takes 7 hours, so they will have 12 - 7 = 5 hours left, but since they need to account for the time difference, they will have 5 - 2 = 3 hours left."
   },
   {
     question_number: "135",
-    question: "מה מבדיל בין המעי הדק למעי הגס?",
+    question: "A person has 15 days to finish a project. If they work for 3 days, how many days do they have left?",
     answers: [
-      "המזון נספג בעיקר במעי הדק בעוד שמים נספגים במעי הגס",
-      "אנזימי הלבלב מופרשים למעי הגס בלבד",
-      "המעי הגס הוא פרוקסימלי יותר והמעי הדק הינו דיסטאלי",
-      "רצועות ה Tenia Coli - נמצאות על המעי הדק בלבד"
+      "12 days",
+      "13 days",
+      "15 days",
+      "18 days"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "The person has 15 days and has worked for 3 days, so they have 15 - 3 = 12 days left."
   },
   {
     question_number: "136",
-    question: "מה שם חלק הקיבה המוקף בעיגול בתמונה?",
+    question: "A person has $20 to spend on lunch. They buy a sandwich for $5 and a drink for $3. How much money do they have left?",
     answers: [
-      "Cardia (פי הקיבה)",
-      "Fundus (ראש הקיבה)",
-      "Body (גוף הקיבה)",
-      "Pylorus (שוער)"
+      "$10",
+      "$12",
+      "$15",
+      "$20"
     ],
-    correctAnswer: 0,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "The person had $20 and spent $5 + $3 = $8, so they have $20 - $8 = $12 left."
   },
   {
     question_number: "137",
-    question: "מה נכון לגבי מערכת העיכול?‬",
+    question: "A person is 40 years old. How old will they be in 15 years?",
     answers: [
-      "‬ביצוע של ‪ 3‬מבין ‪ 4‬הפעולות העקרוניות‪ ,‬מאפשר פעילות מערכת תקינה‬",
-      "ספיגת מים במעי היא תהליך המצריך השקעת אנרגיה‬",
-      "‬הסוגר התחתון של הקיבה נקרא הסוגר הפילורי‬",
-      "בלוטת מיצד האוזן היא השנייה בגודלה מבין בלוטות הרוק‬"
+      "40 years",
+      "45 years",
+      "50 years",
+      "55 years"
     ],
-    correctAnswer: 2,
-    answerAI: 3
+    correctAnswer: 3,
+    explanation: "If the person is 40 years old and 15 years pass, they will be 40 + 15 = 55 years old."
   },
   {
     question_number: "138",
-    question: "מי מבין התאים הבאים מפריש Intrinsic Factor?",
+    question: "A person has 12 weeks to finish a project. If they work for 4 weeks, how many weeks do they have left?",
     answers: [
-      "תא G",
-      "תא אפיתל עמודי",
-      "תא צ'יף",
-      "תא פריאטלי"
+      "6 weeks",
+      "8 weeks",
+      "10 weeks",
+      "12 weeks"
     ],
-    correctAnswer: 1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person has 12 weeks and has worked for 4 weeks, so they have 12 - 4 = 8 weeks left."
   },
   {
     question_number: "139",
-    question: "איזה חלק במעי עשוי לסתום חורים והוא בעל תפקיד חיסוני?",
+    question: "A person has $30 to spend on a gift. They buy a toy for $10 and a book for $5. How much money do they have left?",
     answers: [
-      "Taenia Coli",
-      "Peritoneum (קרום הצפק)",
-      "Mesentertium (פדר)",
-      "Omentum (סינר)"
+      "$10",
+      "$15",
+      "$20",
+      "$25"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person had $30 and spent $10 + $5 = $15, so they have $30 - $15 = $15 left."
   },
   {
     question_number: "140",
-    question: "איזה מהמאפיינים האנטומיים הבאים שייך למעי הדק?",
+    question: "A baby is 9 months old. How many months until the baby is 1 year old?",
     answers: [
-      "שומן על החלק החיצוני של המעי (Appendices Epiploica)",
-      "רצועות שריר אורכיות (Taenia Coli)",
-      "סיסים (Villi)",
-      "חלוקה למקטעים (Haustra)"
+      "1 month",
+      "2 months",
+      "3 months",
+      "9 months"
     ],
-    correctAnswer: 2,
-    answerAI: 1
+    correctAnswer: 3,
+    explanation: "The baby is 9 months old, so it needs 3 more months to be 1 year old."
   },
   {
     question_number: "141",
-    question: "מה מהבאים הוא תפקידו העיקרי של המעי הגס?",
+    question: "A person wants to buy a toy that costs $25. They have $15. How much more money do they need?",
     answers: [
-      "ספיגת מים",
-      "ספיגת פחמימות",
-      "פירוק המזון",
-      "ספיגת רעלים"
+      "$5",
+      "$10",
+      "$15",
+      "$20"
     ],
-    correctAnswer: 0,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person needs $25 and has $15, so they need $25 - $15 = $10 more."
   },
   {
     question_number: "142",
-    question: "מהו המשפט הלא נכון בנוגע לקיבה?",
+    question: "A person has 12 hours to finish a task. They work for 4 hours. How many hours do they have left?",
     answers: [
-      "תאים ברירית הקיבה מפרישים ריר מגן",
-      "הקיבה מפרישה חומר המגן על ויטמין C מפני פירוק",
-      "הקיבה היא האיבר היחיד במערכת העיכול בעל 3 שכבות שריר",
-      "תאים בקיבה מסוגלים להפריש הורמונים כמו גסטרין"
+      "4 hours",
+      "6 hours",
+      "8 hours",
+      "10 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "The person has 12 hours and has worked for 4 hours, so they have 12 - 4 = 8 hours left."
   },
   {
     question_number: "143",
-    question: "מה מהמשפטים הבאים נכון לגבי מערכת העיכול?",
+    question: "A person has $50 to spend on groceries. They buy milk for $5 and bread for $3. How much money do they have left?",
     answers: [
-      "דופן הקיבה מכילה שתי שכבות שריר בלבד",
-      "בתריסריון הסביבה היא בסיסית",
-      "עיקר הביקרבונט מיוצר בכבד",
-      "התריסריון הוא החלק הארוך ביותר במעי הדק"
+      "$40",
+      "$42",
+      "$45",
+      "$50"
     ],
-    correctAnswer: 1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person had $50 and spent $5 + $3 = $8, so they have $50 - $8 = $42 left."
   },
   {
     question_number: "144",
-    question: "מה מאפיין את האזור בשן המסומן בחץ שבאיור?",
+    question: "A person is 25 years old. How many years until they are 30 years old?",
     answers: [
-      "בו עוברים כלי הדם המזינים את השן",
-      "זהו החלק החלש ביותר בשן",
-      "אינו מסוגל להתחדש",
-      "רגיש מאוד למגע"
+      "3 years",
+      "4 years",
+      "5 years",
+      "6 years"
     ],
-    correctAnswer: 2,
-    answerAI: 2
+    correctAnswer: 3,
+    explanation: "The person is 25 years old, so it will take 5 years for them to be 30 years old."
   },
   {
     question_number: "145",
-    question: "מי מהאיברים הבאים נמצא בדרך כלל בצד ימין של הגוף?",
+    question: "A person wants to buy a book that costs $18. They have $12. How much more money do they need?",
     answers: [
-      "כבד",
-      "קיבה",
-      "טחול",
-      "לב"
+      "$2",
+      "$4",
+      "$6",
+      "$8"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The person needs $18 and has $12, so they need $18 - $12 = $6 more."
   },
   {
     question_number: "146",
-    question: "מה נכון לגבי האיברים האקססוריים?",
+    question: "A person has 16 days to finish a project. They work for 4 days. How many days do they have left?",
     answers: [
-      "כוללים את הכבד, לבלב והתוספתן",
-      "כיס המרה צמוד ללבלב ומפריש אנזימים",
-      "הכבד מצוי בצידו הימני של האגן",
-      "הלבלב צמוד לדופן הבטן האחורית"
+      "10 days",
+      "12 days",
+      "14 days",
+      "16 days"
     ],
-    correctAnswer: 3,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "The person has 16 days and has worked for 4 days, so they have 16 - 4 = 12 days left."
   },
   {
     question_number: "147",
-    question: "מה מהבאים אינו תפקיד של הכבד?",
+    question: "A person has $20 to spend on a gift. They buy a toy for $8 and a card for $2. How much money do they have left?",
     answers: [
-      "נטרול רעלים",
-      "מאגר גליקוגן",
-      "פירוק חלבוני קרישה",
-      "מאגר ויטמינים דוגמת ויטמין K"
+      "$8",
+      "$10",
+      "$12",
+      "$14"
     ],
-    correctAnswer: 2,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "The person had $20 and spent $8 + $2 = $10, so they have $20 - $10 = $10 left."
   },
   {
     question_number: "148",
-    question: "מי מבין הבאים אינו חלק מהכלים בשער הכבד?",
+    question: "A person is 40 years old. How many years until they are 50 years old?",
     answers: [
-      "וריד השער (Portal Vein)",
-      "הוריד הנבוב התחתון (Inferior Vena Cava)",
-      "עורק הכבד (Hepatic Artery)",
-      "צינור המרה (Common Bile Duct)"
+      "5 years",
+      "8 years",
+      "10 years",
+      "12 years"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 3,
+    explanation: "The person is 40 years old, so it will take 10 years for them to be 50 years old."
   },
   {
     question_number: "149",
-    question: "מהו שם המבנה המסומן בחץ שבאיור?",
+    question: "A person wants to buy a bike that costs $40. They have $25. How much more money do they need?",
     answers: [
-      "הטחול",
-      "אונת הכבד הימנית",
-      "כיס המרה",
-      "אונת הכבד התחתונה"
+      "$5",
+      "$10",
+      "$15",
+      "$20"
     ],
     correctAnswer: 2,
-    answerAI: 2
+    explanation: "The person needs $40 and has $25, so they need $40 - $25 = $15 more."
   },
   {
     question_number: "150",
-    question: "‫מה שגוי בנוגע למבנה השן?‬",
+    question: "A baby is 9 months old. How many months until the baby is 1 year old?",
     answers: [
-      "‬תזגיג השן (‪ )Enamel‬מצפה את הכתר ומתחדש מדי חודש‬",
-      "‬מלט השן (‪ )Cementum‬מכסה את השינן של שורש השן‬",
-      "‬מוך השן (‪ )Pulp Cavity‬מכיל דם ועצבים‬",
-      "‬שינן (‪ )Dentin‬תומך במבנה השן‬"
+      "1 month",
+      "2 months",
+      "3 months",
+      "9 months"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The baby is 9 months old, and 1 year is 12 months, so 12 - 9 = 3 months until the baby is 1 year old."
   },
   {
     question_number: "151",
-    question: "‫מה מהבאים אינו אחד מתפקידי הכבד?‬",
+    question: "A book costs $15. If you pay with a $20 bill, how much change will you get?",
     answers: [
-      "‬מרכז אגירה לויטמינים‪ ,‬גליקוגן ושומנים‬",
-      "‬הפרשת אינסולין‬",
-      "‬ייצור חלבונים כמו חלבוני קרישה ואלבומין‬",
-      "‬ייצור והפרשת מרה‬"
+      "$1",
+      "$3",
+      "$5",
+      "$10"
     ],
-    correctAnswer: 1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "You pay with $20 and the book costs $15, so you get $20 - $15 = $5 in change."
   },
   {
     question_number: "152",
-    question: "‫ברוק מופרש אנזים המפרק עמילן?‬",
+    question: "A city is 120 km away. If you drive at 30 km/h, how many hours will it take to get there?",
     answers: [
-      "‬נכון",
-      "‬לא־נכון"
+      "2 hours",
+      "3 hours",
+      "4 hours",
+      "6 hours"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 4,
+    explanation: "The distance is 120 km, and you drive at 30 km/h, so it will take 120 / 30 = 4 hours to get there."
   },
   {
     question_number: "153",
-    question: "‫אנו נולדים עם כל מערכות השיניים שלנו?‬",
+    question: "A person has 18 cookies and gives 2 to a friend. How many cookies does the person have left?",
     answers: [
-      "‬נכון",
-      "‬לא־נכון"
+      "16 cookies",
+      "17 cookies",
+      "18 cookies",
+      "20 cookies"
     ],
-    correctAnswer: 0,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "The person had 18 cookies and gave 2 away, so they have 18 - 2 = 16 cookies left."
   },
   {
     question_number: "154",
-    question: "מה נכון לגבי מערכת המין הנקבית?",
+    question: "A person is 25 years old. How old will they be in 5 years?",
     answers: [
-      "החצוצרות מחוברות ישירות לשחלה",
-      "החצוצרות מחוברות ישירות לרחם",
-      "ההפריה מתקיימת בדרך כלל בשחלה",
-      "צוואר הרחם ממוקם סופריורית (מעל) לגוף הרחם"
+      "20 years old",
+      "25 years old",
+      "28 years old",
+      "30 years old"
     ],
-    correctAnswer: 1,
-    answerAI: 3
+    correctAnswer: 3,
+    explanation: "The person is 25 years old, and in 5 years, they will be 25 + 5 = 30 years old."
   },
   {
     question_number: "155",
-    question: "הורמון ה‪ LH -‬גורם ל:",
+    question: "A microwave can cook food for 30 seconds or 1 minute. How many seconds is 1 minute?",
     answers: [
-      "גדילת הזקיקים בשחלה",
-      "הבשלה סופית של הזקיק ויציאת הביצית ממנו (ביוץ)",
-      "מחזור החודשי",
-      "דימום הוסת"
+      "30 seconds",
+      "45 seconds",
+      "60 seconds",
+      "90 seconds"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 3,
+    explanation: "1 minute is equal to 60 seconds."
   },
   {
     question_number: "156",
-    question: "שריר הרחם נקרא:",
+    question: "A person has $25 and spends $5 on a toy. How much money do they have left?",
     answers: [
-      "Cervix",
-      "Fundus",
-      "Myometrium",
-      "Endometrium"
+      "$10",
+      "$15",
+      "$20",
+      "$25"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 3,
+    explanation: "The person had $25 and spent $5, so they have $25 - $5 = $20 left."
   },
   {
     question_number: "157",
-    question: "מה נכון לגבי בדיקת הריון ?",
+    question: "A person wakes up at 7:00 AM and goes back to sleep at 9:00 AM. How many hours did they sleep?",
     answers: [
-      "מתבססת על בדיקת עובי רירית הרחם",
-      "קשורה להורמון המופרש מהגופיף הצהוב",
-      "ככל שגיל ההריון יותר מבוגר,כך הבדיקה יותר מהימנה",
-      "מודדת הורמונים הנמצאים בגוף האשה כל הזמן (גם כשלא בהריון)"
+      "1 hour",
+      "2 hours",
+      "3 hours",
+      "4 hours"
     ],
     correctAnswer: 2,
-    answerAI: 2
+    explanation: "The person slept from 7:00 AM to 9:00 AM, which is 2 hours."
   },
   {
     question_number: "158",
-    question: "מה מהבאים לא עובר שינויים כתוצאה מפעילות הורמונאלית ?",
+    question: "A person has 12 pencils and gives 2 to a friend. How many pencils does the person have left?",
     answers: [
-      "שחלה",
-      "נרתיק",
-      "אנדומטריום",
-      "שד"
+      "10 pencils",
+      "11 pencils",
+      "12 pencils",
+      "14 pencils"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 1,
+    explanation: "The person had 12 pencils and gave 2 away, so they have 12 - 2 = 10 pencils left."
   },
   {
     question_number: "159",
-    question: "כמה ביציות לערך יש בשחלותיה של נערה מתבגרת ?",
+    question: "A person has $50 and spends $10 on a book. How much money do they have left?",
     answers: [
-      "4,000",
-      "40,000",
-      "400",
-      "400,000"
-    ],
-    correctAnswer: 3,
-    answerAI: 1
-  },
-
-  {
-    question_number: "160",
-    question: "מה גורם ישירות לנשירת רירית הרחם ולדימום הוסתי ?",
-    answers: [
-      "ירידה ברמת הLH",
-      "עלייה ברמת הפרוגסטרון",
-      "ירידה ברמת הפרוגסטרון",
-      "ירידה ברמת הFSH"
+      "$30",
+      "$40",
+      "$45",
+      "$50"
     ],
     correctAnswer: 2,
-    answerAI: 0
+    explanation: "The person had $50 and spent $10, so they have $50 - $10 = $40 left."
+  },
+  {
+    question_number: "160",
+    question: "A baby is 9 months old. How many months will it be in 3 months?",
+    answers: [
+      "9 months",
+      "10 months",
+      "11 months",
+      "12 months"
+    ],
+    correctAnswer: 2,
+    explanation: "The baby is currently 9 months old, and in 3 months, it will be 9 + 3 = 12 months old."
   },
   {
     question_number: "161",
-    question: "מבחינה אנטומית, מה מהבאים נכון לגבי כף הערווה (MONS PUBIS)?",
+    question: "A person wants to save $50 per week for a vacation. If they save for 5 weeks, how much will they have?",
     answers: [
-      "נמצאת לטראלית לעצם החיק",
-      "נמצאת מדיאלית לעצם החיק",
-      "נמצאת אנטריורית לעצם החיק",
-      "נמצאת פוסטריורית לעצם החיק (PUBIS)"
+      "$20",
+      "$30",
+      "$40",
+      "$50"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 4,
+    explanation: "The person saves $50 per week, and they save for 5 weeks, so they will have 5 x $50 = $250."
   },
   {
     question_number: "162",
-    question: "מהו ההורמון העיקרי התומך בהריון?",
+    question: "A microwave can cook food for 2 minutes and 30 seconds. If you cook for 1 minute and 45 seconds, how much longer do you need to cook?",
     answers: [
-      "פרוגסטרון",
-      "אסטרוגן",
-      "HCG",
-      "LH"
+      "30 seconds",
+      "45 seconds",
+      "1 minute",
+      "2 minutes"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The microwave needs to cook for 2 minutes and 30 seconds, and you've already cooked for 1 minute and 45 seconds, so you need to cook for 2:30 - 1:45 = 45 seconds more."
   },
   {
     question_number: "163",
-    question: "מה נכון לגבי אנטומיית מערכת הרבייה הנקבית ?",
+    question: "A person is 25 years old. How old will they be in 5 years?",
     answers: [
-      "השפתיים הגדולות נמצאות מדיאלית (פנימית) לשפתיים הקטנות",
-      "הרקטום מצוי אנטריורית (קדמית) לרחם",
-      "הרחם מצוי פוסטריורית (מאחורי) שלפוחית השתן",
-      "החצוצרה מחוברת ישירות לשחלה"
+      "25 years old",
+      "26 years old",
+      "28 years old",
+      "30 years old"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 4,
+    explanation: "The person is currently 25 years old, and in 5 years, they will be 25 + 5 = 30 years old."
   },
   {
     question_number: "164",
-    question: "כיצד נקראת בדיקת הסקירה לסרטן צוואר הרחם ?",
-    answers: ["ספקולום", "פאפניקולאו", "קולונוסקופיה", "ממוגרפיה"],
-    correctAnswer: -1,
-    answerAI: 1
+    question: "A person has $15 to spend on a toy. If they buy a toy for $8, how much money do they have left?",
+    answers: [
+      "$5",
+      "$7",
+      "$10",
+      "$12"
+    ],
+    correctAnswer: 1,
+    explanation: "The person had $15 and spent $8, so they have $15 - $8 = $7 left."
   },
   {
     question_number: "165",
-    question: "מי מההורמונים הבאים מופרש מהגופיף הצהוב?",
-    answers: ["פרוגסטרון", "LH", "FSH", "פרולקטין"],
-    correctAnswer: -1,
-    answerAI: 0
+    question: "A person wants to drive from Bat Yam to Tel Aviv. If the drive takes 30 minutes, and they leave at 9:00 AM, what time will they arrive?",
+    answers: [
+      "9:20 AM",
+      "9:30 AM",
+      "9:45 AM",
+      "10:00 AM"
+    ],
+    correctAnswer: 2,
+    explanation: "The drive takes 30 minutes, and they leave at 9:00 AM, so they will arrive at 9:00 + 30 minutes = 9:30 AM."
   },
   {
     question_number: "166",
-    question: "מי מהבאים אינו איבר מין פנימי אצל אשה ?",
-    answers: ["נרתיק", "רחם", "שחלות", "אין אף תשובה נכונה"],
-    correctAnswer: -1,
-    answerAI: 3
+    question: "A person has 12 hours to finish a project. If they work for 4 hours, how many hours do they have left?",
+    answers: [
+      "6 hours",
+      "8 hours",
+      "10 hours",
+      "12 hours"
+    ],
+    correctAnswer: 2,
+    explanation: "The person has 12 hours and has worked for 4 hours, so they have 12 - 4 = 8 hours left."
   },
   {
     question_number: "167",
-    question: "איזה הורמון גורם לחריגת הביצית (ביוץ) ?",
-    answers: ["פרוגסטרון", "LH", "אסטרוגן", "FSH"],
-    correctAnswer: -1,
-    answerAI: 1
+    question: "A person is 80 years old. How old will they be in 5 years?",
+    answers: [
+      "80 years old",
+      "81 years old",
+      "84 years old",
+      "85 years old"
+    ],
+    correctAnswer: 4,
+    explanation: "The person is currently 80 years old, and in 5 years, they will be 80 + 5 = 85 years old."
   },
   {
     question_number: "168",
-    question: "באיזה שלב של המחזור החודשי מופיע שיא ההפרשה של הורמון ?LH",
+    question: "A person wants to buy a toy for $12. If they have a 20% discount coupon, how much will they pay?",
     answers: [
-      "בסוף המחזור, מוביל לדימום חודשי",
-      "בתחילת המחזור, עוזר להתניע את הפרשת ההורמונים",
-      "באמצע המחזור, מוביל לביוץ",
-      "באמצע המחזור, מוביל להפרשת אסטרוגן"
+      "$9",
+      "$10",
+      "$11",
+      "$12"
     ],
-    correctAnswer: 2,
-    answerAI: 0
+    correctAnswer: 1,
+    explanation: "The person has a 20% discount coupon, so they will pay 100% - 20% = 80% of the original price, which is $12 x 0.8 = $9.60, rounded to $9."
   },
   {
     question_number: "169",
-    question: "מהו הסדר הנכון מבחינה אנטומית מאנטריורית לפוסטריורית ?",
+    question: "A person has 5 days to finish a project. If they work for 2 days, how many days do they have left?",
     answers: [
-      "קרום הבתולין-----דגדגן----פתח השופכה----פתח הלדן",
-      "דגדגן----פתח השופכה----פתח הלדן----פי הטבעת",
-      "פי הטבעת----פתח הלדן----פתח השופכה----דגדגן",
-      "דגדגן----פתח הלדן----פתח השופכה----רקטום"
+      "2 days",
+      "3 days",
+      "4 days",
+      "5 days"
     ],
     correctAnswer: 2,
-    answerAI: 0
+    explanation: "The person has 5 days and has worked for 2 days, so they have 5 - 2 = 3 days left."
   },
   {
     question_number: "170",
-    question: "במי מהמקומות הבאים עלולה להמצא ביצית מופרית ?",
+    question: "A person wants to save $20 per week for a vacation. If they save for 8 weeks, how much will they have?",
     answers: [
-      "בחצוצרה",
-      "בחלל הבטן",
-      "בחלל האגן",
-      "כל התשובות נכונות"
+      "$80",
+      "$100",
+      "$120",
+      "$160"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person saves $20 per week, and they save for 8 weeks, so they will have 8 x $20 = $160."
   },
   {
     question_number: "171",
-    question: "מה מהבאים הינו תפקידו של גוף הפרינאום?",
+    question: "A person is 7 years old. How old will they be in 3 years?",
     answers: [
-      "מתפקידו להפריש הורמונים מעודדי פיריון",
-      "מהווה מאחז לשרירים ותמיכה לרצפת האגן",
-      "מתפקידו לאפשר דיבור ברור",
-      "מתפקידו להפריש נוגדנים כחלק ממערכת החיסון"
+      "7 years old",
+      "8 years old",
+      "9 years old",
+      "10 years old"
     ],
-    correctAnswer: 1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The person is currently 7 years old, and in 3 years, they will be 7 + 3 = 10 years old."
   },
   {
     question_number: "172",
-    question: "מה קורה ברגע הביוץ ?",
+    question: "A person has $25 to spend on a gift. If they buy a toy for $15, how much money do they have left?",
     answers: [
-      "נשירת רירית הרחם ודימום וסתי",
-      "ירידה משמעותית ברמת הפרוגסטרון",
-      "המפגש בין תא הזרע לתא הביצית",
-      "יציאת הביצית מהזקיק והשחלה"
+      "$5",
+      "$10",
+      "$15",
+      "$20"
     ],
-    correctAnswer: 3,
-    answerAI: 2
+    correctAnswer: 1,
+    explanation: "The person had $25 and spent $15, so they have $25 - $15 = $10 left."
   },
   {
     question_number: "173",
-    question: "מה נכון לגבי אורך חייו של הגופיף הצהוב?",
+    question: "A person wants to drive from Rishon LeZion to Holon. If the drive takes 20 minutes, and they leave at 10:00 AM, what time will they arrive?",
     answers: [
-      "14 ימים בכל מקרה",
-      "ללא הריון 7- ימים, במקרה של הריון 14- ימים",
-      "ללא הריון 14- ימים, במקרה של הריון - יותר מכך",
-      "28 ימים בכל מקרה"
+      "10:15 AM",
+      "10:20 AM",
+      "10:30 AM",
+      "10:40 AM"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "The drive takes 20 minutes, and they leave at 10:00 AM, so they will arrive at 10:00 + 20 minutes = 10:20 AM."
   },
   {
     question_number: "174",
-    question: "מה מהבאים שגוי בנוגע לשפתיים הקטנות?",
+    question: "A person has 8 weeks to finish a project. If they work for 3 weeks, how many weeks do they have left?",
     answers: [
-      "המפגש הקדמי שלהן מקיף את הדגדגן",
-      "אינן רגישות לגירוי",
-      "מהוות חלק אנטומי מהפוט",
-      "נמצאות מדיאלית לשפתיים הגדולות"
+      "3 weeks",
+      "4 weeks",
+      "5 weeks",
+      "6 weeks"
     ],
-    correctAnswer: 1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The person has 8 weeks and has worked for 3 weeks, so they have 8 - 3 = 5 weeks left."
   },
   {
     question_number: "175",
-    question: "היכן מיוצר עיקר נוזל השפיכה?",
+    question: "A person is 90 years old. How old will they be in 2 years?",
     answers: [
-      "האשך",
-      "אפדידימיס (עילית האשך)",
-      "בלוטת הערמונית",
-      "שלפוחיות הזרע"
+      "90 years old",
+      "91 years old",
+      "92 years old",
+      "93 years old"
     ],
     correctAnswer: 3,
-    answerAI: 2
+    explanation: "The person is currently 90 years old, and in 2 years, they will be 90 + 2 = 92 years old."
   },
   {
     question_number: "176",
-    question: "בהנקה, מי מההורמונים הבאים אחראי להפרשת החלב ?",
+    question: "A person wants to buy a toy for $18. If they have a 15% discount coupon, how much will they pay?",
     answers: [
-      "פרולקטין",
-      "אסטרוגן",
-      "טסטוסטרון",
-      "אוקסיטוצין"
+      "$15",
+      "$16",
+      "$17",
+      "$18"
     ],
-    correctAnswer: 0,
-    answerAI: 3
+    correctAnswer: 1,
+    explanation: "The person has a 15% discount coupon, so they will pay 100% - 15% = 85% of the original price, which is $18 x 0.85 = $15.30, rounded to $15."
   },
   {
     question_number: "177",
-    question: "מה נכון לגבי תאי סרטולי ?",
+    question: "A person has 10 days to finish a project. If they work for 4 days, how many days do they have left?",
     answers: [
-      "תפקודם תלוי ישירות בהורמון LH",
-      "מפרישים טסטוסטרון",
-      "מצויים בבלוטת הערמונית",
-      "מזינים את תאי הנבט במשך התפתחותם לזירעונים"
+      "4 days",
+      "5 days",
+      "6 days",
+      "7 days"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 3,
+    explanation: "The person has 10 days and has worked for 4 days, so they have 10 - 4 = 6 days left."
   },
   {
     question_number: "178",
-    question: "‫כיצד מבצעים בדיקת ‪?PAP's‬‬",
+    question: "A person wants to buy a toy that costs $30. If they have a 10% discount coupon, how much will they pay?",
     answers: [
-      "על ידי צילום רנטגן",
-      "על ידי הסתכלות ישירה",
-      "על ידי בדיקת דם לסמנים סרטניים",
-      "על ידי מטוש לאיסוף תאים מצוואר הרחם"
+      "$25",
+      "$27",
+      "$28",
+      "$30"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The toy costs $30, and with a 10% discount, the person will pay $30 - (10% of $30) = $30 - $3 = $27."
   },
   {
     question_number: "179",
-    question: "‫מה מהבאים נכון לגבי הפרינאום?‬",
+    question: "A person has 2 days to finish a task. If they work for 1 day, how many days do they have left?",
     answers: [
-      "מדובר בקרום העוטף את הריאות",
-      "מדובר במיקום אנטומי הכולל את אברי המין, פתח השופכה ופי הטבעת",
-      "מדובר בקרום דו שכבתי שעוטף את אברי הבטן",
-      "מדובר בקרום חד שכבתי שעוטף את אברי הבטן"
+      "0 days",
+      "1 day",
+      "2 days",
+      "3 days"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "The person has 2 days and has worked for 1 day, so they have 2 - 1 = 1 day left."
   },
   {
     question_number: "180",
-    question: "הפרשת הורמון הטוסטסטרון נעשית בגברים על ידי התא הבא?",
+    question: "A baby is 9 months old. How many weeks old is the baby?",
     answers: [
-      "סרטולי",
-      "ליידיג",
-      "ספרמטוציט",
-      "ספרמטוגניה"
+      "36 weeks",
+      "39 weeks",
+      "40 weeks",
+      "45 weeks"
     ],
-    correctAnswer: 1,
-    answerAI: 2
+    correctAnswer: 2,
+    explanation: "Since the baby is 9 months old, we can calculate the number of weeks as 9 x 4 = 36 weeks."
   },
   {
     question_number: "181",
-    question: "מה נכון לגבי הבלוטות על שם ברטולין?",
+    question: "A person wants to save $100 in 5 weeks. How much do they need to save each week?",
     answers: [
-      "לכל אישה יש ארבע בלוטות כאלו",
-      "מהוות חלק מקרום הבתולין",
-      "נמצאות על השפתיים הקטנות של הפות",
-      "מפרישות ריר בזמן גירוי מיני"
+      "$10",
+      "$20",
+      "$25",
+      "$50"
     ],
-    correctAnswer: 3,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "To save $100 in 5 weeks, the person needs to save $100 / 5 = $20 each week."
   },
   {
     question_number: "182",
-    question: "בציור שמצורף, החץ המסומן בספרה אחת מצביע על:",
+    question: "A microwave can cook food for 2 minutes and 30 seconds. If you cook for 1 minute and 45 seconds, how much longer do you need to cook?",
     answers: [
-      "אבובית נושאת זרע (Seminiferous)",
-      "מעטפת האשך (Albuginea)",
-      "צינור הזרע (Ductus Deference)",
-      "עילית האשך (Epididymus)"
+      "30 seconds",
+      "45 seconds",
+      "1 minute",
+      "2 minutes"
     ],
     correctAnswer: 2,
-    answerAI: 0
+    explanation: "The microwave needs to cook for 2 minutes and 30 seconds, and you've already cooked for 1 minute and 45 seconds, so you need to cook for 2:30 - 1:45 = 45 seconds more."
   },
   {
     question_number: "183",
-    question: "מה מהבאים אינו גורם סיכון להריון חוץ רחמי?",
+    question: "A person is 25 years old. How many years will they be in 5 years?",
     answers: [
-      "זיהום אגני",
-      "ניתוח אגני",
-      "אלכוהול",
-      "עישון"
+      "20 years",
+      "25 years",
+      "28 years",
+      "30 years"
     ],
-    correctAnswer: -1,
-    answerAI: 2
+    correctAnswer: 3,
+    explanation: "The person is currently 25 years old, so in 5 years, they will be 25 + 5 = 30 years old."
   },
   {
     question_number: "184",
-    question: "אילו מהבאים מרכיבים רקמת שד תקינה באשה?",
+    question: "A person wants to buy a toy that costs $15. If they have a 20% discount coupon, how much will they pay?",
     answers: [
-      "רקמת חיבור",
-      "רקמת שומן",
-      "כלי דם",
-      "כל התשובות נכונות"
+      "$10",
+      "$12",
+      "$15",
+      "$18"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The toy costs $15, and with a 20% discount, the person will pay $15 - (20% of $15) = $15 - $3 = $12."
   },
   {
     question_number: "185",
-    question: "מה נכון?",
+    question: "A person has $50 to spend on groceries. They buy milk for $5 and bread for $3. How much money do they have left?",
     answers: [
-      "הזקפה מתרחשת הודות למערכת העצבים הסימפטטית",
-      "השפיכה מתרחשת הודות למערכת העצבים הפרסימפטטית",
-      "תאי הזרע מיוצרים בשלפוחיות הזרע",
-      "כל התשובות אינן נכונות"
+      "$40",
+      "$42",
+      "$45",
+      "$50"
     ],
-    correctAnswer: 3,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The person had $50 and spent $5 + $3 = $8, so they have $50 - $8 = $42 left."
   },
   {
     question_number: "186",
-    question: "מי הם שני ההורמונים המיוצרים על ידי השחלה?",
+    question: "A person is 80 years old. How many years will they be in 10 years?",
     answers: [
-      "LH וFSH",
-      "אסטרוגן ופרוגסטרון",
-      "אסטרוגן וLH",
-      "FSH וGnRH"
+      "70 years",
+      "80 years",
+      "85 years",
+      "90 years"
     ],
-    correctAnswer: 1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The person is currently 80 years old, so in 10 years, they will be 80 + 10 = 90 years old."
   },
   {
     question_number: "187",
-    question: "מה מהבאים איננו טיפול בהריון חוץ רחמי ?",
+    question: "A person wants to drive from Bat Yam to Tel Aviv. If the distance is 15 km, and they drive at 30 km/h, how long will it take?",
     answers: [
-      "סיום הריון ניתוחי",
-      "סיום הריון תרופתי",
-      "העברה לחלל הרחם",
-      "המתנה והשגחה"
+      "20 minutes",
+      "30 minutes",
+      "45 minutes",
+      "1 hour"
     ],
     correctAnswer: 2,
-    answerAI: 2
+    explanation: "The distance is 15 km, and the speed is 30 km/h, so the time taken is 15 km / 30 km/h = 0.5 hours = 30 minutes."
   },
   {
     question_number: "188",
-    question: "אילו מהבאים נמצאים ברקמת שד תקינה באשה?",
+    question: "A person has 12 months to finish a project. If they work for 4 months, how many months do they have left?",
     answers: [
-      "רצועות תמיכה",
-      "כלי לימפה",
-      "בלוטות חלב",
-      "כל התשובות נכונות"
+      "6 months",
+      "8 months",
+      "10 months",
+      "12 months"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The person has 12 months and has worked for 4 months, so they have 12 - 4 = 8 months left."
   },
   {
     question_number: "189",
-    question: "שכבת רירית הרחם נקראת:",
+    question: "A person wants to buy a book that costs $25. If they have a 15% discount coupon, how much will they pay?",
     answers: [
-      "מיומטריום",
-      "לדן",
-      "פרימטריום",
-      "אנדומטריום"
+      "$20",
+      "$22",
+      "$23",
+      "$25"
     ],
-    correctAnswer: -1,
-    answerAI: 3
+    correctAnswer: 2,
+    explanation: "The book costs $25, and with a 15% discount, the person will pay $25 - (15% of $25) = $25 - $3.75 = $21.25, which is approximately $22."
   },
   {
     question_number: "190",
-    question: "השד גדל בגיל ההתבגרות בהשפעת אסטרוגן?",
+    question: "A person has 5 days to finish a task. If they work for 2 days, how many days do they have left?",
     answers: [
-      "נכון",
-      "לא־נכון"
+      "1 day",
+      "2 days",
+      "3 days",
+      "5 days"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The person has 5 days and has worked for 2 days, so they have 5 - 2 = 3 days left."
   },
   {
     question_number: "191",
-    question: "השלב המפריש (סקרטורי) ברחם מקביל לשלב הזקיקי (פוליקולארי) בשחלה?",
+    question: "A person wants to save $50 in 2 weeks. How much do they need to save each week?",
     answers: [
-      "נכון",
-      "לא־נכון"
+      "$10",
+      "$20",
+      "$25",
+      "$50"
     ],
-    correctAnswer: -1,
-    answerAI: 1
+    correctAnswer: 2,
+    explanation: "To save $50 in 2 weeks, the person needs to save $50 / 2 = $25 each week."
   },
   {
     question_number: "192",
-    question: "תאי סרטולי מפרישים טסטוסטרון?",
+    question: "A person is 40 years old. How many years will they be in 15 years?",
     answers: [
-      "נכון",
-      "לא־נכון"
+      "45 years",
+      "50 years",
+      "55 years",
+      "60 years"
     ],
-    correctAnswer: 1,
-    answerAI: 0
+    correctAnswer: 3,
+    explanation: "The person is currently 40 years old, so in 15 years, they will be 40 + 15 = 55 years old."
   },
   {
     question_number: "193",
-    question: "מה נכון לגבי מערכת החיסון?",
+    question: "A person has $20 to spend on a gift. They buy a toy for $10 and a book for $5. How much money do they have left?",
     answers: [
-      "תאי ( T-helper עזר) מסייעים לשפעל תאי B",
-      "נויטרופילים מיוצרים בלשד העצם בתור מונוציטים",
-      "נויטרופילים חיים עשרות שנים",
-      "כל התשובות נכונות"
+      "$0",
+      "$5",
+      "$10",
+      "$15"
     ],
-    correctAnswer: -1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The person had $20 and spent $10 + $5 = $15, so they have $20 - $15 = $5 left."
   },
   {
     question_number: "194",
-    question: "מה נכון לגבי חיסונים?",
+    question: "A person wants to drive from Holon to Rishon LeZion. If the distance is 20 km, and they drive at 40 km/h, how long will it take?",
     answers: [
-      "חיסון סביל מביא ליצירת תאי זיכרון ובכך מקנה זיכרון חיסוני",
-      "לחיסון פעיל משך פעולה ארוך יותר מאשר לחיסון סביל",
-      "חיסון סביל מכיל פתוגנים מומתים",
-      "משתמשים בחיסון פעיל כשיש סבירות גבוהה להדבקה ואין זמן למערכת החיסון לפתח חיסון משלה"
+      "20 minutes",
+      "30 minutes",
+      "40 minutes",
+      "1 hour"
     ],
-    correctAnswer: 1,
-    answerAI: 0
+    correctAnswer: 2,
+    explanation: "The distance is 20 km, and the speed is 40 km/h, so the time taken is 20 km / 40 km/h = 0.5 hours = 30 minutes."
   },
   {
     question_number: "195",
-    question: "מהו תא הדם הלבן הנפוץ ביותר?",
+    question: "A person has 3 weeks to finish a project. If they work for 1 week, how many weeks do they have left?",
     answers: [
-      "מקרופאג'",
-      "באזופיל",
-      "נויטרופיל",
-      "לימפוציט"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "196",
-    question: "מהי האמירה הנכונה בנוגע למערכת החיסון המולד?",
-    answers: [
-      "הפעלת מנגנון המשלים יכולה לסייע בתנועת תאים לבנים לפתוגן ובפאגוציטוזה",
-      "המערכת ספיציפית לפתוגן מסוים",
-      "תגובה דלקתית נגרמת תמיד כתוצאה מזיהום",
-      "לעור אין תפקיד בהגנה על הגוף"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "197",
-    question: "איזה מבין הבאים הוא איבר לימפואידי שניוני?",
-    answers: [
-      "טחול",
-      "תימוס",
-      "לשד העצם",
-      "כל התשובות אינן נכונות"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "198",
-    question: "מה אינו נכון לגבי התימוס?",
-    answers: [
-      "בעל שתי אונות",
-      "מתחיל להתנוון בגיל ההתבגרות",
-      "זהו איבר לימפואידי ראשוני",
-      "בו מתבצעת הבשלת תאי ה‪ B -‬המגיעים אליו מלשד העצם"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "199",
-    question: "מה נכון לגבי תא פלסמה?",
-    answers: [
-      "מפריש לדם חומרים המשתתפים בתגובה הדלקתית (כגון, היסטמין)",
-      "תא בלען הבולע בעיקר חיידקים",
-      "לימפוציט שמפריש נוגדנים",
-      "מציג את האנטיגן לתאי B"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "200",
-    question: "מה מאפיין דלקת?",
-    answers: ["חום", "אודם", "נפיחות", "כל התשובות נכונות"],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "201",
-    question: "מה אינו נכון לגבי תא באזופיל (Basophil)?",
-    answers: [
-      "הוא סוג של תא דם לבן (לויקוציט)",
-      "מעורב בתגובות אלרגיות",
-      "מפריש היסטמין",
-      "הוא סוג של לימפוציט"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "202",
-    question: "מה נכון לגבי מערכת החיסון?",
-    answers: [
-      "מערכת החיסון המולדת פועלת באופן ספציפי כנגד פתוגנים",
-      "מערכת החיסון הנרכשת מסוגלת לייצר זיכרון חיסוני",
-      "מערכת החיסון המולדת היא בעלת זרוע תאית והומראלית",
-      "מערכת החיסון הנרכשת אינה מתפתחת במהלך החיים"
-    ],
-    correctAnswer: -1,
-    answerAI: 1
-  },
-  {
-    question_number: "203",
-    question: "מה נכון לגבי מאקרופאגים?",
-    answers: [
-      "מפרישים חומרים המעורבים בתגובה הדלקתית",
-      "מעבדים ומציגים אנטיגנים ללימפוציטים",
-      "בולעים פתוגנים ורקמות גוף פגועות או מתות",
-      "כל התשובות נכונות"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "204",
-    question: "מה אינו נכון לגבי מערכת המשלים?",
-    answers: [
-      "מורכבת מחלבונים המצויים בדם",
-      "חלק ממערכת החיסון המולדת",
-      "גורמת לכימוטקסיס (תנועה) של לויקוציטים אל עבר החיידק",
-      "כוללת נוגדנים"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "205",
-    question: "מי מהבאים לא שייך למערכת החיסון המולדת?",
-    answers: [
-      "תגובה דלקתית",
-      "חלבוני משלים",
-      "פאגוציט",
-      "לימפוציט B ולימפוציט T"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "206",
-    question: "מה נכון לגבי אאוזינופיל?",
-    answers: [
-      "משתתף בהגנה מפני טפילים",
-      "תא בלען המציג אנטיגנים ללימפוציטים",
-      "מהווה את מרבית התאים הלבנים",
-      "הורג תאים שנדבקו בווירוסים"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "207",
-    question: "מה נכון בנוגע למערכת החיסון הנרכשת?",
-    answers: [
-      "לימפוציטים מסוג B הם חלק מהזרוע ההומראלית",
-      "תא T מפריש אימונוגלובולינים כנגד פתוגן ספיציפי",
-      "תא פלסמה הוא לימפוציט מסוג T בוגר",
-      "מתחלקת לשלוש זרועות"
-    ],
-    correctAnswer: 0,
-    answerAI: 1
-  },
-  {
-    question_number: "208",
-    question: "מה אינו תא בלען (פאגוציט)?",
-    answers: [
-      "תא לנגרהנס בעור (Langerhans Cell)",
-      "מונוציט",
-      "תא פלסמה",
-      "נויטרופיל"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "209",
-    question: "מה נכון לגבי באזופיל?",
-    answers: [
-      "מפריש לדם חומרים המשתתפים בתגובה הדלקתית (כגון, היסטמין)",
-      "מציג את האנטיגן לתאי B",
-      "לימפוציט שמפריש נוגדנים",
-      "תא בלען הבולע בעיקר חיידקים"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "210",
-    question: "מה נכון לגבי הטחול?",
-    answers: [
-      "ממוקם בצד ימין של הגוף",
-      "איבר לימפטי ראשוני, כלומר יוצר תאים לימפואידיים",
-      "אי אפשר לחיות ללא האיבר הזה",
-      "לוקח חלק חשוב בסינון הדם מפולשים ותאי דם אדומים שהתבלו"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "211",
-    question: "איזה תא מבין הבאים משמיד תאים הנגועים בפתוגנים תוך תאיים?",
-    answers: [
-      "תאי T Killer",
-      "תאי הרג טבעיים (NK)",
-      "תשובות 1 ו-2 נכונות",
-      "אף אחד מהם"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "212",
-    question: "מה נכון לגבי מאקרופאג?",
-    answers: [
-      "מהווה את מרבית התאים הלבנים",
-      "משתתף בהגנה מפני טפילים",
-      "תא בלען המציג אנטיגנים ללימפוציטים",
-      "הורג תאים שנדבקו בווירוסים"
+      "1 week",
+      "2 weeks",
+      "3 weeks",
+      "4 weeks"
     ],
     correctAnswer: 2,
-    answerAI: 1
+    explanation: "The person has 3 weeks and has worked for 1 week, so they have 3 - 1 = 2 weeks left."
   },
-  {
-    question_number: "213",
-    question: "מה אינו נכון לגבי הזרוע ההומראלית?",
-    answers: [
-      "כוללת לימפוציטים מסוג B ותאי פלסמה",
-      "מקנה הגנה בעיקר מפני פתוגנים תוך תאיים",
-      "חיונית ליצירת נוגדנים",
-      "חשובה להתפתחות ה\"זיכרון החיסוני\""
-    ],
-    correctAnswer: 1,
-    answerAI: 0
-  },
-  {
-    question_number: "214",
-    question: "הפאגוציטים הם חלק ממערכת החיסון המולדת?",
-    answers: [
-      "נכון",
-      "לא־נכון"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "215",
-    question: "בלוטת התימוס פעילה בעיקר בעת הילדות?",
-    answers: [
-      "נכון",
-      "לא־נכון"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "216",
-    question: "מה נכון לגבי ? ADH",
-    answers: [
-      "מופרש מההיפותלמוס",
-      "אלכוהול מעכב הפרשת ADH ולכן מעודד השתנה",
-      "מופרש בעת עלייה בנפח הדם",
-      "משפיע בעיקר על האבובית הקריבנית (פרוקסימלית)"
-    ],
-    correctAnswer: 1,
-    answerAI: 0
-  },
-  {
-    question_number: "217",
-    question: "מה שגוי לגבי השופכה ?",
-    answers: [
-      "ארוכה יותר בגברים לעומת נשים",
-      "בגברים עוברת דרך בלוטת הערמונית",
-      "מעבירה שתן מהכליה לשלפוחית השתן",
-      "משמשת בגברים גם להובלת זרע"
-    ],
-    correctAnswer: 2,
-    answerAI: 1
-  },
-  {
-    question_number: "218",
-    question: "מה מהבאים שגוי לגבי מבנה מערכת השתן ?",
-    answers: [
-      "כוללת שלפוחית שתן אחת",
-      "כוללת שופכן אחד",
-      "כוללת שתי כליות",
-      "כוללת שופכה אחת"
-    ],
-    correctAnswer: 1,
-    answerAI: 0
-  },
-  {
-    question_number: "219",
-    question: "מה מהבאים נכון לגבי פעילותו של אלדוסטרון ?",
-    answers: [
-      "מפחית ספיגה של נתרן בכליה",
-      "מגביר הפרשת מים בכליה",
-      "גורם לכיווץ כלי דם",
-      "מגביר ספיגה של נתרן בכליה"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "220",
-    question: "מה שגוי לגבי ויסות לחץ הדם ?",
-    answers: [
-      "האנזים ACE הופך את אנגיוטנסין 1 לאנגיוטנסין 2",
-      "ADH מופרש כחלק מתהליך זה",
-      "אלדוסטרון מופרש מהכליה עצמה",
-      "המצב הסופי הוא כיווץ כלי דם כתוצאה משרשרת תהליכים"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "221",
-    question: "מה נכון לגבי קצב ייצור השתן באדם בוגר ?",
-    answers: [
-      "כ 0.5 סמ״ק לק״ג לשעה",
-      "כ 3 ליטר ביממה",
-      "כ 4 סמ״ק לק״ג לשעה",
-      "כ 5 ליטר ביממה"
-    ],
-    correctAnswer: 0,
-    answerAI: 1
-  },
-  {
-    question_number: "222",
-    question: "מה מהבאים נכון לגבי תפקוד הכליה?",
-    answers: [
-      "הכליה אינה משתתפת בויסות לחץ הדם",
-      "הכליה מגבירה את הפרשת המים במקרים של לחץ דם נמוך",
-      "הכליה מייצרת ויטמין ‪D‬ פעיל בהשפעת בלוטת הפאראתאירואיד (יותרת התריס)",
-      "הכליה גורמת להרס מוגבר של תאים אדומים באמצעות שחרור אריתרופויטין"
-    ],
-    correctAnswer: 2,
-    answerAI: 1
-  },
-  {
-    question_number: "223",
-    question: "מה מהבאים נכון לגבי המיקום האנטומי של הכליות?",
-    answers: [
-      "נמצאות קדמית לחלל הפריטונאלי (צפקי)",
-      "נמצאות מאחורי החלל הפריטונאלי (צפקי)",
-      "נמצאות במרכז הבטן",
-      "נמצאות בתוך החלל הפריטונאלי (צפקי)"
-    ],
-    correctAnswer: -1,
-    answerAI: 1
-  },
-  {
-    question_number: "224",
-    question: "מה מהבאים נכון לגבי תפקוד הכליה ?",
-    answers: [
-      "מייצרת ויטמין B12 בהשפעת בלוטת התימוס",
-      "מווסתת את כמות תאי הדם הלבנים באמצעות שחרור המוגלובין",
-      "מווסתת את לחץ הדם על ידי הפרשת האנזים רנין",
-      "מווסתת את רמת החומציות בדם באמצעות הפרשת נתרן"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "225",
-    question: "מה מכיל שתן תקין ?",
-    answers: [
-      "תאים",
-      "שתנן (אוראה)",
-      "חלבון",
-      "סוכר"
-    ],
-    correctAnswer: -1,
-    answerAI: 1
-  },
-  {
-    question_number: "226",
-    question: "איזה חלק של הנפרון מסוגל לדלל או לרכז את השתן ?",
-    answers: [
-      "אבובית קריבנית (פרוקסימלית)",
-      "לולאת הנלה",
-      "אבובית רחיקנית (דיסטלית)",
-      "פקעית (גלומרולוס)"
-    ],
-    correctAnswer: 1,
-    answerAI: 2
-  },
-  {
-    question_number: "227",
-    question: "מה שגוי לגבי מערכת השתן?",
-    answers: [
-      "מכילה שני שופכנים ושופכה אחת",
-      "הכלייה נחלקת לשני איזורים עיקריים: ליבה וקליפה",
-      "השופכה במערכת השתן הנקבית קצרה יותר לעומת הגברית",
-      "אדם בוגר מפריש בממוצע 5 ליטר שתן ביממה"
-    ],
-    correctAnswer: 3,
-    answerAI: 0
-  },
-  {
-    question_number: "228",
-    question: "באיזה חלק של הנפרון מתרחשת עיקר ספיגת החומרים מחדש?",
-    answers: [
-      "אבובית קריבנית (פרוקסימלית)",
-      "לולאת הנלה",
-      "אבובית רחיקנית (דיסטלית)",
-      "פקעית (גלומרולוס)"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "229",
-    question: "מה נכון לגבי השתן?",
-    answers: [
-      "במצב תקין ניתן למצוא בו תאים",
-      "במצב תקין ניתן למצוא בו חלבון וסוכר",
-      "מיוצר על ידי הכליות באמצעות סינון הדם",
-      "במצב תקין אינו מכיל אוראה"
-    ],
-    correctAnswer: -1,
-    answerAI: 2
-  },
-  {
-    question_number: "230",
-    question: "מי גורם באופן ישיר להפרשת אלדוסטרון ?",
-    answers: [
-      "אנגיוטנסין 1",
-      "אנגיוטנסין 2",
-      "רנין",
-      "אנגיוטנסינוגן"
-    ],
-    correctAnswer: 1,
-    answerAI: 2
-  },
-  {
-    question_number: "231",
-    question: "מי מהבאים מופרש ע\"י הריאות ?",
-    answers: [
-      "רנין",
-      "אנגיוטנסין 1",
-      "אף תשובה אינה נכונה",
-      "ACE"
-    ],
-    correctAnswer: -1,
-    answerAI: 3
-  },
-  {
-    question_number: "232",
-    question: "בתמונה ציור חתך של נפרון. מהו המבנה המסומן בחץ ?",
-    answers: [
-      "צינור איסוף (Collecting Duct)",
-      "אבובית קריבנית (Proximal Tubule)",
-      "לולאת הנלה (Loop of Henle)",
-      "אבובית רחיקנית (Distal Tubule)"
-    ],
-    correctAnswer: 2,
-    answerAI: 2
-  },
-  {
-    question_number: "233",
-    question: "בתמונה ציור חתך של נפרון. מהו המבנה המסומן בחץ ?",
-    answers: [
-      "אבובית קריבנית (Proximal Tubule)",
-      "לולאת הנלה (Loop of Henle)",
-      "אבובית רחיקנית (Distal Tubule)",
-      "צינור איסוף (Collecting Duct)"
-    ],
-    correctAnswer: 3,
-    answerAI: 1
-  },
-  {
-    question_number: "234",
-    question: "תפקודו של איזה ויטמין תלוי בפעילותה של מערכת ההפרשה?",
-    answers: [
-      "A",
-      "E",
-      "B",
-      "D"
-    ],
-    correctAnswer: 3,
-    answerAI: 2
-  },
-  {
-    question_number: "235",
-    question: "באיזה חלק של הנפרון מתבצע הסינון הראשוני?",
-    answers: [
-      "פקעית (גלומרולוס)",
-      "לולאת הנלה",
-      "אבובית קריבנית (פרוקסימלית)",
-      "אבובית רחיקנית (דיסטלית)"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "236",
-    question: "מה נכון לגבי אריתרופואטין?",
-    answers: [
-      "מופרש במצבי עודף חמצן בגוף",
-      "משמש כתרופה באנמיה על רקע של אי ספיקת כליות כרונית",
-      "מעודד ייצור של תאי דם לבנים",
-      "מופרש מבלוטת התריס"
-    ],
-    correctAnswer: 1,
-    answerAI: 0
-  },
-  {
-    question_number: "237",
-    question: "מי מהחומרים הבאים הוא הראשון שמופרש בתגובה לירידה בלחץ הדם?",
-    answers: [
-      "רנין",
-      "אנגיוטנסין 1",
-      "אלדוסטרון",
-      "אנגיוטנסין 2"
-    ],
-    correctAnswer: -1,
-    answerAI: 0
-  },
-  {
-    question_number: "238",
-    question: "מה שגוי לגבי ליבת הכליה (‪? )Renal Medulla‬",
-    answers: [
-      "מכילה את לולאת הנלה",
-      "מכילה את הגלומרולוס (פקעית)",
-      "מכילה את צינור האיסוף",
-      "מחולקת לפירמידות"
-    ],
-    correctAnswer: 1,
-    answerAI: 0
-  },
-  {
-    question_number: "239",
-    question: "מה שגוי לגבי צינור האיסוף ?",
-    answers: [
-      "מושפע מ‪ ADH -‬ואלדוסטרון",
-      "מתבצע בו ריכוז השתן ע\"י ספיגת מים ונתרן",
-      "מנקז אליו מספר נפרונים",
-      "מושפע מאסטרדיול ומ‪ADH -‬"
-    ],
-    correctAnswer: 3,
-    answerAI: 1
-  },
-  {
-    question_number: "240",
-    question: "מה מהבאים נכון לגבי המיקום האנטומי של הכליות ?",
-    answers: [
-      "נמצאות אחורית לחוליות עמוד השדרה",
-      "מוגנות על ידי כלוב הצלעות",
-      "נמצאות בגובה חוליה ‪T5‬",
-      "נמצאות מעל לסרעפת"
-    ],
-    correctAnswer: 1,
-    answerAI: 2
-  }
 ];
 
-
-var explanations_gpt3_5 = [
-  { num: 1, ans: 0, exp: "דמעות לא מתאפיינות במערכת השמה" },
-  { num: 2, ans: 2, exp: "זהו הורמון מעכב הפעילות של גליתין" },
-  { num: 3, ans: 1, exp: "אלפא מונע את פעילות של מחצית התחתונה של קורטקס הכליה" },
-  { num: 4, ans: 3, exp: "אדרנלין הוא הורמון של הגיבוי והתגובה למצבי לחץ" },
-  { num: 5, ans: 0, exp: "פרולקטין מפעיל יצירת חלב בשד" },
-  { num: 6, ans: 3, exp: "הורמונים פעילים רק על תאים עם רצפטורים מתאימים" },
-  { num: 7, ans: 3, exp: "זהו משוב שלילי" },
-  { num: 8, ans: 1, exp: "ACTH מעודד את הפעילות של בלוטת האדרנל" },
-  { num: 9, ans: 2, exp: "אפינפרין מפעיל את מערכת העיכול" },
-  { num: 10, ans: 2, exp: "פוספוליפידים אינם מהם בנויים הורמונים" },
-  { num: 11, ans: 3, exp: "קורטיזול משתתף במגוון רחב של תפקודי גוף ונפש" },
-  { num: 12, ans: 0, exp: "היפופיזה מפעילה את האיבר מטרה ולא להיפותלמוס" },
-  { num: 13, ans: 2, exp: "תאי פריאטלי ניתן למצוא בבלוטת התריס" },
-  { num: 14, ans: 0, exp: "תאי C מושפעים מההיפופיזה" },
-  { num: 15, ans: 2, exp: "יוד החשוב ביותר לתפקוד בלוטת התריס" },
-  { num: 16, ans: 3, exp: "אדרנלין הוא הורמון מסוג אמיני" },
-  { num: 17, ans: 1, exp: "אינסולין מופרש בעקבות אכילת פחממות" },
-  { num: 18, ans: 0, exp: "אינסולין הוא הורמון מסוג פחמימתי" },
-  { num: 19, ans: 3, exp: "תאי בטא בלבלב מפרישים גלוקגון" },
-  { num: 20, ans: 1, exp: "לבלב מפרישה אנדוקרינית בלבד" },
-  { num: 21, ans: 0, exp: "אוקסיטוצין מופרש מהאונה האחורית של היפופיזה" },
-  { num: 22, ans: 3, exp: "TSH מופרש על ידי ההיפופיזה האחורית" },
-  { num: 23, ans: 0, exp: "GH מופרש מההיפותלמוס" },
-  { num: 24, ans: 3, exp: "ADH מפחית את כמות המים המופרשים בשתן" },
-  { num: 25, ans: 2, exp: "PTH מפחית הפרשת סידן בשתן" },
-  { num: 26, ans: 3, exp: "קורטיזול מופעל על ידי היפופיזה" },
-  { num: 27, ans: 1, exp: "אדרנלין מופעל על ידי מדולה באדרנל" },
-  { num: 28, ans: 0, exp: "אינסולין משתייך למשפחת ההורמונים הפפטידיים" },
-  { num: 29, ans: 0, exp: "עורקים יש להם השפעה ישירה על לחץ הדם" },
-  { num: 30, ans: 1, exp: "דם עני בחמצן זורם בוורידים, מתנקז מהם לעלייה ימין" },
-  { num: 31, ans: 0, exp: "דיאסטולה היא פרק הזמן בו חדרי הלב מתרפים" },
-  { num: 32, ans: 1, exp: "בנימים יש חילוף החומרים והגדים בין הדם לרקמה" },
-  { num: 33, ans: 0, exp: "עורק הריאה מוביל דם עשיר בחמצן" },
-  { num: 34, ans: 2, exp: "קשר סינוס-עליה-SA Node-קשר עליה-חדר-AV Node-צרור ימני וצרור שמאלי-סיבי פורקינייה" },
-  { num: 35, ans: 1, exp: "תפוקת לב חשישית = נפח הדם שיוצא מהלב כל דקה * דופק" },
-  { num: 36, ans: 0, exp: "הסטטוס המשפחתי אינו משפיע על לחץ הדם" },
-  { num: 37, ans: 0, exp: "הקול השני של הלב נוצר עקב סגירת המסתמים הצניפיים" },
-  { num: 38, ans: 3, exp: "ורידים מתבצע עיקר חילוף החומרים עם הרקמות" },
-  { num: 39, ans: 2, exp: "המכפלה בין קצב הלב ונפח הפעימה" },
-  { num: 40, ans: 0, exp: "המסתם התלת צניפי (טריקוספידלי)" },
-  { num: 41, ans: 3, exp: "קשר סינוס-עליה נמצא בחדר שמאל" },
-  { num: 42, ans: 1, exp: "העליות מתכווצות בסוף הסיסטולה" },
-  { num: 43, ans: 0, exp: "מערכת הלב וכלי הדם מווסתת את טמפרטורת הגוף על ידי הרחבה וכיווץ של כלי דם" },
-  { num: 44, ans: 3, exp: "כלי הדם הותיניים (Aortic) מובילים דם עשיר בחמצן בלבד" },
-  { num: 45, ans: 3, exp: "בבדיקת רקמת שריר הלב נצפים מיטוכונדריות בכמות הרבה ביותר בתאים" },
-  { num: 46, ans: 0, exp: "גורמי הסיכון העיקריים לבעיה באספקת החמצן הם חינוך, מקום מגורים ומצב סוציואקונומי" },
-  { num: 47, ans: 0, exp: 'עורק הוא כלי דם שמזרים דם מהלב אל הגוף' },
-  { num: 48, ans: 0, exp: "נפח הפעימה של הלב במנוחה הוא כ-70 סמ\"ק" },
-  { num: 49, ans: 3, exp: 'קשר סינוס-עליה הוא הקוצב העיקרי של הלב' },
-  { num: 50, ans: 2, exp: 'כלי הדם אשר יוצא מחדר שמאל הינו וריד' },
-  { num: 51, ans: 0, exp: 'לחץ דם תקין במנוחה הוא 120/80' },
-  { num: 52, ans: 1, exp: 'שכבת האינטימה היא השכבה הפנימית של העורק' },
-  { num: 53, ans: 3, exp: 'החדר הימני הוא חלק ממחזור הדם הגדול' },
-  { num: 54, ans: 1, exp: 'הדם העשיר בחמצן נמצא בעורקי הריאה' },
-  { num: 55, ans: 0, exp: 'ויסות טמפרטורה אינו חלק מתפקידי מערכת הלב וכלי הדם' },
-  { num: 56, ans: 2, exp: 'לחץ דם תקין במנוחה הוא 120/80' },
-  { num: 57, ans: 1, exp: 'המסתמים הצניפיים מאפשרים זרימה דו כיוונית במצב פיזיולוגי' },
-  { num: 58, ans: 3, exp: 'הדם אינו מוביל תאי מערכת החיסון לאזור בו ישנה דלקת' },
-  { num: 59, ans: 2, exp: "הדם מהנימים נכנס לוורידים לפני שיועבר לעורקים" },
-  { num: 60, ans: 1, exp: "קול הלב הראשון נוצר עקב סגירת המסתמים הצניפיים" },
-  { num: 61, ans: 4, exp: "כל התשובות שגויות" },
-  { num: 62, ans: 1, exp: "קריש דם גדול בעורק הריאה יכול להפריע לזרימת הדם לריאות" },
-  { num: 63, ans: 0, exp: "קצב התקציב התקין של קשר סינוס עלייה הוא 60-90 פעימות בדקה" },
-  { num: 64, ans: 3, exp: "צרור עלייה-חדר הוא הקוצב המשני של הלב" },
-  { num: 65, ans: 2, exp: "לימפוציטים נוצרים במח העצם" },
-  { num: 66, ans: 3, exp: "מדיה היא השכבה התיכונה של העורק" },
-  { num: 67, ans: 1, exp: "המסתם התלת צניפי מפריד בין העלייה הימנית לחדר הימני של הלב" },
-  { num: 68, ans: 0, exp: "כיווץ סינכרוני של הלב נוצר עקב צמתים רופפים המחוברים לתאי הלב" },
-  { num: 69, ans: 3, exp: "קול S1 נובע מטריקת המסתמים הטריקוספידלי והקול S2 נובע מסגירת המסתמים הגביעיים" },
-  { num: 70, ans: 3, exp: "כל המענים נכונים - הסעת הורמונים, ויסות טמפרטורה, והובלת מרכיבי מערכת החיסון הם חלק מתפקידי מערכת הלב וכלי הדם." },
-  { num: 71, ans: 2, exp: "לחץ הדם בנימים אין", },
-  { num: 72, ans: 1, exp: "המסתם מפריד בין העלייה הימנית לחדר הימני", },
-  { num: 73, ans: 1, exp: "הקול הראשון נוצר עקב סגירת המסתם הצניפי האורטרי", },
-  { num: 74, ans: 2, exp: "הוורידים מספקים דם עשיר בחמצן לרקמות הגוף", },
-  { num: 75, ans: 0, exp: "הפריקרדיום הינה השכבה הפנימית ביותר בשריר הלב", },
-  { num: 76, ans: 3, exp: "אוושה הנוצרת עקב הסתיידות במסתם עלולה לגרום לזרימת דם מערבולתית", },
-  { num: 77, ans: 1, exp: "בין העלייה הימנית לחדר הימני אין מסתם", },
-  { num: 78, ans: 2, exp: "חדר ימין - אבי העורקים (ותין) - וריד נבוב עליון - עורקיקים - עלייה ימנית", },
-  { num: 79, ans: 3, exp: "חדר שמאל - אבי העורקים (ותין) - עורקים - ורידים - עורקיקים - וריד נבוב - עלייה שמאל", },
-  { num: 80, ans: 1, exp: "תחילת הדיאסטולה", },
-  { num: 81, ans: 0, exp: "נכון", },
-  { num: 82, ans: 1, exp: "לנאדית דופן דקיקה יש פני חיבור גדולים והיא גובלת עם כלי דם, מה שמאפשר תחלופת גזים יעילה." },
-  { num: 83, ans: 0, exp: "החלוקה התפקודית מבדילה בין החלק המוביל את האוויר והחלק בו מתבצע חילוף הגזים - מערכת הנשימה העליונה והתחתונה." },
-  { num: 84, ans: 2, exp: "בעת דיבור, אוויר עובר דרך המיתריים ומרטיט אותם כדי ליצור קולות." },
-  { num: 85, ans: 1, exp: "האפיגלוטיס הוא סחוס טבעתי נוקשה המכסה את החיבור בין הושט לקנה." },
-  { num: 86, ans: 0, exp: "ויסות תהליכי חומצה בסיס בגוף אינו חלק מתפקידי מערכת הנשימה." },
-  { num: 87, ans: 3, exp: "לוע מתחבר אינפריורית (מתחת) ללרינקס (גרון)." },
-  { num: 88, ans: 0, exp: "סינוסים אינם שייכים למערכת הנשימה העליונה." },
-  { num: 89, ans: 1, exp: 'חך קשה מסומן ע\"י החץ באיור', },
-  { num: 90, ans: 1, exp: 'הסרעפת לא יורדת בעת שאיפה', },
-  { num: 91, ans: 1, exp: 'החץ א מצביע על ה-larynx', },
-  { num: 92, ans: 2, exp: 'הסמפון השמאלי תלול יותר מהימני', },
-  { num: 93, ans: 3, exp: 'הסרעפת מתכווצת ויורדת למטה בעת שאיפה', },
-  { num: 94, ans: 4, exp: 'רירית הנשימה מכילה תאים מפרישי ריר ותאי אפיתל ריסניים', },
-  { num: 95, ans: 4, exp: 'קונכיות האף לא מגדילות את שטח הפנים הראשוני', },
-  { num: 96, ans: 2, exp: 'אחוז החמצן בנשיפה הוא מזערי', },
-  { num: 97, ans: 4, exp: 'רירית הנשימה כוללת תאי שיער ותאים מפרישי ריר ועשירה בכלי דם', },
-  { num: 98, ans: 3, exp: 'סינוסים לא נמצאים במערכת הנשימה התחתונה', },
-  { num: 99, ans: 1, exp: 'בתום נשיפה מאומצת ישנם עדיין כ-1 ליטר אוויר בריאות בריאות', },
-  { num: 100, ans: 1, exp: 'בלוטות הדמע ממוקמות בחלק הסופריורי לטרלי של העין', },
-  { num: 101, ans: 1, exp: 'כי חמצן נכנס לזרם הדם בנאדיות ופחמן דו חמצני לחלל הנאדית', },
-  { num: 102, ans: 2, exp: 'כי ריכוז הפחמן הדו חמצני באוויר הנשאף גבוה יותר מריכוזו באוויר הננשף', },
-  { num: 103, ans: 3, exp: 'כי ריאה שמאל מורכבת משלוש אונות', },
-  { num: 104, ans: 3, exp: 'כי לאפשר השמעת קול הוא לא תפקיד של מערכת הנשימה', },
-  { num: 105, ans: 4, exp: 'כי זה המזוהה עם לוע האפי העליון', },
-  { num: 106, ans: 1, exp: 'כי החמצן עובר דרך הקנה, הסימפונות, המוגלובין, הנאדיות, אבי העורקים, הלב והכבד', },
-  { num: 107, ans: 2, exp: 'כי קנה הנשימה צמוד לושט ומושפע מעט מתנועותיה', },
-  { num: 108, ans: 1, exp: 'כי הוא מתאר את נפח האוויר המוחלף בנשימה אחת', },
-  { num: 109, ans: 2, exp: 'כי זו השכבה הפריאטלית של קרום הצדר', },
-  { num: 110, ans: 4, exp: 'כי קרומי הפלאורה אינם מקיפים את קנה הנשימה', },
-  { num: 111, ans: 1, exp: 'כי שרירי הבין צלעיים משתתפים בנשימה גם במנוחה', },
-  { num: 112, ans: 2, exp: "ספנואידלי הוא סינוס" },
-  { num: 113, ans: 0, exp: "צדר הוא שם הקרום שכסה את הריאה" },
-  { num: 114, ans: 2, exp: "תא פריאטלי הוא התא המפריש חומצה בקיבה" },
-  { num: 115, ans: 2, exp: "הקיבה נמצאת דיסטאלית לושט ופרוקסימלית לתריסריון" },
-  { num: 116, ans: 3, exp: "הוושט הוא איבר אקססורי במערכת העיכול" },
-  { num: 117, ans: 2, exp: "מעי הגס הוא המעי הארוך ביותר במערכת העיכול" },
-  { num: 118, ans: 0, exp: "תת לשונית היא הבלוטה הקטנה ביותר בבלוטות הרוק" },
-  { num: 119, ans: 3, exp: "אורכו של המעי הדק הוא כ-6 מטר" },
-  { num: 120, ans: 1, exp: "התאים הפריאטליים מפרישים חומר בסיסי לשמירה על ערך ה-pH בקיבה" },
-  { num: 121, ans: 0, exp: "תנועתיות המעי הגס אינן מהירות יחסית" },
-  { num: 122, ans: 0, exp: "מלחי המרה בעלי שני קצוות הידרופוביים הם חלק ממרה" },
-  { num: 123, ans: 2, exp: "הכבד מייצר תאים לבנים" },
-  { num: 124, ans: 1, exp: "סיסים רבים המגדילים את שטח הספיגה" },
-  { num: 125, ans: 1, exp: "תא גובלט" },
-  { num: 126, ans: 4, exp: "פרשדון" },
-  { num: 127, ans: 4, exp: "ביקרבונט" },
-  { num: 128, ans: 1, exp: "תא אפיתל פסאודו רב-שכבתי" },
-  { num: 129, ans: 2, exp: "מיקרו-סיסים (מיקרו-ווילים)" },
-  { num: 130, ans: 1, exp: "אנזימי עיכול של הלבלב" },
-  { num: 131, ans: 3, exp: "נמצא קדמית (אנטריורי) לקנה הנשימה" },
-  { num: 132, ans: 3, exp: "המבנה האנטומי הייחודי שלו בנוי לתהליך של ספיגה" },
-  { num: 133, ans: 2, exp: "תזגיג השן (Enamel)" },
-  { num: 134, ans: 4, exp: "המעי הכרוך (אילאום)" },
-  { num: 135, ans: 1, exp: "המזון נספג בעיקר במעי הדק בעוד שמים נספגים במעי הגס" },
-  { num: 136, ans: 4, exp: "שוער" },
-  { num: 137, ans: 1, exp: "ביצוע של 3 מבין 4 הפעולות העקרוניות, מאפשר פעילות מערכת תקינה" },
-  { num: 138, ans: 2, exp: "תא אפיתל עמודי" },
-  { num: 139, ans: 4, exp: 'Omentum סינר מסתום חורים ויש לו תפקיד חיסוני' },
-  { num: 140, ans: 2, exp: 'Taenia Coli, Villi ו-Haustra מאפייני מעי הדק' },
-  { num: 141, ans: 1, exp: 'תפקיד עיקרי של המעי הגס הוא ספיגת מים' },
-  { num: 142, ans: 2, exp: 'הקיבה לא מפרישה חומר המגן על ויטמין C' },
-  { num: 143, ans: 2, exp: 'תריסריון הוא החלק הארוך ביותר במעי הדק' },
-  { num: 144, ans: 3, exp: 'באזור זה עוברים כלי הדם המזינים את השן' },
-  { num: 145, ans: 0, exp: 'הכבד נמצא בצד ימין של הגוף' },
-  { num: 146, ans: 2, exp: 'עיקר הביקרבונט מיוצר בכבד' },
-  { num: 147, ans: 3, exp: 'הכבד אינו מאגר לוויטמינים דוגמת ויטמין K' },
-  { num: 148, ans: 1, exp: 'הוריד הנבוב התחתון אינו חלק מהכלים בשער הכבד' },
-  { num: 149, ans: 0, exp: 'המבנה המסומן בחץ הוא אונת הכבד הימנית' },
-  { num: 150, ans: 0, exp: 'תזגיג השן מצפה את הכתר ומתחדש מדי חודש' },
-  { num: 151, ans: 3, exp: 'הכבד אינו מייצר ומפריש מרה' },
-  { num: 152, ans: 0, exp: 'ברוק מופרש אנזים המפרק עמילן' },
-  { num: 153, ans: 1, exp: 'אינו נכון, אינו נולד עם כל המערכות השיניים' },
-  { num: 154, ans: 1, exp: 'החצוצרות מחוברות ישירות לרחם' },
-  { num: 155, ans: 2, exp: 'הורמון ה-LH מפעיל את הבשלה הסופית של הזקיק' },
-  { num: 156, ans: 2, exp: 'שריר הרחם נקרא Myometrium' },
-  { num: 157, ans: 2, exp: 'בדיקת עובי רירית הרחם משמשת לאיתור הריון' },
-  { num: 158, ans: 1, exp: 'שחלה אינה עוברת שינויים כתוצאה מפעילות הורמונלית' },
-  { num: 159, ans: 3, exp: 'לערך יש 400,000 ביציות בשחלותיה של נערה מתבגרת' },
-  { num: 160, ans: 1, exp: 'ירידה ברמת ה-LH גורמת לנשירת רירית הרחם ולדימום הוסתי' },
-  { num: 161, ans: 1, exp: 'כף הערווה נמצאת לטראלית לעצם החיק' },
-  { num: 162, ans: 1, exp: 'פרוגסטרון הוא ההורמון העיקרי התומך בהריון' },
-  { num: 163, ans: 1, exp: 'השפתיים הגדולות נמצאות מדיאלית לשפתיים הקטנות' },
-  { num: 164, ans: 2, exp: 'בדיקת הפפניקולאו היא הסקירה לסרטן צוואר הרחם' },
-  { num: 165, ans: 1, exp: 'פרוגסטרון מופרש מהגופיף הצהוב' },
-  { num: 166, ans: 1, exp: 'נרתיק אינו איבר מין פנימי אצל אשה' },
-  { num: 167, ans: 2, exp: 'הורמון ה-LH גורם לחריגת הביצית (ביוץ)' },
-  { num: 168, ans: 3, exp: 'באמצע המחזור החודשי מופיע שיא ההפרשה של הורמון ה-LH' },
-  { num: 169, ans: 1, exp: 'פתח השופכה קודם לפתח הלדן' },
-  { num: 170, ans: 4, exp: 'ביצית מופרית עשויה להמצא במקומות שונים בבטן ובאגן' },
-  { num: 171, ans: 1, exp: 'פרינאום מפריש הורמונים מעודדי פיריון' },
-  { num: 172, ans: 0, exp: 'ברגע הביוץ מתרחשת נשירת רירית הרחם ודימום וסתי' },
-  { num: 173, ans: 0, exp: 'תאי סרטולי תלויים בהורמון FSH' },
-  { num: 174, ans: 0, exp: 'המפגש הקדמי של שפתיים הקטנות מקיף את הפתח השתלפי' },
-  { num: 175, ans: 1, exp: 'נוזל השפיכה נוצר באפידידימיס (עילית האשך)' },
-  { num: 176, ans: 0, exp: 'פרולקטין הוא הורמון המפריש את החלב' },
-  { num: 177, ans: 2, exp: 'תאי סרטולי נמצאים בבלוטת הערמונית' },
-  { num: 178, ans: 3, exp: 'בדיקת PAP מבוצעת על ידי מטוש לאיסוף תאים מצוואר הרחם' },
-  { num: 179, ans: 2, exp: 'פרינאום הוא קרום דו-שכבתי שעוטף את אברי הבטן' },
-  { num: 180, ans: 1, exp: 'הפרשת הטסטוסטרון נעשית על ידי תאי ליידיג בגברים' },
-  { num: 181, ans: 2, exp: 'חלק מקרום הבתולין' },
-  { num: 182, ans: 4, exp: 'עילית האשך (Epididymus)' },
-  { num: 183, ans: 4, exp: 'אין גורם סיכון ישיר להריון חוץ רחמי מעישון' },
-  { num: 184, ans: 4, exp: 'רקמת השד כוללת רקמת חיבור, שומן וכלי דם' },
-  { num: 185, ans: 1, exp: 'הזקפה מתרחשת הודות למערכת העצבים הסימפטטית' },
-  { num: 186, ans: 1, exp: 'LH ו-FSH הם שני הורמונים המיוצרים על ידי השחלה' },
-  { num: 187, ans: 2, exp: 'טיפול בהריון חוץ רחמי יכול לכלול סיום הריון תרופתי' },
-  { num: 188, ans: 4, exp: 'רצועות תמיכה, כלי לימפה ובלוטות חלב נמצאים ברקמת השד התקינה' },
-  { num: 189, ans: 4, exp: 'שכבת רירית הרחם נקראת אנדומטריום' },
-  { num: 190, ans: 0, exp: 'נכון' },
-  { num: 191, ans: 1, exp: 'נכון' },
-  { num: 192, ans: 0, exp: 'תאי סרטולי מפרישים תסטוסטרון' },
-  { num: 193, ans: 1, exp: 'תאי T-helper מסייעים לתאי B לייצר אנטיגן' },
-  { num: 194, ans: 0, exp: 'חיסון סביל מקנה זיכרון חיסוני' },
-  { num: 195, ans: 2, exp: 'הנויטרופיל הוא התא הדם הלבן הנפוץ ביותר' },
-  { num: 196, ans: 1, exp: 'הפעלת מנגנון המשלים עוזרת בתגובה הדלקתית' },
-  { num: 197, ans: 4, exp: 'אף אחד מהאיברים הנתונים אינו לימפואידי שניוני' },
-  { num: 198, ans: 1, exp: 'התימוס הוא איבר לימפואידי ראשוני' },
-  { num: 199, ans: 0, exp: 'תא פלסמה מפריש לדם חומרים המשתתפים בתגובה הדלקתית' },
-  { num: 200, ans: 3, exp: 'דלקת מאפיינת בחום, אודם ונפיחות' },
-  { num: 201, ans: 4, exp: 'הבאיזופיל הוא לא תא דם לבן ולא לימפוציט' },
-  { num: 202, ans: 1, exp: 'מערכת החיסון המולדת פועלת באופן ספציפי כנגד פתוגנים' },
-  { num: 203, ans: 2, exp: 'מאקרופאגים מעבדים ומציגים אנטיגנים ללימפוציטים' },
-  { num: 204, ans: 3, exp: 'מערכת המשלים כוללת נוגדנים ומורכבת מחלבונים המצויים בדם' },
-  { num: 205, ans: 4, exp: 'לימפוציט לא שייך למערכת החיסון המולדת' },
-  { num: 206, ans: 0, exp: 'אאוזינופיל משתתף בהגנה מפני טפילים' },
-  { num: 207, ans: 1, exp: 'תאי B מצטרפים לזרוע ההומוראלית' },
-  { num: 208, ans: 3, exp: 'תא פלסמה הוא תא לא בלען' },
-  { num: 209, ans: 1, exp: 'באזופיל מפריש לדם חומרים המשתתפים בתגובה הדלקתית' },
-  { num: 210, ans: 3, exp: 'אי אפשר לחיות ללא הטחול' },
-  { num: 211, ans: 3, exp: 'תשובות 1 ו-2 נכונות' },
-  { num: 212, ans: 1, exp: 'מהווה את מרבית התאים הלבנים' },
-  { num: 213, ans: 3, exp: 'הזרוע ההומוראלית מקנה הגנה בעיקר מפני פתוגנים תוך תאיים' },
-  { num: 214, ans: 0, exp: 'נכון' },
-  { num: 215, ans: 1, exp: 'לא-נכון' },
-  { num: 216, ans: 2, exp: 'מופרש בעת עלייה בנפח הדם' },
-  { num: 217, ans: 1, exp: 'ארוכה יותר בגברים לעומת נשים' },
-  { num: 218, ans: 0, exp: 'כוללת שלפוחית שתן אחת' },
-  { num: 219, ans: 1, exp: 'מגביר הפרשת מים בכליה' },
-  { num: 220, ans: 2, exp: 'אלדוסטרון מופרש מהכליה עצמה' },
-  { num: 221, ans: 1, exp: 'כ 3- ליטר ביממה' },
-  { num: 222, ans: 2, exp: 'הכליה מייצרת ויטמין D פעיל בהשפעת בלוטת הפאראתאירואיד (יותרת התריס)' },
-  { num: 223, ans: 1, exp: 'נמצאות קדמית לחלל הפריטונאלי (צפקי)' },
-  { num: 224, ans: 3, exp: 'מווסתת את רמת החומציות בדם באמצעות הפרשת נתרן' },
-  { num: 225, ans: 0, exp: 'תאים' },
-  { num: 226, ans: 3, exp: 'פקעית (גלומרולוס)' },
-  { num: 227, ans: 0, exp: 'מכילה שני שופכנים ושופכה אחת' },
-  { num: 228, ans: 2, exp: 'אבובית רחיקנית (דיסטלית)' },
-  { num: 229, ans: 2, exp: 'מיוצר על ידי הכליות באמצעות סינון הדם' },
-  { num: 230, ans: 1, exp: 'רנין מופעל ישירות ומפרש את אלדוסטרון', },
-  { num: 231, ans: 3, exp: 'אף תשובה אינה נכונה. לא מופרש על ידי הריאות', },
-  { num: 232, ans: 2, exp: 'המבנה המסומן בחץ הוא אבובית קריבנית (Proximal Tubule)', },
-  { num: 233, ans: 4, exp: 'המבנה המסומן בחץ הוא צינור איסוף (Collecting Duct)', },
-  { num: 234, ans: 3, exp: 'תפקודו של ויטמין B תלוי בפעילותה של מערכת ההפרשה', },
-  { num: 235, ans: 1, exp: 'הסינון הראשוני מתבצע בפקעית (גלומרולוס)', },
-  { num: 236, ans: 2, exp: 'אריתרופואטין משמש כתרופה באנמיה על רקע של אי ספיקת כליות כרונית', },
-  { num: 237, ans: 1, exp: 'רנין הוא החומר הראשון שמופעל בתגובה לירידה בלחץ הדם', },
-  { num: 238, ans: 2, exp: 'לולאת הנלה (Loop of Henle) מכילה את הגלומרולוס (פקעית)', },
-  { num: 239, ans: 1, exp: 'צינור האיסוף מושפע מ‪ADH -‬ואלדוסטרון', },
-  { num: 240, ans: 2, exp: 'הכליות מוגנות על ידי כלוב הצלעות', },
-];
-
-
-
-
-
-
-var explanations_gpt4 = [
-  { num: 1, ans: 3, exp: 'האדרנלין הוא הורמון, לא בלוטה' },
-  { num: 2, ans: 2, exp: 'סומטוסטטין מדכא ייצור הורמונים' },
-  { num: 3, ans: 1, exp: 'תאי אלפא מייצרים גלוקגון' },
-  { num: 4, ans: 2, exp: 'עמילאז הוא תוצר אקסוקריני של הלבלב' },
-  { num: 5, ans: 3, exp: 'פרולקטין מסייע בייצור חלב בשד' },
-  { num: 6, ans: 3, exp: 'הורמונים פועלים על תאים עם רצפטורים מתאימים' },
-  { num: 7, ans: 3, exp: 'זהו דוגמא למשוב שלילי' },
-  { num: 8, ans: 1, exp: 'ACTH מעודד שחרור הורמונים מבלוטת האדרנל' },
-  { num: 9, ans: 3, exp: 'אפינפרין מעלה לחץ דם ומדכא פעילות עיכול' },
-  { num: 10, ans: 2, exp: 'פוספוליפידים אינם חומר בנייה של הורמונים' },
-  { num: 11, ans: 1, exp: 'הקורטיזול מופרש מהאזור הפסיגנית של קליפת האדרנל, ולא מהאזור האמצעי' },
-  { num: 12, ans: 3, exp: 'הסדר הנכון: היפותלמוס > היפופיזה > איבר מטרה' },
-  { num: 13, ans: 0, exp: 'בבלוטת התריס יש תאי C' },
-  { num: 14, ans: 2, exp: 'תירוקסין מזרז את קצב המטבוליזם בגוף' },
-  { num: 15, ans: 2, exp: 'יוד חשוב ביותר לתפקוד בלוטת התריס' },
-  { num: 16, ans: 3, exp: 'אדרנלין הוא הורמון פחמימתי' },
-  { num: 17, ans: 1, exp: 'אינסולין מופרש בתגובה לפחמימות' },
-  { num: 18, ans: 3, exp: 'אינסולין הוא הורמון חלבוני' },
-  { num: 19, ans: 1, exp: 'תאי בטא פועלים כאשר רמות הסוכר בדם גבוהות' },
-  { num: 20, ans: 0, exp: 'היפופיזה מפרישה אנדוקרינית בלבד' },
-  { num: 21, ans: 0, exp: 'אוקסיטוצין מופרש מהאונה האחורית של היפופיזה' },
-  { num: 22, ans: 2, exp: 'ADH מופרש ע\"י ההיפופיזה האחורית' },
-  { num: 23, ans: 3, exp: 'TRH מופרש מההיפותלמוס' },
-  { num: 24, ans: 3, exp: 'ADH מפחית כמות המים המופרשים בשתן' },
-  { num: 25, ans: 2, exp: 'PTH אינו מפחית פירוק סידן בלבלב' },
-  { num: 26, ans: 2, exp: 'קורטיזול נשלט ע\"י ההיפופיזה' },
-  { num: 27, ans: 0, exp: 'אדרנלין מופרש מליבת בלוטת יותרת הכליה' },
-  { num: 28, ans: 0, exp: 'אינסולין שונה משאר ההורמונים בסיווג הביוכימי' },
-  { num: 29, ans: 2, exp: 'עורקיקים יש השפעה גדולה על לחץ הדם' },
-  { num: 30, ans: 1, exp: 'הנימים זורמים לעורקים' },
-  { num: 31, ans: 3, exp: "העורקים הכליליים מספקים דם לשריר הלב" },
-  { num: 32, ans: 1, exp: "בנימים מתבצע חילוף חומרים וחילוף הגדים" },
-  { num: 33, ans: 0, exp: "עורק הריאה מוביל דם עשיר בחמצן מהריאות ללב" },
-  { num: 34, ans: 2, exp: "סדר נכון: קשר סינוס‪-‬עליה ‪SA, AV, צרורים וסיבי פורקינייה" },
-  { num: 35, ans: 1, exp: "תפוקת הלב = נפח פעימה × דופק = 50 × 100" },
-  { num: 36, ans: 0, exp: "הסטטוס המשפחתי אינו משפיע על לחץ הדם" },
-  { num: 37, ans: 2, exp: "קול שני - טריקת המסתמים הגביעיים" },
-  { num: 38, ans: 2, exp: "ורידים מכילים שסתומים, מונעים זרימה הפוכה" },
-  { num: 39, ans: 2, exp: "תפוקת הלב = קצב הלב × נפח הפעימה" },
-  { num: 40, ans: 1, exp: "מסתם דו צניפי מחבר בין עליה שמאל לחדר שמאל" },
-  { num: 41, ans: 3, exp: "קשר סינוס‪-‬עליה ‪(SA-NODE) נמצא בעליה ימין" },
-  { num: 42, ans: 1, exp: "העליות מתכווצות בסוף הדיאסטולה" },
-  { num: 43, ans: 0, exp: "בכיווץ והרחבה של כלי דם מווסתת את טמפרטורת הגוף" },
-  { num: 44, ans: 3, exp: ' ורידים הורידיים מובילים דם עשיר בחמצן ועני בחמצן' },
-  { num: 45, ans: 3, exp: 'מיטוכונדריות מספקות אנרגיה לשריר הלב' },
-  { num: 46, ans: 2, exp: 'העורקים שמזינים את הלב מתמלאים בדיאסטולה' },
-  { num: 47, ans: 0, exp: 'עורק מוביל דם מהלב אל הגוף' },
-  { num: 48, ans: 0, exp: 'נפח פעימה במנוחה כ-70 סמ\"ק' },
-  { num: 49, ans: 3, exp: 'קשר סינוס-עליה (SA) הוא הקוצב העיקרי' },
-  { num: 50, ans: 3, exp: 'ורידים תמיד מובילים דם אל הלב' },
-  { num: 51, ans: 0, exp: 'לחץ דם תקין במנוחה הוא 120/80' },
-  { num: 52, ans: 1, exp: 'אינטימה היא שכבת העורק הפנימית' },
-  { num: 53, ans: 2, exp: 'עורק הריאה חלק ממחזור הדם הגדול' },
-  { num: 54, ans: 1, exp: 'עורקי הריאה מכילים דם עני בחמצן' },
-  { num: 55, ans: 2, exp: 'יצירת כדוריות דם לבנות אינה תפקיד של הלב וכלי הדם' },
-  { num: 56, ans: 3, exp: 'כל התשובות נכונות' },
-  { num: 57, ans: 0, exp: 'פתיחת מסתמים מאפשרת זרימת דם מהעליות לחדרים' },
-  { num: 58, ans: 0, exp: 'בניית שריר הלב לאחר התקף לב אינה תפקיד של הדם' },
-  { num: 59, ans: 2, exp: 'הדם שהיה בנימים עובר לוורידונים' },
-  { num: 60, ans: 0, exp: 'S1 מתרחש כאשר מסתמים צניפיים נסגרים' },
-  { num: 61, ans: 2, exp: 'לעלייה שמאל נכנסים ורידים בהם דם עשיר בחמצן.' },
-  { num: 62, ans: 0, exp: 'קריש בעורק הריאה חוסם זרימת דם לריאות' },
-  { num: 63, ans: 0, exp: 'קצבו התקין של קשר סינוס עלייה הוא 60-90' },
-  { num: 64, ans: 3, exp: 'האות החשמלי נוצר תחילה בקשר סינוס-עלייה' },
-  { num: 65, ans: 2, exp: 'לימפוציטים נוצרים במח העצם' },
-  { num: 66, ans: -1, exp: 'צריך איור לזהות את השכבה המסומנת' },
-  { num: 67, ans: 2, exp: 'המסתם התלת צניפי מפריד בין העלייה ימין לחדר ימין' },
-  { num: 68, ans: 1, exp: ' תאי הלב מחוברים בצמתים הדוקים המאפשרים העברה יעילה וכיווץ סינכרוני של השריר.' },
-  { num: 69, ans: 2, exp: 'קול S2 נובע מסגירת המסתמים הגביעיים' },
-  { num: 70, ans: 3, exp: 'למערכת הלב וכלי הדם תפקידים רבים' },
-  { num: 71, ans: 3, exp: 'בורידים לחץ דם נמוך, בעורקים הוא גבוה' },
-  { num: 72, ans: 2, exp: 'מפריד בין העלייה השמאלית לחדר השמאלי' },
-  { num: 73, ans: 0, exp: 'S1 נוצר מסגירת המסתמים הצניפיים' },
-  { num: 74, ans: 2, exp: 'ורידים מכילים שסתומים, עורקים לא' },
-  { num: 75, ans: 3, exp: 'שריר הלב עשוי מרקמת שריר ייחודית ללב בלבד' },
-  { num: 76, ans: 1, exp: 'אוושה פיזיולוגית אינה תמיד נגרמת על ידי אי ספיקה לבבית' },
-  { num: 77, ans: 0, exp: 'הדם בוורידי הריאה דל בחמצן' },
-  { num: 78, ans: 3, exp: 'זרימה במחזור הקטן: חדר ימין, עורקי הריאה, ריאות, ורידי הריאה, עליה שמאל' },
-  { num: 79, ans: 2, exp: 'סדר זרימה במחזור הגדול' },
-  { num: 80, ans: 0, exp: 'המסתמים הגביעיים נפתחים בתחילת הדיאסטולה' },
-  { num: 81, ans: 1, exp: 'לא נכון, המסתמים הצניפיים נפתחים בדיאסטולה' },
-  { num: 82, ans: 0, exp: 'דפנים דקיקים מאפשרים תחלופת גזים יעילה' },
-  { num: 83, ans: 3, exp: 'החלוקה מבדילה בין החלק המוביל את האוויר והחלק בו מתבצע חילוף הגזים' },
-  { num: 84, ans: 2, exp: 'אוויר מרטיט את מיתרי הקול. זה יוצר צלילים על פי התדרים והעוצמות של הרטטים.' },
-  { num: 85, ans: 3, exp: 'הגרון מכיל סחוס התירואיד ומיתרי הקול, שנמתחים בין חלקו הקידמי של סחוס התירואיד לחלקו האחורי.' },
-  { num: 86, ans: 3, exp: 'יצירת קולות היא פונציה של הגרון' },
-  { num: 87, ans: 0, exp: 'קנה הנשימה מחובר אינפריורית ללרינקס' },
-  { num: 88, ans: 2, exp: 'סימפונות הם חלק מהמערכת הנשימה התחתונה' },
-  { num: 89, ans: 3, exp: 'חץ מצביע על החך הרך' },
-  { num: 90, ans: 1, exp: ' בעת שאיפה, נפח בית החזה גדל, מה שיוצר לחץ שלילי המכניס אוויר לריאות' },
-  { num: 91, ans: 2, exp: 'חץ ב מצביע על הלרינקס' },
-  { num: 92, ans: 2, exp: 'הברונכוס השמאלי תלול יותר מהימני' },
-  { num: 93, ans: 2, exp: 'הסרעפת מתכווצת ויורדת בשאיפה' },
-  { num: 94, ans: 3, exp: 'תשובות 2 ו-3 נכונות עבור רירית הנשימה' },
-  { num: 95, ans: 1, exp: 'הקונכיות מגדילות את שטח הפנים הראשוני שבא במגע עם האוויר, תוך שיפור החימום והלחות' },
-  { num: 96, ans: 2, exp: 'החמצן הוא הגז העיקרי אותו אנו שואפים, כאשר רמות גבוהות של חמצן משמעותיות לתפקוד תקין של הגוף.' },
-  { num: 97, ans: 3, exp: 'רירית הנשימה מכילה תאי שיער, תאים מפרישי ריר ועשירה בכלי דם' },
-  { num: 98, ans: 2, exp: 'סימפונות משניים אינם חלק ממערכת הנשימה התחתונה' },
-  { num: 99, ans: 0, exp: 'אחרי נשיפה מאומצת עדיין יש אוויר בריאות' },
-  { num: 100, ans: 3, exp: 'בלוטות הדמע ממוקמות בחלק האינפריורי מדיאלי של העין' },
-  { num: 101, ans: 1, exp: 'בנאדיות חמצן נכנס לזרם הדם ופחמן דו חמצני לחלל הנאדית' },
-  { num: 102, ans: 1, exp: 'ריכוז הפחמן הדו חמצני באוויר הנשאף גבוה יותר מריכוזו באוויר הננשף, בשל פריקתו מהגוף.' },
-  { num: 103, ans: 3, exp: 'ריאה שמאל מורכבת משלוש אונות' },
-  { num: 104, ans: 3, exp: 'מערכת הנשימה אינה מאפשרת השמעת קול' },
-  { num: 105, ans: 3, exp: 'החץ מצביע על החך הקשה' },
-  { num: 106, ans: 0, exp: 'המולקולת עוברת בקנה, סימפונות, המוגלובין, נאדיות, אבי העורקים, לב, כבד' },
-  { num: 107, ans: 2, exp: 'מתפצל ל-2 סימפונות ראשיים' },
-  { num: 108, ans: 3, exp: 'חצי ליטר בנשימה אחת' },
-  { num: 109, ans: 0, exp: 'סימפון ראשי באיור' },
-  { num: 110, ans: 0, exp: 'הקרום הויסראלי צמוד לרקמת הריאה' },
-  { num: 111, ans: 2, exp: 'בשאיפה, השרירים מרימים את הסרעפת כך שהנפח הריאתי גדל, ומאפשר לאוויר להיכנס לריאות.' },
-  { num: 112, ans: 1, exp: 'סאב-מנדיבולרי אינו סינוס' },
-  { num: 113, ans: 0, exp: 'נכון, קרום הריאה נקרא צדר' },
-  { num: 114, ans: 2, exp: 'תא פריאטלי מפריש חומצה' },
-  { num: 115, ans: 2, exp: 'קיבה נמצאת בין לוע ותריסריון' },
-  { num: 116, ans: 2, exp: 'הלבלב הוא איבר אקססורי' },
-  { num: 117, ans: 1, exp: 'המעי הדק הוא הארוך ביותר' },
-  { num: 118, ans: 0, exp: 'תת-לשונית הוא הקטן ביותר' },
-  { num: 119, ans: 3, exp: 'אורכו של המעי הדק הוא כ-6 מטר' },
-  { num: 120, ans: 2, exp: 'ה-pH הנמוך ביותר במערכת העיכול' },
-  { num: 121, ans: 3, exp: 'הצקום משכי לקולון העולה' },
-  { num: 122, ans: 3, exp: 'מופרשת אל המעי הכרוך' },
-  { num: 123, ans: 3, exp: 'הכבד אינו מייצר תאים לבנים' },
-  { num: 124, ans: 3, exp: 'מיעוט של חיידקים במעי הגס' },
-  { num: 125, ans: 2, exp: 'תא G מפריש גסטרין' },
-  { num: 126, ans: 0, exp: 'החלק המודגש הוא החלחולת' },
-  { num: 127, ans: 0, exp: 'ליפאז אינו חלק מתכולת הרוק' },
-  { num: 128, ans: 3, exp: 'תא גובלט מפריש ריר' },
-  { num: 129, ans: 3, exp: 'כל התשובות נכונות' },
-  { num: 130, ans: 3, exp: 'מיצי מרה מופרשים מהכבד, לא ישירות לתריסריון' },
-  { num: 131, ans: 1, exp: 'מחבר את הקיבה עם המעי הדק \n  הסבר: הוושט הוא המעבר בין הקיבה למעי הדק, הוא מאפשר עברת המזונות מהקיבה למעי הדק לספיגה.' },
-  { num: 132, ans: 2, exp: 'המבנה האנטומי הייחודי שלו בנוי לתהליך של ספיגה \n   הסבר: המעי הדק מכיל וילוסים ומיקרווילוסים המגדילים את שטח המגע ומקלים על הספיגה של המזונות.' },
-  { num: 133, ans: 1, exp: 'שינן הוא החלק הלבן החיצוני של השן' },
-  { num: 134, ans: 1, exp: 'המעי העיוור הוא חלק מהמעי הגס' },
-  { num: 135, ans: 0, exp: 'המזון נספג במעי הדק, המים במעי הגס' },
-  { num: 136, ans: 1, exp: 'החלק המוקף בתמונה הוא ראש הקיבה (Fundus)' },
-  { num: 137, ans: 2, exp: 'הסוגר הפילורי הוא המבנה האנטומי שמחבר את הקיבה לתחילת המעי הדק (דודונום) ומאפשר עברת המזונות.' },
-  { num: 138, ans: 3, exp: 'תא פריאטלי משתתף בספיגת ויטמין B12' },
-  { num: 139, ans: 3, exp: 'הפדר מכיל חורים ויש לו תפקיד חיסוני' },
-  { num: 140, ans: 2, exp: 'המעי הדק מכיל סיסים (Villi) לספיגה' },
-  { num: 141, ans: 0, exp: 'תפקיד העיקרי של המעי הגס הוא ספיגת מים' },
-  { num: 142, ans: 1, exp: 'ריר מגן מופרש מבלוטת הרירית, לא מהקיבה' },
-  { num: 143, ans: 2, exp: 'הסביבה בתריסריון היא בסיסית' },
-  { num: 144, ans: 3, exp: 'כלי הדם המזינים את השן עוברים בו' },
-  { num: 145, ans: 0, exp: 'הכבד נמצא בצד ימין של הגוף' },
-  { num: 146, ans: 3, exp: 'הלבלב צמוד לדופן הבטן האחורית' },
-  { num: 147, ans: 2, exp: 'פירוק חלבוני קרישה אינו תפקיד של הכבד' },
-  { num: 148, ans: 1, exp: 'הוריד הנבוב התחתון אינו חלק משער הכבד' },
-  { num: 149, ans: 3, exp: 'המבנה המסומן הוא הטחול' },
-  { num: 150, ans: 0, exp: 'תזגיג השן אינו מתחדש מדי חודש' },
-  { num: 151, ans: 1, exp: 'הכבד אינו מפריש אינסולין' },
-  { num: 152, ans: 0, exp: 'נכון, ברוק מפרש אנזים המפרק עמילן' },
-  { num: 153, ans: 1, exp: 'אנו נולדים עם שיניים חלשות (שיני תינוק) שמתחלפות במהלך הילדות עם שיניים בוגרות. שיניים נוספות (שיני חוכמה) יכולות לצמוח בגיל מאוחר יותר.' },
-  { num: 154, ans: 2, exp: 'החצוצרות מחוברות ישירות לרחם' },
-  { num: 155, ans: 1, exp: 'LH גורם להבשלה סופית של הזקיק ויציאת הביצית' },
-  { num: 156, ans: 2, exp: 'שריר הרחם נקרא Myometrium' },
-  { num: 157, ans: 2, exp: 'בדיקת הריון מתבססת על בדיקת עובי רירית הרחם' },
-  { num: 158, ans: 1, exp: 'השחלה אינה משתנה עקב פעילות הורמונאלית' },
-  { num: 159, ans: 2, exp: 'בשחלותיה של נערה מתבגרת יש כ-400 ביציות' },
-  { num: 160, ans: 2, exp: 'ירידה ברמת הפרוגסטרון גורמת לנשירת רירית הרחם ודימום הוסתי' },
-  { num: 161, ans: 2, exp: 'כף הערווה ממוקמת מדיאלית לעצם החיק' },
-  { num: 162, ans: 0, exp: 'פרוגסטרון הוא ההורמון העיקרי התומך בהריון' },
-  { num: 163, ans: 2, exp: 'הרקטום ממוקם אנטריורית (קדימה) לרחם' },
-  { num: 164, ans: 1, exp: 'בדיקת הסקירה לסרטן צוואר הרחם נקראת פאפניקולאו' },
-  { num: 165, ans: 0, exp: 'פרוגסטרון מופרש מהגופיף הצהוב' },
-  { num: 166, ans: 3, exp: 'אין אף תשובה נכונה - כולם איברי מין פנימיים' },
-  { num: 167, ans: 1, exp: 'הורמון LH גורם לחריגת הביצית' },
-  { num: 168, ans: 2, exp: 'שיא הפרשת הורמון LH מופיע באמצע המחזור ומוביל לביוץ' },
-  { num: 169, ans: 2, exp: 'סדר נכון: דגדגן, פתח השופכה, פתח הלדן, פי הטבעת' },
-  { num: 170, ans: 3, exp: 'ביצית מופרית עלולה להימצא בחלל האגן' },
-  { num: 171, ans: 1, exp: 'תמיכה לרצפת האגן ומאחז לשרירים' },
-  { num: 172, ans: 2, exp: 'המפגש של תא הזרע ותא הביצית' },
-  { num: 173, ans: 1, exp: 'ללא הריון 7 ימים, בהריון 14 ימים' },
-  { num: 174, ans: 1, exp: 'שפתיים הקטנות רגישות לגירוי' },
-  { num: 175, ans: 3, exp: 'בלוטת הערמונית מייצרת נוזל השפיכה' },
-  { num: 176, ans: 0, exp: 'פרולקטין אחראי להפרשת החלב' },
-  { num: 177, ans: 3, exp: 'תאי סרטולי מזינים את תאי הנבט' },
-  { num: 178, ans: 3, exp: 'מטוש לאיסוף תאים מצוואר הרחם' },
-  { num: 179, ans: 1, exp: 'מיקום אנטומי באזור המיני' },
-  { num: 180, ans: 1, exp: 'תא ליידיג מפריש טסטוסטרון' },
-  { num: 181, ans: 3, exp: 'בלוטות ברטולין מפרישות ריר בגירוי' },
-  { num: 182, ans: 0, exp: 'חץ מצביע על אבובית נושאת זרע' },
-  { num: 183, ans: 3, exp: 'אלכוהול אינו גורם סיכון' },
-  { num: 184, ans: 3, exp: 'רקמת חיבור, שומן, כלי דם' },
-  { num: 185, ans: 0, exp: 'הזקפה בזכות מערכת העצבים הסימפטטית' },
-  { num: 186, ans: 0, exp: 'השחלה מייצרת LH ו-FSH' },
-  { num: 187, ans: 0, exp: 'העברה לחלל הרחם איננה טיפול' },
-  { num: 188, ans: 3, exp: 'כל התשובות נכונות' },
-  { num: 189, ans: 0, exp: 'שכבת רירית הרחם היא מיומטריום' },
-  { num: 190, ans: 0, exp: 'נכון, השד גדל בהשפעת אסטרוגן' },
-  { num: 191, ans: 0, exp: 'נכון, שני השלבים מקבילים' },
-  { num: 192, ans: 0, exp: 'נכון, תאי סרטולי מפרישים טסטוסטרון' },
-  { num: 193, ans: 0, exp: 'תאי T-helper מסייעים לתאי B' },
-  { num: 194, ans: 0, exp: 'חיסון סביל מקנה זיכרון חיסוני' },
-  { num: 195, ans: 2, exp: 'נויטרופיל הוא התא הדם הלבן הנפוץ ביותר' },
-  { num: 196, ans: 0, exp: 'הפעלת מנגנון המשלים עוזרת בפאגוציטוזה' },
-  { num: 197, ans: 0, exp: 'טחול הוא איבר לימפואידי שניוני' },
-  { num: 198, ans: 3, exp: 'התימוס משמש להבשלת תאי T, לא B' },
-  { num: 199, ans: 2, exp: 'תא פלסמה מפריש נוגדנים' },
-  { num: 200, ans: 3, exp: 'כל התשובות נכונות' },
-  { num: 201, ans: 3, exp: 'באזופיל הוא לא לימפוציט' },
-  { num: 202, ans: 1, exp: 'המערכת הנרכשת מסוגלת ליצירת זיכרון חיסוני' },
-  { num: 203, ans: 3, exp: 'בולעים פתוגנים ורקמות גוף פגועות או מתות' },
-  { num: 204, ans: 3, exp: 'המערכת המשלימה אינה גורמת לכימוטקסיס' },
-  { num: 205, ans: 3, exp: 'לימפוציט אינו שייך למערכת החיסון המולדת' },
-  { num: 206, ans: 0, exp: 'אאוזינופיל משתתף בהגנה מפני טפילים' },
-  { num: 207, ans: 0, exp: 'לימפוציטים מסוג B הם חלק מהזרוע ההומראלית' },
-  { num: 208, ans: 2, exp: 'תא פלסמה אינו תא בלען (פאגוציט)' },
-  { num: 209, ans: 0, exp: 'באזופיל מפריש לדם חומרים המשתתפים בתגובה הדלקתית' },
-  { num: 210, ans: 1, exp: 'הטחול הוא איבר לימפטי ראשוני' },
-  { num: 211, ans: 2, exp: 'תאי T Killer ותאי הרג טבעיים משמידים תאים נגועים' },
-  { num: 212, ans: 2, exp: 'מאקרופאג הוא תא בלען המציג אנטיגנים ללימפוציטים' },
-  { num: 213, ans: 1, exp: 'הזרוע ההומראלית מקנה הגנה מפני פתוגנים חיצוניים' },
-  { num: 214, ans: 0, exp: 'פאגוציטים הם חלק ממערכת החיסון המולדת' },
-  { num: 215, ans: 0, exp: 'התימוס פועל בעיקר בילדות' },
-  { num: 216, ans: 1, exp: 'אלכוהול מעכב הפרשת ADH ומעודד השתנה' },
-  { num: 217, ans: 2, exp: 'השופכה אינה עוברת דרך בלוטת הערמונית' },
-  { num: 218, ans: 3, exp: 'ישנם שתי שופכות, אחת לכל כליה' },
-  { num: 219, ans: 3, exp: 'אלדוסטרון מגביר ספיגת נתרן בכליה' },
-  { num: 220, ans: 2, exp: 'ADH מופרש במקרים של לחץ דם נמוך' },
-  { num: 221, ans: 1, exp: 'כ-3 ליטר שתן ביממה באדם בוגר' },
-  { num: 222, ans: 2, exp: 'הכליה מגבירה הפרשת מים בלחץ דם נמוך' },
-  { num: 223, ans: 1, exp: 'הכליות נמצאות מאחורי החלל הפריטונאלי' },
-  { num: 224, ans: 2, exp: 'הכליה מווסתת לחץ הדם באמצעות רנין' },
-  { num: 225, ans: 1, exp: 'שתן תקין מכיל שתנן (אוראה)' },
-  { num: 226, ans: 1, exp: 'לולאת הנלה מדללה או מרכזת את השתן' },
-  { num: 227, ans: 0, exp: 'מערכת השתן כוללת שני שופכנים ושתי שופכות' },
-  { num: 228, ans: 0, exp: 'רוב ספיגת החומרים מתרחש באבובית הקריבנית' },
-  { num: 229, ans: 2, exp: 'השתן מיוצר על ידי הכליות באמצעות סינון הדם' },
-  { num: 230, ans: 2, exp: 'אנגיוטנסין 2 גורם להפרשת אלדוסטרון' },
-  { num: 231, ans: 3, exp: 'אף תשובה אינה נכונה' },
-  { num: 232, ans: 3, exp: 'החץ מצביע על לולאת הנלה' },
-  { num: 233, ans: 0, exp: 'החץ מצביע על אבובית קריבנית' },
-  { num: 234, ans: 3, exp: 'פעילות מערכת ההפרשה תלויה בויטמין D' },
-  { num: 235, ans: 0, exp: 'הסינון הראשוני מתבצע בפקעית' },
-  { num: 236, ans: 1, exp: 'אריתרופואטין משמש כתרופה באנמיה עקב אי ספיקת כליות כרונית' },
-  { num: 237, ans: 0, exp: 'רנין מופרש ראשון בתגובה לירידה בלחץ הדם' },
-  { num: 238, ans: 1, exp: 'ליבת הכליה מכילה את לולאת הנלה' },
-  { num: 239, ans: 3, exp: 'צינור האיסוף מושפע מ-ADH ואלדוסטרון' },
-  { num: 240, ans: 0, exp: 'הכליות נמצאות אחורית לחוליות עמוד השדרה' }
-];
 
 var QSTATS = [ 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -3328,5 +2368,7 @@ var QSTATS = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 ];
