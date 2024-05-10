@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -7,7 +7,7 @@
   <style>
     body {
       font-size: 18px;
-      direction: rtl; /* Add this line */
+      direction: ltr; /* Add this line */
     }
 
     .quiz-button {
@@ -112,16 +112,18 @@
     let questions_file = "questions2.js";
     let DEBUG = 0;
 
+    let subject_questions_num = 32;
+
     const examTypes = [
-      { type: 1, name: "מבחן מאתגר (מומלץ)", range: [1, 240] },
-      { type: 2, name: "צפי לציון במבחן אמיתי", range: [1, 240] },
-      { type: 3, name: "מבחן קליל", range: [1, 240] },
-      { type: 4, name: "המערכת ההורמונלית", range: [1, 28] },
-      { type: 5, name: "לב, כלי הדם ולימפה", range: [29, 81] },
-      { type: 6, name: "מערכת הנשימה", range: [82, 113] },
-      { type: 7, name: "מערכת העיקול", range: [114, 153] },
-      { type: 8, name: "מערכות המין והרבייה", range: [154, 192] },
-      { type: 9, name: "מערכות החיסון והפרשה", range: [193, 240] },
+      { type: 1, name: "Hard exam", range: [1, subject_questions_num*6] },
+      { type: 2, name: "Usual exam", range: [1, subject_questions_num*6] },
+      { type: 3, name: "Easy exam", range: [1, subject_questions_num*6] },
+      { type: 4, name: "Subject 1", range: [1, subject_questions_num] },
+      { type: 5, name: "Subject 2", range: [subject_questions_num+1, subject_questions_num*2] },
+      { type: 6, name: "Subject 3", range: [subject_questions_num*2+1, subject_questions_num*3] },
+      { type: 7, name: "Subject 4", range: [subject_questions_num*3+1, subject_questions_num*4] },
+      { type: 8, name: "Subject 5", range: [subject_questions_num*4+1, subject_questions_num*5] },
+      { type: 9, name: "Subject 6", range: [subject_questions_num*5+1, subject_questions_num*6] },
     ];
     let selectedType = examTypes[0];  // Default to the first type
 
@@ -390,11 +392,11 @@
           } else {
             incorrect_str = "Incorrect! " + smiley;
           }
-          document.getElementById("result").innerHTML = incorrect_str + " wait " + seconds + " seconds";
+          document.getElementById("result").innerHTML = incorrect_str + " wait " + seconds + " seconds.<br> Explanation: " + questions[currentQuestion].explanation;
           if (distance < 0) {
             clearInterval(x);
             document.getElementById("next-question").disabled = false;
-            document.getElementById("result").innerHTML = incorrect_str;
+            document.getElementById("result").innerHTML = incorrect_str + ".<br> Explanation: " + questions[currentQuestion].explanation;
           }
         }, 1000);
         userAnswerElement.parentNode.style.color = "red";
@@ -521,7 +523,7 @@
 
 <form id="answers-form">
   <div class="answers-form"></div>
-  <button type="submit">מעבר לעמוד ראשי</button>
+  <button type="submit">Move to the main page</button>
 </form>
 
 </html>
