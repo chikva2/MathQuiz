@@ -388,7 +388,7 @@ var questions = [
   
   {
     question_number: "33",
-    question: "Arik has 12 dollars and spends 4 dollars. How much money does the person have left?",
+    question: "Arik has 12 dollars and spends 4 dollars. How much money does Arik have left?",
     answers: [
       "8 dollars",
       "10 dollars",
@@ -1311,15 +1311,15 @@ var questions = [
   },
   {
     question_number: "109",
-    question: "A person is 25 years old and their sister is 3 years older. How old is their sister?",
+    question: "Avital is 31 years old and her sister is 7 years older. How old is her sister?",
     answers: [
-      "26 years old",
-      "27 years old",
-      "28 years old",
-      "29 years old"
+      "36 years old",
+      "37 years old",
+      "38 years old",
+      "39 years old"
     ],
     correctAnswer: 2,
-    explanation: "If the person is 25 years old and their sister is 3 years older, their sister is 25 + 3 = 28 years old."
+    explanation: "If Avital is 31 years old and their sister is 7 years older, their sister is 31 + 7 = 38 years old."
   },
   {
     question_number: "110",
@@ -1359,7 +1359,7 @@ var questions = [
   },
   {
     question_number: "113",
-    question: "A person has 15 pencils and gives 3 to their friend. How many pencils does the person have left?",
+    question: "Caroline has 15 pencils and gives 3 to their friend. How many pencils does Caroline have left?",
     answers: [
       "12",
       "13",
@@ -1367,11 +1367,11 @@ var questions = [
       "15"
     ],
     correctAnswer: 0,
-    explanation: "The person had 15 pencils and gave away 3, so they have 15 - 3 = 12 pencils left."
+    explanation: "Caroline had 15 pencils and gave away 3, so she has 15 - 3 = 12 pencils left."
   },
   {
     question_number: "114",
-    question: "A person wants to save $100 in 5 weeks. How much do they need to save each week?",
+    question: "Avital wants to save $100 in 5 weeks. How much does she need to save each week?",
     answers: [
       "$10",
       "$15",
@@ -1379,7 +1379,7 @@ var questions = [
       "$25"
     ],
     correctAnswer: 2,
-    explanation: "If the person wants to save $100 in 5 weeks, they need to save $100 / 5 = $20 each week."
+    explanation: "If Avital wants to save $100 in 5 weeks, they need to save $100 / 5 = $20 each week."
   },
   {
     question_number: "115",
